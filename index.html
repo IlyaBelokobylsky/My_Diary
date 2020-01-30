@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Diary</title>
+    <link rel="stylesheet" href="css/normolize.css">
+    <link rel="stylesheet" href="css/mobile-styles.css">
+    <link rel="stylesheet" href="css/desktop-styles.css">
+    <script src="https://kit.fontawesome.com/071a28e8c4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img class="hamburger" src="img/hamburger.svg" alt="menu">
+    <div class="desktop triangle-desktop"></div>
+    <header>
+        <nav>
+            <a class="a" href="#head-screen">Попробуйте <strong>My Diary</strong></a>
+            <a class="a" href="#make-settings">Создайте и настройте</a>
+            <a class="a" href="#interface">Интерфейс <strong>My Diary</strong></a>
+            <a class="a" href="#">Возможности</a>
+            <a class="a" href="#communication">Связь с нами</a>
+        </nav>
+        <br>
+        <aside>
+            <select name="languages" class="languages">
+                <option value="rus" selected>РУС</option>
+                <option value="eng">ENG</option>
+            </select>
+            <br>
+            <a class="a header__moonProd" href="https://play.google.com/store/apps/dev?class=5961568897601928199">
+                moonProd 
+                <img src="img/Moon.svg" alt=""> 
+            </a>
+            <a class="a header__logo" href="https://play.google.com/store/apps/details?class=moonproject.mydiary">
+                <img class="my-diary_logo" src="img/logo.svg" alt="">
+                <strong>My diary</strong>
+            </a>
+        </aside>
+    </header>
+    
+
+    <main>
+        <div class="head-screen" id="head-screen">
+            <h1 class="head-screen__h1">
+                My Diary
+                <object class="head-screen__moon-svg" type="image/svg+xml" data="picture.svg">
+                    <img class="head-screen__moon-svg_img" src="img/Moon.svg" alt=""> 
+                </object>
+            </h1>
+            <h4 class="head-screen__h4">Комфорт.&nbsp;Простота. <br> Скорость</h4>
+            <div class="head-screen__phones">
+                <object class="desktop" type="image/svg+xml" data="picture.svg">
+                    <img src="img/desktop-mainPhone.svg" alt="">
+                </object>
+                <object type="image/svg+xml" data="picture.svg">
+                    <img class="main-phone" src="img/mainPhone.svg" alt="">
+                </object>
+            </div>
+            <a class="a head-screen__download-button" href="https://play.google.com/store/apps/details?class=moonproject.mydiary" class="head-screen__download-button">Скачать My Diary</a>
+        </div>
+        
+
+
+        <div class="why-we">
+            <h3 class="why-we__h3">Почему My Diary?</h3>
+            <ul class="why-we__list">
+                <li>
+                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-pen"></i></span>
+                    <a class="a why-we__list_a" href="#">Простое создание</a>
+                </li>
+                <li>
+                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-list"></i></span>
+                    <a class="a why-we__list_a" href="#">Практичный интерфейс</a>
+                </li>
+                <li>
+                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-cog"></i></span>
+                    <a class="a why-we__list_a" href="#">Гибкая настройка</a>
+                </li>
+                <li>
+                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-save"></i></span>
+                    <a class="a why-we__list_a" href="#">Умное сохранение д/з</a>
+                </li>
+                <li>
+                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-pencil-ruler"></i></span>
+                    <a class="a why-we__list_a" href="#">Своеобразный дизайн</a>
+                </li>
+                <li>
+                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-pen-nib"></i></span>
+                    <a class="a why-we__list_a" href="#">Удобная система оценок</a>
+                </li>
+            </ul>
+            <img class="why-we__phone" src="img/why-we-mobi.svg" alt="">
+        </div>
+
+
+
+        <div class="make-and-settings" id="make-and-settings">
+            <div class="make">
+                <div class="description">
+                    <h3 class="make__head-text head-text">Простота&nbsp;создания</h3>
+                    <p class="description-text">
+                        В My Diary есть подсказки 
+                        с названиями предметов
+                        для ускорения процесса 
+                        создания расписания
+                    </p>
+                </div>
+                <object type="image/svg+xml" data="picture.svg">
+                    <!-- todo: put the img -->
+                    <img class="main-phone" src="img/mainPhone.svg" alt="">
+                </object>
+            </div>
+            <div class="settings">
+                <div class="description settings__description">
+                    <h3 class="settings__head-text head-text">Настройте&nbsp;под&nbsp;себя</h3>
+                    <p class="description-text">
+                        Благодаря гибким 
+                        настройкам Вы сможете
+                        сделать дневник 
+                        по своему вкусу
+                    </p>
+                </div>
+                <object class="settings__img" type="image/svg+xml" data="picture.svg">
+                    <img class="settings__img-triangle" src="img/settings-triangle.svg" alt="">
+                    <img class="settings__img-phone" src="img/settings.svg" alt="">
+                </object>
+            </div>
+        </div>
+
+        
+
+        <div class="interface" id="interface">
+            <h3 class="interface__head-text head-text">Практичный&nbsp;интерфейс</h3>
+            <ul class="interface__features">
+                <li>
+                    <object class="feature__img" data="picture.svg" type="image/svg+xml">
+                        <img src="img/design-feat.svg" alt="">
+                    </object>
+                    <p class="feature__visible-text">Интуитивный дизайн дневника очень прост <br> в освоении...</p>
+                    <button class="feature__btn_more"><i class="fas fa-chevron-down"></i></button>
+                    <p class="feature__hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+                </li >
+
+                <li>
+                    <object class="diary-img feature__img" data="picture.svg" type="image/svg+xml">
+                        <img src="img/diary-feat.svg" alt="">
+                    </object>
+                    <p class="feature__visible-text">Значительные преимущества в сравнении с бумажным дневником...</p>
+                    <button class="feature__btn_more"><i class="fas fa-chevron-down"></i></button>
+                    <p class="feature__hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+                </li>
+
+                <li>
+                    <object class="list-img feature__img" data="picture.svg" type="image/svg+xml">
+                        <img src="img/list-feat.svg" alt="">
+                    </object>
+                    <p class="feature__visible-text feature__text_more-right">Заметная сортировка сделанной домашней работы...</p>
+                    <button class="feature__btn_more"><i class="fas fa-chevron-down"></i></button>
+                    <p class="feature__hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+                </li>
+
+                <li>
+                    <object class="watch-img feature__img" data="picture.svg" type="image/svg+xml">
+                        <img src="img/watch-feat.svg" alt="">
+                    </object>
+                    <p class="feature__visible-text feature__text_more-right-and-down">Понятный внешний вид структуры расписания дневника...</p>
+                    <button class="feature__btn_more"><i class="fas fa-chevron-down"></i></button>
+                    <p class="feature__hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+                </li>
+            </ul>
+        </div>
+        
+
+        
+        <!-- todo: possibilities-->
+    </main>
+    
+
+    <footer>
+        <section class="communication" id="communication">
+            <div class="communication__write-menu">
+                <h4 class="communication__head-text">Связаться с нами</h4>
+                <p>Если заметите ошибки в работе приложения, сообщите нам при помощи формы ниже</p>
+                <form action="send.php" method="post">
+                    <input type="email" class="communication__input_text user-email" name="email" required placeholder="Email"><br>
+                    <br><textarea rows="5" class="communication__input_text user-message" name="message" placeholder="Ваше сообщение"></textarea><br>
+                    <input type="submit" name="submit" class="communication__btn_send-message" value="Отправить">
+                </form>
+            </div>
+
+            <div class="communication__write-us">
+                <h5 class="write-us_text">Напишите нам</h5>
+                <ul class="write-us__media-list">
+                    <li class="write-us__media-link link-2">
+                        <a class="a" href="https://www.instagram.com/moondayj/" target="_blank"> 
+                            <i class="fab fa-instagram"></i> 
+                            moondayj 
+                        </a> 
+                    </li>
+
+                    <li class="write-us__media-link link-3">
+                        <a class="a" href="https://vk.com/moon_mydiary" target="_blank"> 
+                            <i class="fab fa-vk"></i> 
+                            moon_mydiary 
+                        </a> 
+                    </li>
+
+                    <li class="write-us__media-link link-1"> <!-- такая нумерация для десктопов -->
+                            <i class="fas fa-at"></i> 
+                            andanonil253@gmail.com
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <img class="not-triangle" src="img/not-triangle-communication.png" alt="">
+        <div class="footer__bottom">
+            <a class="a" href="https://play.google.com/store/apps/details?class=moonproject.mydiary" target="_blank">
+                <img class="my-diary_logo" src="img/logo.svg" alt="">
+                <strong>My diary</strong>
+            </a>
+            <a class="a"  href="https://play.google.com/store/apps/dev?class=5961568897601928199"  target="_blank">
+                <span>Moon Production</span>
+                <img class="footer__moon" src="img/Moon.svg" alt="">
+            </a>
+            <span class="footer__bottom_media">
+                <a class="a footer__bottom_vk" href="https://vk.com/moon_mydiary" target="_blank"> <img src="img/vk.svg" alt=""> </a>
+                <a class="a footer__bottom_google-play" href="https://play.google.com/store/apps/details?class=moonproject.mydia" target="_blank"> <img src="img/google-play.svg" alt=""> </a>
+            </span>
+        </div>
+    </footer>
+
+</body>
+</html>

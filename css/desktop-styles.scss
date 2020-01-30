@@ -1,0 +1,308 @@
+
+@media (min-width: 993px) {
+    .desktop {
+        display: block;
+    }     
+    :root {
+        font-size: 27px;
+    }
+    img.main-phone {
+        width: 5.75rem;
+        height: 12.5rem;
+        max-width: 275px;
+        max-height: 600px;
+        z-index: 1;
+    }
+    .hamburger {
+        padding: 0.9rem 0.5rem;
+        background-image: url(../img/hamburger-background.svg);
+        background-size: cover;
+    }
+    
+    /* body { 
+        background-image: url(../img/triangle-desktop.svg);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 19rem 34.2rem;
+    } */
+
+    div.head-screen {
+        margin-left: 12vw;
+        margin-top: 3rem;
+        .head-screen__h1 {
+            font-size: 3.4rem;
+        }
+        .head-screen__h4 {
+            font-size: 1.25rem;
+            margin-left: -0.75rem;
+        }
+        div.head-screen__phones {
+            position: absolute;
+            display: flex;
+            right: 1.5rem;
+            top: 2rem;
+            .desktop img {
+                width: 4.6625rem;
+                margin-top: 6rem;
+                margin-right: 1.5rem;
+            }
+        }
+        .head-screen__download-button {
+            margin-top: 3.4rem;
+        }
+    }
+
+
+    div.why-we {
+        margin-left: 5rem;
+        .why-we__list {
+            margin-left: -4.2rem;
+            margin-top: 3.3rem;
+            grid-template-columns: 14rem 14rem;
+            a.why-we__list_a {
+                font-size: 1rem;
+            }
+        }
+        .why-we__phone {
+            visibility: hidden;
+            top: 28.85rem;
+            max-width: 6rem;
+        }
+    }
+
+
+
+    div.make-and-settings {
+        overflow: hidden;
+        margin-top: 5rem;
+        padding-top: 1rem;
+        grid-template-columns: 1fr 1fr;
+        div.description {
+            p.description-text {
+                margin-top: 0.5rem;
+                width: 17rem;
+                font-size: 0.75rem;
+                line-height: 1.2rem;
+            }
+        }
+        .make::after, .settings::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 2.5rem;
+            left: 50vw;
+            height: 7.5rem;
+            border: 1.5px solid #795547;
+        }
+        .settings::after {
+            top: 13rem;
+        }
+        .settings::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 11.3333rem;
+            left: calc(50vw - 3.5px);
+            height: 10px;
+            width: 10px;
+            background-color: #795547;
+            transform: rotate(45deg);
+        }
+
+        div.settings {
+            flex-direction: column-reverse;
+            margin-left: -0.35rem;
+            .settings__description {
+                display: block;
+                position: absolute;
+                bottom: 3.5rem;
+                margin-bottom: 0;
+                .description-text {
+                    margin-top: -0.75rem;
+                }
+            }
+            .settings__img {
+                bottom: 10.3rem;
+                left: -2rem;
+                img.settings__img-phone {
+                    left: 10rem;
+                    top: 7.5rem;
+                    width: 5.3rem;
+                }
+                img.settings__img-triangle {
+                    width: 17.3rem;
+                }
+            }
+        }
+    }
+
+
+
+    main .interface {
+        margin-top: 9rem;
+        .interface__head-text {
+            position: relative;
+            left: 13rem;
+            top: -6.5rem;
+        }
+        .interface__features {
+            margin-top: -5.5rem;
+            margin-left: 0;
+            grid-template-columns: repeat(4, 6.25rem);
+            grid-template-rows: repeat(1, 10.417rem);
+            font-size: 0.615rem;
+            grid-column-gap: 2rem;
+        }
+    }
+
+    main .interface::before {
+        margin-left: 0;
+        left: -7.25rem;
+        z-index: -1;
+        height: 30.9rem;
+        width: 27.4rem;
+        background-size: 30.9rem 27.4rem;
+    }
+
+
+    footer {
+        .communication {
+            margin-top: 4.94rem;
+            width: 30.3rem;
+            grid-template-columns: 1fr 1fr;
+            .communication__head-text {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 0.5rem;
+                padding: 0;
+                margin: -1.5rem 0 1rem 2.5rem;
+                width: 12rem;
+            }
+            form {
+                border: none;
+                .communication__btn_send-message {
+                    width: 5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+        .communication__write-us {
+            .write-us_text {
+                margin: 1rem 0 0 1.5rem;
+                font-size: 1.1rem;
+            }
+            .write-us__media-list {
+                flex-direction: column-reverse;
+                font-size: 0.8rem;
+                @for $i from 1 through 3 {
+                    .link-#{$i} { 
+                        margin-left: 1.5rem * $i;
+                        order: -$i;
+                    }
+                }
+                .write-us__media-link {
+                    margin-top: 1.735rem;
+                }
+            }
+        }
+        .not-triangle {
+            width: 21.6rem;
+            height: 18.75rem;
+            top: 2rem;
+            left: 6.5rem;
+            right: auto;
+        }
+    }
+
+    footer::after {
+        border-top: 38.49vw solid white;
+        border-left: 60vw solid transparent;
+    }
+    footer::before {
+        border-top: 27vw solid white;
+        border-right: 50vw solid transparent;
+    }
+    footer .footer__bottom .footer__bottom_media .footer__bottom_vk, .footer__bottom_google-play {
+        img {
+        height: 1rem;
+        }
+    }
+}
+
+
+@media (min-width: 1160px) {
+    :root {
+        font-size: 30px;
+    }
+    .hamburger {
+        padding: 0.85rem 0.5rem;
+    }
+    div.make-and-settings div.settings .settings__description {
+        bottom: 2.5rem;
+    }
+    div.make-and-settings div.settings .settings__img {
+        bottom: 11rem;
+    }
+}
+@media (min-width: 1280px) {
+    :root {
+        font-size: 32.5px;
+    }
+    .hamburger {
+        padding: 0.8rem 0.5rem;
+    }
+    div.make-and-settings div.settings .settings__img {
+        bottom: 12.5rem;
+    }
+}
+@media (min-width: 1360px) {
+    :root {
+        font-size: 35px;
+    }
+    div.make-and-settings div.settings .settings__img {
+        bottom: 13.5rem;
+    }
+}
+@media (min-width: 1439px) {
+    :root {
+        font-size: 38px;
+    }
+    .hamburger {
+        padding: 0.8rem 0.55rem;
+    }
+    div.why-we {
+        margin-top: 22vh;
+    }
+    div.make-and-settings div.settings .settings__img {
+        bottom: 14.5rem;
+    }
+}
+@media (min-width: 1599px) {
+    :root {
+        font-size: 42px;
+    }
+    .hamburger {
+        padding: 0.9rem 0.65rem;
+    }
+    div.why-we {
+        margin-top: 18vh;
+    }
+    div.make-and-settings div.settings .settings__img {
+        bottom: 16.5rem;
+    }
+}
+@media (min-width: 1919px) {
+    :root {
+        font-size: 48px;
+    }
+    .hamburger {
+        padding: 0.8rem 0.6rem;
+    }
+    div.why-we {
+        margin-top: 18vh;
+    }
+    div.make-and-settings div.settings .settings__img {
+        bottom: 18.5rem;
+    }
+}
