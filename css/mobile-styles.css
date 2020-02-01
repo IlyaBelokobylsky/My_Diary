@@ -157,10 +157,10 @@ main .head-screen .head-screen__download-button {
   border-radius: 2rem;
   font-weight: 900;
   font-size: 1.33rem;
-  -webkit-transition: -webkit-transform 0.15s;
-  transition: -webkit-transform 0.15s;
-  transition: transform 0.15s;
-  transition: transform 0.15s, -webkit-transform 0.15s;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 main .head-screen .head-screen__download-button:hover {
@@ -608,10 +608,10 @@ footer .communication form .communication__btn_send-message {
           box-shadow: 0px 0px 0.33rem rgba(0, 0, 0, 0.3);
   border-radius: 0.33rem;
   font-size: 0.5rem;
-  -webkit-transition: -webkit-transform 0.15s;
-  transition: -webkit-transform 0.15s;
-  transition: transform 0.15s;
-  transition: transform 0.15s, -webkit-transform 0.15s;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 footer .communication form .communication__btn_send-message:hover {
