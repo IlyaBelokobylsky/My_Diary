@@ -26,7 +26,8 @@
 .hamburger {
    top: 10px; 
    left: 10px;
-   position: absolute;
+   position: fixed;
+   z-index: 999;
 }
 .desktop {
    display: none;

@@ -107,19 +107,19 @@
     content: '';
     display: block;
     position: absolute;
-    top: 2.5rem;
+    top: 1.5rem;
     left: 48.5vw;
     height: 7.5rem;
     border: 1.5px solid #795547;
   }
   div.make-and-settings .settings::after {
-    top: 13rem;
+    top: 12rem;
   }
   div.make-and-settings .settings::before {
     content: '';
     display: block;
     position: absolute;
-    top: 11.325rem;
+    top: 10.325rem;
     left: calc(48.5vw - 3.58px);
     height: 10px;
     width: 10px;
@@ -168,8 +168,8 @@
     margin-left: 0;
     -ms-grid-columns: (6.25rem)[4];
         grid-template-columns: repeat(4, 6.25rem);
-    -ms-grid-rows: (10.417rem)[1];
-        grid-template-rows: repeat(1, 10.417rem);
+    -ms-grid-rows: 10.417rem;
+        grid-template-rows: 10.417rem;
     font-size: 0.615rem;
     grid-column-gap: 2rem;
   }
@@ -288,6 +288,13 @@
   div.make-and-settings div.settings .settings__img {
     bottom: 12.5rem;
   }
+  div.make-and-settings .make::after,
+  div.make-and-settings .settings::after {
+    left: 50vw;
+  }
+  div.make-and-settings .settings::before {
+    left: calc(50vw - 3.58px);
+  }
 }
 
 @media (min-width: 1360px) {
@@ -312,6 +319,13 @@
   div.make-and-settings div.settings .settings__img {
     bottom: 14.5rem;
   }
+  div.make-and-settings .make::after,
+  div.make-and-settings .settings::after {
+    left: 50vw;
+  }
+  div.make-and-settings .settings::before {
+    left: calc(50vw - 3.58px);
+  }
 }
 
 @media (min-width: 1599px) {
@@ -330,6 +344,13 @@
 }
 
 @media (min-width: 1800px) {
+  div.make-and-settings .make::after,
+  div.make-and-settings .settings::after {
+    left: 49vw;
+  }
+  div.make-and-settings .settings::before {
+    left: calc(49vw - 3.58px);
+  }
   footer .communication img.not-triangle {
     left: 3.5rem;
   }
