@@ -479,11 +479,11 @@ footer .communication {
   width: 16.67rem;
   position: relative;
   margin: 0 auto;
+  z-index: 1;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  z-index: 10;
 }
 
 footer .communication .communication__head-text {
@@ -511,6 +511,7 @@ footer .communication form {
           align-items: center;
   width: 16.6rem;
   border-bottom: 1px solid #dbdbdb;
+  position: relative;
 }
 
 footer .communication form .communication__input_text {
@@ -642,7 +643,7 @@ footer .not-triangle {
   width: 18.7rem;
   height: 16.2rem;
   position: absolute;
-  z-index: 20;
+  z-index: 2;
   top: 15.9rem;
   right: 0.5rem;
 }
@@ -681,7 +682,7 @@ footer .footer__bottom .footer__bottom_media {
   display: flex;
   position: absolute;
   right: 0.5rem;
-  bottom: -0.4rem;
+  bottom: -0.45rem;
 }
 
 footer .footer__bottom .footer__bottom_media .footer__bottom_vk, footer .footer__bottom .footer__bottom_media .footer__bottom_google-play {
@@ -809,6 +810,9 @@ footer::before {
   main > .why-we > img.why-we__phone {
     top: 145vh;
     max-width: 85px;
+  }
+  main .make-and-settings .settings .settings__img {
+    margin-top: 100px;
   }
   main > div.interface {
     margin-top: 8rem;
