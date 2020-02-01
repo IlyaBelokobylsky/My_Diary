@@ -518,6 +518,7 @@ footer .communication form .communication__input_text {
   padding: 0.5rem;
   width: 13.33rem;
   border-radius: 0.3rem;
+  z-index: 1;
   font-size: 0.5rem;
   border: 1px solid #dbdbdb;
 }
@@ -585,6 +586,7 @@ footer .communication form .communication__btn_send-message {
   background-color: white;
   border: 2px solid #795547;
   cursor: pointer;
+  z-index: 1;
   width: 6.5rem;
   height: 2rem;
   -webkit-box-shadow: 0px 0px 0.33rem rgba(0, 0, 0, 0.3);
@@ -679,7 +681,7 @@ footer .footer__bottom .footer__bottom_media {
   display: flex;
   position: absolute;
   right: 0.5rem;
-  bottom: -0.5rem;
+  bottom: -0.4rem;
 }
 
 footer .footer__bottom .footer__bottom_media .footer__bottom_vk, footer .footer__bottom .footer__bottom_media .footer__bottom_google-play {

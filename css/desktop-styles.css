@@ -114,7 +114,7 @@
     display: block;
     position: absolute;
     top: 2.5rem;
-    left: 50vw;
+    left: 48.5vw;
     height: 7.5rem;
     border: 1.5px solid #795547;
   }
@@ -125,8 +125,8 @@
     content: '';
     display: block;
     position: absolute;
-    top: 11.3333rem;
-    left: calc(50vw - 3.5px);
+    top: 11.325rem;
+    left: calc(48.5vw - 3.58px);
     height: 10px;
     width: 10px;
     background-color: #795547;
@@ -189,7 +189,7 @@
   }
   footer .communication {
     margin-top: 4.94rem;
-    width: 30.3rem;
+    width: 32rem;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
@@ -208,6 +208,9 @@
   footer .communication form .communication__btn_send-message {
     width: 5rem;
     height: 1.5rem;
+  }
+  footer .communication__write-us {
+    margin-left: 1.6rem;
   }
   footer .communication__write-us .write-us_text {
     margin: 1rem 0 0 1.5rem;
@@ -245,7 +248,7 @@
     width: 21.6rem;
     height: 18.75rem;
     top: 2rem;
-    left: 6.5rem;
+    left: 7rem;
     right: auto;
   }
   footer::after {
@@ -282,6 +285,9 @@
   }
   .hamburger {
     padding: 0.8rem 0.5rem;
+  }
+  div.make-and-settings div.settings {
+    margin-left: 0.4rem;
   }
   div.make-and-settings div.settings .settings__img {
     bottom: 12.5rem;
@@ -327,6 +333,12 @@
   }
 }
 
+@media (min-width: 1800px) {
+  footer img.not-triangle {
+    left: 8rem;
+  }
+}
+
 @media (min-width: 1919px) {
   :root {
     font-size: 48px;
@@ -339,6 +351,9 @@
   }
   div.make-and-settings div.settings .settings__img {
     bottom: 18.5rem;
+  }
+  footer .not-triangle {
+    left: 7rem;
   }
 }
 /*# sourceMappingURL=desktop-styles.css.map */
