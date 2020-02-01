@@ -18,13 +18,42 @@
         background-image: url(../img/hamburger-background.svg);
         background-size: cover;
     }
-    
+
     /* body { 
         background-image: url(../img/triangle-desktop.svg);
         background-position: top right;
         background-repeat: no-repeat;
         background-size: 19rem 34.2rem;
     } */
+    .triangle-desktop {
+        height: 35.23rem;
+        width: 20.27rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background: linear-gradient(90deg, #7FC7C6 0.91%, #7FC7C6 0.92%, #298181 100.57%);
+        box-shadow: 15px 0 5px -5px #fff inset;
+    }
+    .triangle-desktop::after, .triangle-desktop::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+    }
+    .triangle-desktop::before {
+        top: 0;
+        border-left: 12rem solid white;
+        border-bottom: 16.8rem solid transparent;
+    }
+    
+    .triangle-desktop::after {
+        bottom: 0;
+        border-left: 20.27rem solid white;
+        border-top: 20rem solid transparent;
+    }
+
 
     div.head-screen {
         margin-left: 12vw;
@@ -43,7 +72,7 @@
             top: 2rem;
             .desktop img {
                 width: 4.6625rem;
-                margin-top: 6rem;
+                margin-top: 5.5rem;
                 margin-right: 1.5rem;
             }
         }
