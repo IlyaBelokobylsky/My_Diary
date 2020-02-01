@@ -39,12 +39,12 @@
   .triangle-desktop::before {
     top: 0;
     border-left: 12rem solid white;
-    border-bottom: 17.5rem solid transparent;
+    border-bottom: 17.3rem solid transparent;
   }
   .triangle-desktop::after {
     bottom: 0;
     border-left: 20.27rem solid white;
-    border-top: 18.7rem solid transparent;
+    border-top: 18.95rem solid transparent;
   }
   div.head-screen {
     margin-left: 12vw;
