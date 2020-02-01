@@ -27,6 +27,7 @@
   left: 10px;
   position: fixed;
   z-index: 999;
+  cursor: pointer;
 }
 
 .desktop {
@@ -156,6 +157,10 @@ main .head-screen .head-screen__download-button {
   border-radius: 2rem;
   font-weight: 900;
   font-size: 1.33rem;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 main .head-screen .head-screen__download-button:hover {
@@ -490,6 +495,11 @@ footer .communication {
           flex-direction: column;
 }
 
+footer .communication .communication__write-menu {
+  position: relative;
+  z-index: 999;
+}
+
 footer .communication .communication__head-text {
   font-size: 1.6rem;
   margin-top: 0.57rem;
@@ -598,15 +608,18 @@ footer .communication form .communication__btn_send-message {
           box-shadow: 0px 0px 0.33rem rgba(0, 0, 0, 0.3);
   border-radius: 0.33rem;
   font-size: 0.5rem;
-  resize: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 footer .communication form .communication__btn_send-message:hover {
   background-color: #795547;
   border: none;
   color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
 }
 
 footer .communication form .communication__btn_send-message:focus {
@@ -614,8 +627,8 @@ footer .communication form .communication__btn_send-message:focus {
 }
 
 footer .communication form .communication__btn_send-message:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(0.975);
+          transform: scale(0.975);
 }
 
 footer .communication .not-triangle {
