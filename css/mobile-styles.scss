@@ -140,7 +140,7 @@ main {
          border-radius: 2rem;
          font-weight: 900;
          font-size: 1.33rem;
-         transition: transform 0.2s;
+         transition: transform 0.15s;
       }
       .head-screen__download-button:hover {
          transform: scale(1.025);
@@ -477,7 +477,7 @@ footer {
             box-shadow: 0px 0px 0.33rem rgba(0, 0, 0, 0.3);
             border-radius: 0.33rem;
             font-size: 0.5rem;
-            transition: transform 0.2s;
+            transition: transform 0.15s;
          }
          .communication__btn_send-message:hover {
             background-color: #795547;
