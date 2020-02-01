@@ -269,7 +269,7 @@ main {
 
    
    .interface {
-      margin-top: 22.5rem;
+      margin-top: 23rem;
       margin-left: 1rem;
       position: relative;
       .interface__head-text {
@@ -348,7 +348,7 @@ main {
             }
 
             .feature__visible-text {
-               margin-top: 7.75em;
+               margin-top: 8em;
                margin-bottom: 2.3em;
                margin-left: 1.6em;
                width: 7.85em;
@@ -362,7 +362,7 @@ main {
                margin-left: 2em;
             }
             .feature__text_more-right-and-down {
-               margin-top: 8.15em;
+               margin-top: 8.45em;
             }
             .feature__hidden-text {
                display: none;
@@ -389,7 +389,7 @@ main {
       position: absolute;
       background-image: url(../img/hexs.svg);
       background-repeat: no-repeat;
-      top: -25rem;
+      top: -25.5rem;
       left: -10rem;
       height: 35rem;
       width: 31rem;
@@ -412,8 +412,8 @@ footer {
       position: relative;
       margin: 0 auto;
       z-index: 1;
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       .communication__head-text {
          font-size: 1.6rem;
          margin-top: 0.57rem;
@@ -486,7 +486,20 @@ footer {
          }
       }
 
+      .not-triangle {
+         display: block;
+         width: 18.7rem;
+         height: 16.2rem;
+         position: absolute;
+         z-index: 2;
+         top: 15.85rem;
+         right: -3.333rem;
+      }
 
+      .communication__write-us {
+         position: relative;
+         z-index: 999;
+      }
       .write-us_text {
          font-size: 1.4rem;
          margin: 2.5rem 0 0 1rem;
@@ -503,17 +516,7 @@ footer {
          }
       }
    }
-
-   .not-triangle {
-      display: block;
-      width: 18.7rem;
-      height: 16.2rem;
-      position: absolute;
-      z-index: 2;
-      top: 15.9rem;
-      right: 0.5rem;
-   }
-
+   
 
    .footer__bottom {
       position: relative;
@@ -683,6 +686,7 @@ footer::before {
       margin-top: 8rem;
    }
    footer .footer__bottom span.footer__bottom_media {
+      bottom: -0.38rem;
       .footer__bottom_vk, .footer__bottom_google-play {
          transform: scale(0.6);
          padding: 0;

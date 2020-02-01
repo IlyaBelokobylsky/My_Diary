@@ -306,7 +306,7 @@ main .make-and-settings .settings .settings__img .settings__img-triangle {
 }
 
 main .interface {
-  margin-top: 22.5rem;
+  margin-top: 23rem;
   margin-left: 1rem;
   position: relative;
 }
@@ -412,7 +412,7 @@ main .interface .interface__features li .watch-img::after {
 }
 
 main .interface .interface__features li .feature__visible-text {
-  margin-top: 7.75em;
+  margin-top: 8em;
   margin-bottom: 2.3em;
   margin-left: 1.6em;
   width: 7.85em;
@@ -428,7 +428,7 @@ main .interface .interface__features li .feature__text_more-right, main .interfa
 }
 
 main .interface .interface__features li .feature__text_more-right-and-down {
-  margin-top: 8.15em;
+  margin-top: 8.45em;
 }
 
 main .interface .interface__features li .feature__hidden-text {
@@ -456,7 +456,7 @@ main .interface::before {
   position: absolute;
   background-image: url(../img/hexs.svg);
   background-repeat: no-repeat;
-  top: -25rem;
+  top: -25.5rem;
   left: -10rem;
   height: 35rem;
   width: 31rem;
@@ -480,10 +480,13 @@ footer .communication {
   position: relative;
   margin: 0 auto;
   z-index: 1;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer .communication .communication__head-text {
@@ -614,6 +617,21 @@ footer .communication form .communication__btn_send-message:active {
           transform: scale(0.9);
 }
 
+footer .communication .not-triangle {
+  display: block;
+  width: 18.7rem;
+  height: 16.2rem;
+  position: absolute;
+  z-index: 2;
+  top: 15.85rem;
+  right: -3.333rem;
+}
+
+footer .communication .communication__write-us {
+  position: relative;
+  z-index: 999;
+}
+
 footer .communication .write-us_text {
   font-size: 1.4rem;
   margin: 2.5rem 0 0 1rem;
@@ -636,16 +654,6 @@ footer .communication .write-us__media-list .write-us__media-link {
 
 footer .communication .write-us__media-list .write-us__media-link a {
   padding-top: 1.5rem;
-}
-
-footer .not-triangle {
-  display: block;
-  width: 18.7rem;
-  height: 16.2rem;
-  position: absolute;
-  z-index: 2;
-  top: 15.9rem;
-  right: 0.5rem;
 }
 
 footer .footer__bottom {
@@ -816,6 +824,9 @@ footer::before {
   }
   main > div.interface {
     margin-top: 8rem;
+  }
+  footer .footer__bottom span.footer__bottom_media {
+    bottom: -0.38rem;
   }
   footer .footer__bottom span.footer__bottom_media .footer__bottom_vk, footer .footer__bottom span.footer__bottom_media .footer__bottom_google-play {
     -webkit-transform: scale(0.6);

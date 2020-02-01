@@ -17,12 +17,6 @@
     background-image: url(../img/hamburger-background.svg);
     background-size: cover;
   }
-  /* body { 
-        background-image: url(../img/triangle-desktop.svg);
-        background-position: top right;
-        background-repeat: no-repeat;
-        background-size: 19rem 34.2rem;
-    } */
   .triangle-desktop {
     height: 35.23rem;
     width: 20.27rem;
@@ -45,16 +39,16 @@
   .triangle-desktop::before {
     top: 0;
     border-left: 12rem solid white;
-    border-bottom: 16.8rem solid transparent;
+    border-bottom: 17.5rem solid transparent;
   }
   .triangle-desktop::after {
     bottom: 0;
     border-left: 20.27rem solid white;
-    border-top: 20rem solid transparent;
+    border-top: 18.7rem solid transparent;
   }
   div.head-screen {
     margin-left: 12vw;
-    margin-top: 4.25rem;
+    margin-top: 4rem;
   }
   div.head-screen .head-screen__h1 {
     font-size: 3.4rem;
@@ -190,8 +184,10 @@
   footer .communication {
     margin-top: 4.94rem;
     width: 32rem;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   footer .communication .communication__head-text {
     font-size: 1.5rem;
@@ -209,47 +205,47 @@
     width: 5rem;
     height: 1.5rem;
   }
-  footer .communication__write-us {
+  footer .communication .not-triangle {
+    width: 21.6rem;
+    height: 18.75rem;
+    top: -2.965rem;
+    left: 2rem;
+    right: auto;
+  }
+  footer .communication .communication__write-us {
     margin-left: 1.6rem;
   }
-  footer .communication__write-us .write-us_text {
+  footer .communication .communication__write-us .write-us_text {
     margin: 1rem 0 0 1.5rem;
     font-size: 1.1rem;
   }
-  footer .communication__write-us .write-us__media-list {
+  footer .communication .communication__write-us .write-us__media-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     font-size: 0.8rem;
   }
-  footer .communication__write-us .write-us__media-list .link-1 {
+  footer .communication .communication__write-us .write-us__media-list .link-1 {
     margin-left: 1.5rem;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
   }
-  footer .communication__write-us .write-us__media-list .link-2 {
+  footer .communication .communication__write-us .write-us__media-list .link-2 {
     margin-left: 3rem;
     -webkit-box-ordinal-group: -1;
         -ms-flex-order: -2;
             order: -2;
   }
-  footer .communication__write-us .write-us__media-list .link-3 {
+  footer .communication .communication__write-us .write-us__media-list .link-3 {
     margin-left: 4.5rem;
     -webkit-box-ordinal-group: -2;
         -ms-flex-order: -3;
             order: -3;
   }
-  footer .communication__write-us .write-us__media-list .write-us__media-link {
+  footer .communication .communication__write-us .write-us__media-list .write-us__media-link {
     margin-top: 1.735rem;
-  }
-  footer .not-triangle {
-    width: 21.6rem;
-    height: 18.75rem;
-    top: 2rem;
-    left: 7rem;
-    right: auto;
   }
   footer::after {
     border-top: 38.49vw solid white;
@@ -334,8 +330,8 @@
 }
 
 @media (min-width: 1800px) {
-  footer img.not-triangle {
-    left: 8rem;
+  footer .communication img.not-triangle {
+    left: 3.5rem;
   }
 }
 
@@ -352,7 +348,7 @@
   div.make-and-settings div.settings .settings__img {
     bottom: 18.5rem;
   }
-  footer .not-triangle {
+  footer .communication img.not-triangle {
     left: 7rem;
   }
 }

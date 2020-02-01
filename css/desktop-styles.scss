@@ -18,13 +18,6 @@
         background-image: url(../img/hamburger-background.svg);
         background-size: cover;
     }
-
-    /* body { 
-        background-image: url(../img/triangle-desktop.svg);
-        background-position: top right;
-        background-repeat: no-repeat;
-        background-size: 19rem 34.2rem;
-    } */
     .triangle-desktop {
         height: 35.23rem;
         width: 20.27rem;
@@ -45,19 +38,19 @@
     .triangle-desktop::before {
         top: 0;
         border-left: 12rem solid white;
-        border-bottom: 16.8rem solid transparent;
+        border-bottom: 17.5rem solid transparent;
     }
     
     .triangle-desktop::after {
         bottom: 0;
         border-left: 20.27rem solid white;
-        border-top: 20rem solid transparent;
+        border-top: 18.7rem solid transparent;
     }
 
 
     div.head-screen {
         margin-left: 12vw;
-        margin-top: 4.25rem;
+        margin-top: 4rem;
         .head-screen__h1 {
             font-size: 3.4rem;
         }
@@ -198,7 +191,7 @@
         .communication {
             margin-top: 4.94rem;
             width: 32rem;
-            grid-template-columns: 1fr 1fr;
+            flex-direction: row;
             .communication__head-text {
                 font-size: 1.5rem;
             }
@@ -215,33 +208,33 @@
                     height: 1.5rem;
                 }
             }
-        }
-        .communication__write-us {
-            margin-left: 1.6rem;
-            .write-us_text {
-                margin: 1rem 0 0 1.5rem;
-                font-size: 1.1rem;
+            .not-triangle {
+                width: 21.6rem;
+                height: 18.75rem;
+                top: -2.965rem;
+                left: 2rem;
+                right: auto;
             }
-            .write-us__media-list {
-                flex-direction: column-reverse;
-                font-size: 0.8rem;
-                @for $i from 1 through 3 {
-                    .link-#{$i} { 
-                        margin-left: 1.5rem * $i;
-                        order: -$i;
+            .communication__write-us {
+                margin-left: 1.6rem;
+                .write-us_text {
+                    margin: 1rem 0 0 1.5rem;
+                    font-size: 1.1rem;
+                }
+                .write-us__media-list {
+                    flex-direction: column-reverse;
+                    font-size: 0.8rem;
+                    @for $i from 1 through 3 {
+                        .link-#{$i} { 
+                            margin-left: 1.5rem * $i;
+                            order: -$i;
+                        }
+                    }
+                    .write-us__media-link {
+                        margin-top: 1.735rem;
                     }
                 }
-                .write-us__media-link {
-                    margin-top: 1.735rem;
-                }
             }
-        }
-        .not-triangle {
-            width: 21.6rem;
-            height: 18.75rem;
-            top: 2rem;
-            left: 7rem;
-            right: auto;
         }
     }
 
@@ -327,8 +320,8 @@
     
 }
 @media (min-width: 1800px) {
-    footer img.not-triangle {
-        left: 8rem;
+    footer .communication img.not-triangle {
+        left: 3.5rem;
     }
 }
 @media (min-width: 1919px) {
@@ -344,7 +337,7 @@
     div.make-and-settings div.settings .settings__img {
         bottom: 18.5rem;
     }
-    footer .not-triangle {
+    footer .communication img.not-triangle {
         left: 7rem;
     }
 }
