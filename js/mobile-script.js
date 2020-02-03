@@ -9,10 +9,9 @@ menu.addEventListener('click', function () {
 
 function scrollToElem(target) {
     let elemTo = document.querySelector('#' + target.dataset.link);
-    elemTo.classList.contains('interface') // для более корректной работы
-    || elemTo.classList.contains('communication') ?
-    elemTo.scrollIntoView({ behavior: 'smooth', block: 'end' }) :
-    elemTo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    elemTo.classList.contains('make-and-settings') ?// для более корректной работы 
+    elemTo.scrollIntoView({ behavior: 'smooth', block: 'start' }) :
+    elemTo.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
 header.addEventListener('click', function (event) {
@@ -75,7 +74,10 @@ header.addEventListener('click', function (event) {
         }
 
         scrollToElem(target);
-
+        setTimeout(() => {
+            menu.classList.toggle('menu-clicked');
+            header.classList.toggle('header-visible');
+        }, 1000);
     }
 });
 

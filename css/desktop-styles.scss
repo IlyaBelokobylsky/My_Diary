@@ -34,6 +34,7 @@
         margin-top: 0.6575rem;
         margin-left: 0.6rem;
     }
+
     .triangle-desktop {
         height: 35.23rem;
         width: 20.4rem;
@@ -179,7 +180,7 @@
             p.description-text {
                 margin-top: 0.5rem;
                 width: 17rem;
-                font-size: 0.75rem;
+                font-size: 0.7rem;
                 line-height: 1.2rem;
             }
         }
@@ -359,7 +360,7 @@
         margin-left: 0.4rem;
     }
     div.make-and-settings div.settings .settings__img {
-        bottom: 12.5rem;
+        bottom: 12rem;
     }
     div.make-and-settings .make::after,
     div.make-and-settings .settings::after {
@@ -374,7 +375,7 @@
         font-size: 35px;
     }
     div.make-and-settings div.settings .settings__img {
-        bottom: 13.5rem;
+        bottom: 13rem;
     }
 }
 @media (min-width: 1439px) {
@@ -388,7 +389,7 @@
         margin-top: 22vh;
     }
     div.make-and-settings div.settings .settings__img {
-        bottom: 14.5rem;
+        bottom: 14rem;
     }
     div.make-and-settings .make::after,
     div.make-and-settings .settings::after {
@@ -409,7 +410,7 @@
         margin-top: 18vh;
     }
     div.make-and-settings div.settings .settings__img {
-        bottom: 16.5rem;
+        bottom: 16rem;
     }
     
 }
@@ -436,7 +437,7 @@
         margin-top: 18vh;
     }
     div.make-and-settings div.settings .settings__img {
-        bottom: 18.5rem;
+        bottom: 17rem;
     }
     footer .communication img.not-triangle {
         left: 7rem;
