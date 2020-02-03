@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Diary</title>
+    <title>MyDiary</title>
     <link rel="stylesheet" href="css/normolize.css">
     <link rel="stylesheet" href="css/mobile-styles.css">
     <link rel="stylesheet" href="css/desktop-styles.css">
     <script src="https://kit.fontawesome.com/071a28e8c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <img class="hamburger" src="img/hamburger.svg" alt="menu">
-    <div class="desktop triangle-desktop"></div>
+    <button class="hamburger">
+        <span class="hamburger__line_first"></span>
+        <span class="hamburger__line_second"></span>
+        <span class="hamburger__line_third"></span>
+    </button>
+    
     <header>
+        <a class="a header__head" href="https://play.google.com/store/apps/details?class=moonproject.mydiary">
+            <img class="my-diary_logo header_logo" src="img/logo.svg" alt="">
+            <strong>MyDiary</strong>
+        </a>
         <nav>
-            <a class="a" href="#head-screen">Попробуйте <strong>My Diary</strong></a>
-            <a class="a" href="#make-settings">Создайте и настройте</a>
-            <a class="a" href="#interface">Интерфейс <strong>My Diary</strong></a>
-            <a class="a" href="#">Возможности</a>
-            <a class="a" href="#communication">Связь с нами</a>
+            <a class="a nav__a nav__active-link" href="#head-screen">Попробуйте <strong>MyDiary</strong></a>
+            <a class="a nav__a" href="#make-and-settings">Создайте и настройте</a>
+            <a class="a nav__a" href="#interface">Интерфейс <strong>MyDiary</strong></a>
+            <a class="a nav__a" href="#">Возможности</a>
+            <a class="a nav__a" href="#communication">Связь с нами</a>
         </nav>
         <br>
         <aside>
@@ -32,18 +40,15 @@
                 moonProd 
                 <img src="img/Moon.svg" alt=""> 
             </a>
-            <a class="a header__logo" href="https://play.google.com/store/apps/details?class=moonproject.mydiary">
-                <img class="my-diary_logo" src="img/logo.svg" alt="">
-                <strong>My diary</strong>
-            </a>
         </aside>
     </header>
-    
+
+    <div class="desktop triangle-desktop"></div>
 
     <main>
         <div class="head-screen" id="head-screen">
             <h1 class="head-screen__h1">
-                My Diary
+                MyDiary
                 <object class="head-screen__moon-svg" type="image/svg+xml" data="picture.svg">
                     <img class="head-screen__moon-svg_img" src="img/Moon.svg" alt=""> 
                 </object>
@@ -51,21 +56,21 @@
             <h4 class="head-screen__h4">Комфорт.&nbsp;Простота. <br> Скорость</h4>
             <div class="head-screen__phones">
                 <object class="desktop" type="image/svg+xml" data="picture.svg">
-                    <img src="img/desktop-mainPhone.svg" alt="">
+                    <img class="phone" src="img/desktop-mainPhone.svg" alt="">
                 </object>
                 <object type="image/svg+xml" data="picture.svg">
                     <img class="main-phone" src="img/mainPhone.svg" alt="">
                 </object>
             </div>
-            <a class="a head-screen__download-button" href="https://play.google.com/store/apps/details?class=moonproject.mydiary">
-                Скачать My Diary
+            <a class="a head-screen__download-button" href="https://play.google.com/store/apps/details?id=moonproject.mydiary">
+                Скачать MyDiary
             </a>
         </div>
         
 
 
         <div class="why-we">
-            <h3 class="why-we__h3">Почему My Diary?</h3>
+            <h3 class="why-we__h3">Почему MyDiary?</h3>
             <ul class="why-we__list">
                 <li>
                     <span style="font-size: 30px; color: #795547;"><i class="fas fa-pen"></i></span>
@@ -102,7 +107,7 @@
                 <div class="description">
                     <h3 class="make__head-text head-text">Простота&nbsp;создания</h3>
                     <p class="description-text">
-                        В My Diary есть подсказки 
+                        В MyDiary есть подсказки 
                         с названиями предметов
                         для ускорения процесса 
                         создания расписания
@@ -220,20 +225,22 @@
             </div>
         </section>
         <div class="footer__bottom">
-            <a class="a" href="https://play.google.com/store/apps/details?class=moonproject.mydiary" target="_blank">
+            <a class="a" href="https://play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank">
                 <img class="my-diary_logo" src="img/logo.svg" alt="">
-                <strong>My diary</strong>
+                <strong>Mydiary</strong>
             </a>
-            <a class="a"  href="https://play.google.com/store/apps/dev?class=5961568897601928199"  target="_blank">
+            <a class="a"  href="https://play.google.com/store/apps/dev?id=5961568897601928199"  target="_blank">
                 <span>Moon Production</span>
                 <img class="footer__moon" src="img/Moon.svg" alt="">
             </a>
             <span class="footer__bottom_media">
                 <a class="a footer__bottom_vk" href="https://vk.com/moon_mydiary" target="_blank"> <img src="img/vk.svg" alt=""> </a>
-                <a class="a footer__bottom_google-play" href="https://play.google.com/store/apps/details?class=moonproject.mydia" target="_blank"> <img src="img/google-play.svg" alt=""> </a>
+                <a class="a footer__bottom_google-play" href="https://play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank"> <img src="img/google-play.svg" alt=""> </a>
             </span>
         </div>
     </footer>
 
+
+    <script src="js/mobile-script.js"></script>
 </body>
 </html>

@@ -23,11 +23,63 @@
 }
 
 .hamburger {
+  display: block;
+  position: fixed;
+  background-color: white;
+  border: none;
   top: 10px;
   left: 10px;
-  position: fixed;
   z-index: 999;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger__line_first,
+.hamburger__line_second,
+.hamburger__line_third {
+  display: block;
+  position: absolute;
+  width: 1.2rem;
+  top: 0.5rem;
+  left: 0;
+  height: 0.1rem;
+  background: #000;
+  -webkit-transition: top 0.3s 0.3s, -webkit-transform 0.3s 0s;
+  transition: top 0.3s 0.3s, -webkit-transform 0.3s 0s;
+  transition: top 0.3s 0.3s, transform 0.3s 0s;
+  transition: top 0.3s 0.3s, transform 0.3s 0s, -webkit-transform 0.3s 0s;
+}
+
+.hamburger__line_first {
+  top: 0.1rem;
+}
+
+.hamburger__line_third {
+  top: 0.9rem;
+}
+
+.hamburger.menu-clicked .hamburger__line_first,
+.hamburger.menu-clicked .hamburger__line_second,
+.hamburger.menu-clicked .hamburger__line_third {
+  top: 0.5rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition: top 0.3s 0s, -webkit-transform 0.3s 0.3s;
+  transition: top 0.3s 0s, -webkit-transform 0.3s 0.3s;
+  transition: top 0.3s 0s, transform 0.3s 0.3s;
+  transition: top 0.3s 0s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+}
+
+.hamburger.menu-clicked .hamburger__line_third {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .desktop {
@@ -47,12 +99,38 @@ body {
 }
 
 header {
-  display: none;
-  margin-top: 100px;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: relative;
-  height: 100vh;
+  padding-top: 100px;
+  background-color: #f6f6f6;
+  background-image: linear-gradient(135deg, #f9fcff 0%, #dee4ea 100%);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  -webkit-transform: translateX(-80vw);
+          transform: translateX(-80vw);
+  -webkit-box-shadow: 0.5rem 1vh 1rem -0.5rem;
+          box-shadow: 0.5rem 1vh 1rem -0.5rem;
+  position: fixed;
+  top: -2vh;
+  left: 0;
+  z-index: 99;
+  height: 102vh;
   width: 75vw;
+}
+
+header .header__head {
+  display: block;
+  font-size: 2.5rem;
+  margin: -1rem 0 1rem 1rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+header .header__head .header_logo {
+  width: 0.7em;
+  height: 0.7em;
 }
 
 header nav {
@@ -63,11 +141,20 @@ header nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 1.2rem;
 }
 
-header nav a {
-  font-size: 1.2rem;
-  padding: 1.2rem;
+header nav .a {
+  margin: 0 0.625em;
+  padding: 1em 0.625em;
+  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+}
+
+header nav .nav__active-link {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(127, 199, 198, 0.35)), to(rgba(127, 199, 198, 0.7)));
+  background: linear-gradient(-90deg, rgba(127, 199, 198, 0.35) 0%, rgba(127, 199, 198, 0.7) 100%);
+  border-left: 0.3rem solid #298181;
 }
 
 header nav .moonProd {
@@ -77,15 +164,19 @@ header nav .moonProd {
 header aside {
   display: block;
   position: absolute;
-  bottom: 10%;
-  margin-left: 0.67rem;
+  bottom: 2.5%;
+  margin-left: 1rem;
+}
+
+header aside .languages:focus {
+  outline: none;
 }
 
 header aside .header__moonProd {
   display: block;
   position: relative;
   width: 5.3rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -98,8 +189,9 @@ header aside .header__moonProd img {
   height: 3.3rem;
 }
 
-header aside .header__logo {
-  padding-top: 1rem;
+.header-visible {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 main .head-screen {
@@ -129,6 +221,9 @@ main .head-screen .head-screen__moon-svg .head-screen__moon-svg_img {
 }
 
 main .head-screen h4 {
+  display: block;
+  position: relative;
+  z-index: 1;
   margin-top: 3rem;
   margin-left: 2vw;
   width: 15rem;
@@ -672,7 +767,7 @@ footer .communication .write-us__media-list .write-us__media-link a {
 
 footer .footer__bottom {
   position: relative;
-  height: 1.45rem;
+  height: 1.5rem;
   margin-top: 1.3rem;
   background-color: #f0f0f0;
   padding: 0 0.55rem;
@@ -692,7 +787,7 @@ footer .footer__bottom .footer__moon {
   display: block;
   position: absolute;
   bottom: -0.75rem;
-  left: 6.5rem;
+  left: 6.4rem;
   width: 3rem;
   height: 3rem;
 }
