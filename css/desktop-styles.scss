@@ -71,8 +71,10 @@
         transform: translateX(0) translateY(-6rem);
         background-image: linear-gradient(180deg, #f9fcff 0%, #dee4ea 100%);
         .header__head {
-            margin-top: 1.25rem;
+            margin: 1.25rem auto 0 0.5rem;
             font-size: 1rem;
+            width: 5.5rem;
+            padding-left: 0.5rem;
         }
         nav {
             flex-direction: row;
@@ -96,7 +98,7 @@
                 border-left: none;
                 background: linear-gradient(180deg, rgba(127, 199, 198, 0.35) 0%, rgba(127, 199, 198, 0.7) 100%);
                 border-bottom: 0.3rem solid #298181;
-                transition: height 0.2s 0s, width 0.2s 0.2s, left 0.4s 0.3s;
+                transition: height 0.2s 0s, width 0.2s 0.2s, left 0.3s 0.3s;
             }
         }
         aside {

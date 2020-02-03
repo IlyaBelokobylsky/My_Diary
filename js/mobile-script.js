@@ -7,6 +7,13 @@ menu.addEventListener('click', function () {
     menu.classList.toggle('menu-clicked');
 });
 
+function scrollToElem(target) {
+    let elemTo = document.querySelector('#' + target.dataset.link);
+    elemTo.classList.contains('interface') // для более корректной работы
+    || elemTo.classList.contains('communication') ?
+    elemTo.scrollIntoView({ behavior: 'smooth', block: 'end' }) :
+    elemTo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 header.addEventListener('click', function (event) {
     let target = event.target;
@@ -16,6 +23,8 @@ header.addEventListener('click', function (event) {
         
         const border = document.querySelector('.nav__active-link');
         
+
+        // Различия между телефоном и десктопом
         if (document.documentElement.clientWidth < 993) { // для мобилок
             let posAfter = target.id[10] * 3.15 + 'em';
 
@@ -25,14 +34,14 @@ header.addEventListener('click', function (event) {
             
             border.style.width = 0;
             if (border.style.top < posAfter) { // если идет вниз
-                setTimeout( () => border.style.height = '1.2em', 40);
+                setTimeout( () => border.style.height = '1.2em', 60);
             } else {
                 border.style.height = '1.5em';
             }
 
             border.style.top = posAfter;
-            setTimeout( () => border.style.height = '3.15em', 340);
-            setTimeout( () => border.style.width = '13em', 625);
+            setTimeout( () => border.style.height = '3.15em', 345);
+            setTimeout( () => border.style.width = '13em', 645);
 
         } else {
             if (target.classList.contains('nav__link-small')) {
@@ -42,7 +51,7 @@ header.addEventListener('click', function (event) {
                     posAfter = target.id[10] * 10.645 + 'em';
                 var widthAfter = 8.3;
             } else {
-                posAfter = target.id[10] * 10.6 + 'em';
+                posAfter = target.id[10] * 10.65 + 'em';
                 widthAfter = 10.8;
             }
 
@@ -56,13 +65,23 @@ header.addEventListener('click', function (event) {
             border.style.height = 0;
             
             if (border.style.left < posAfter) {
-                setTimeout( () => border.style.width = widthAfter - 3 + 'em', 50);
+                setTimeout( () => border.style.width = widthAfter - 5 + 'em', 60);
             } else {
-                border.style.width = widthAfter - 3 + 'em';
+                border.style.width = widthAfter - 5 + 'em';
             }
             border.style.left = posAfter;
             setTimeout( () => border.style.width = widthAfter + 'em', 350);
-            setTimeout( () => border.style.height = '3.15em', 800);
+            setTimeout( () => border.style.height = '3.15em', 750);
         }
+
+        scrollToElem(target);
+
+    }
+});
+
+
+document.querySelector('.why-we').addEventListener('click', function(event) {
+    if (event.target.classList.contains('btn-link')) {
+        scrollToElem(event.target);
     }
 });
