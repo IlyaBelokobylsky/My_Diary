@@ -11,7 +11,14 @@
    text-decoration: none;
    color: #000;
 }
-
+.btn-link {
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+.btn-link:focus {
+   outline: none;
+}
 
 .my-diary_logo {
    width: 1rem;
@@ -120,16 +127,27 @@ header {
    nav { 
       display: flex;
       flex-direction: column;
+      position: relative;
       font-size: 1.2rem;
-      .a {
-         margin: 0 0.625em;
+      .btn-link {
+         height: 3.15em;
+         width: 13em;
+         margin: 0 0.75em;
          padding: 1em 0.625em;
          border-bottom: 1px solid #dbdbdb;
          border-top: 1px solid #dbdbdb;
       }
       .nav__active-link {
+         display: block;
+         position: absolute;
+         width: 13.25em;
+         height: 3.15em;
+         top: 0;
+         left: 0.5em;
+         z-index: -1;
          background: linear-gradient(-90deg, rgba(127, 199, 198, 0.35) 0%, rgba(127, 199, 198, 0.7) 100%);
          border-left: 0.3rem solid #298181;
+         transition: width 0.2s 0s, height 0.2s 0.2s, top 0.3s 0.3s;
       }
       .moonProd {
          font-weight: lighter;
@@ -250,7 +268,11 @@ main {
          margin-left: -1rem;
          li {
             padding: 1.6rem 0;
-            a {
+            span {
+               font-size: 1rem;
+               color: #795547;
+            }
+            .why-we__list_link {
                font-size: 1.2rem;
                padding-left: 5px;
                font-weight: 500;

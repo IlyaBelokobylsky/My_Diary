@@ -18,16 +18,17 @@
     </button>
     
     <header>
-        <a class="a header__head" href="https://play.google.com/store/apps/details?class=moonproject.mydiary">
+        <a class="a header__head" href="https://play.google.com/store/apps/details?id=moonproject.mydiary">
             <img class="my-diary_logo header_logo" src="img/logo.svg" alt="">
             <strong>MyDiary</strong>
         </a>
         <nav>
-            <a class="a nav__a nav__active-link" href="#head-screen">Попробуйте <strong>MyDiary</strong></a>
-            <a class="a nav__a" href="#make-and-settings">Создайте и настройте</a>
-            <a class="a nav__a" href="#interface">Интерфейс <strong>MyDiary</strong></a>
-            <a class="a nav__a" href="#">Возможности</a>
-            <a class="a nav__a" href="#communication">Связь с нами</a>
+            <span class="nav__active-link"></span>
+            <button id="nav__link-0" class="btn-link nav__link" data-link="head-screen"> Попробуйте <strong>MyDiary</strong></button>
+            <button id="nav__link-1" class="btn-link nav__link" data-link="make-and-settings">Быстрое создание</button>
+            <button id="nav__link-2" class="btn-link nav__link" data-link="interface">Интерфейс <strong>MyDiary</strong></button>
+            <button id="nav__link-3" class="btn-link nav__link nav__link-small" data-link="">Возможности</button>
+            <button id="nav__link-4" class="btn-link nav__link nav__link-small" data-link="communication">Связь с нами</button>
         </nav>
         <br>
         <aside>
@@ -36,7 +37,7 @@
                 <option value="eng">ENG</option>
             </select>
             <br>
-            <a class="a header__moonProd" href="https://play.google.com/store/apps/dev?class=5961568897601928199">
+            <a class="a header__moonProd" href="https://play.google.com/store/apps/dev?id=5961568897601928199">
                 moonProd 
                 <img src="img/Moon.svg" alt=""> 
             </a>
@@ -73,28 +74,28 @@
             <h3 class="why-we__h3">Почему MyDiary?</h3>
             <ul class="why-we__list">
                 <li>
-                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-pen"></i></span>
-                    <a class="a why-we__list_a" href="#">Простое создание</a>
+                    <span><i class="fas fa-pen"></i></span>
+                    <button class="why-we__list_link btn-link" data-link="make">Простое создание</button>
                 </li>
                 <li>
-                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-list"></i></span>
-                    <a class="a why-we__list_a" href="#">Практичный интерфейс</a>
+                    <span><i class="fas fa-list"></i></span>
+                    <button class="why-we__list_link btn-link" data-link="interface">Практичный интерфейс</button>
                 </li>
                 <li>
-                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-cog"></i></span>
-                    <a class="a why-we__list_a" href="#">Гибкая настройка</a>
+                    <span><i class="fas fa-cog"></i></span>
+                    <button class="why-we__list_link btn-link" data-link="settings">Гибкая настройка</button>
                 </li>
                 <li>
-                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-save"></i></span>
-                    <a class="a why-we__list_a" href="#">Умное сохранение д/з</a>
+                    <span><i class="fas fa-save"></i></span>
+                    <button class="why-we__list_link btn-link" data-link="">Умное сохранение д/з</button>
                 </li>
                 <li>
-                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-pencil-ruler"></i></span>
-                    <a class="a why-we__list_a" href="#">Своеобразный дизайн</a>
+                    <span><i class="fas fa-pencil-ruler"></i></span>
+                    <button class="why-we__list_link btn-link" data-link="interface">Своеобразный дизайн</button>
                 </li>
                 <li>
-                    <span style="font-size: 30px; color: #795547;"><i class="fas fa-pen-nib"></i></span>
-                    <a class="a why-we__list_a" href="#">Удобная система оценок</a>
+                    <span><i class="fas fa-pen-nib"></i></span>
+                    <button class="why-we__list_link btn-link" data-link="">Удобная система оценок</button>
                 </li>
             </ul>
             <img class="why-we__phone" src="img/why-we-mobi.svg" alt="">
