@@ -34,10 +34,12 @@
 .hamburger {
    display: block;
    position: fixed;
-   background-color: white;
+   background-image: radial-gradient(circle, #fff 0%, #fbfbfb 100%);
+   border-radius: 0.5rem;
+   padding: 0.9rem 1rem;
    border: none;
-   top: 10px; 
-   left: 10px;
+   top: 0.1rem; 
+   left: 0.1rem;
    z-index: 999;
    box-shadow: none;
    cursor: pointer;
@@ -52,8 +54,8 @@
    display: block;
    position: absolute;
    width: 1.2rem;
-   top: 0.5rem;
-   left: 0;
+   top: 0.8rem;
+   left: 0.4rem;
    height: 0.1rem;
    background: #000;
    // Время анимации по 2-му клику
@@ -62,16 +64,16 @@
 }
 
 .hamburger__line_first {
-   top: 0.1rem;
+   top: 0.4rem;
 }
 .hamburger__line_third {
-   top: 0.9rem;
+   top: 1.2rem;
 }
 
 .hamburger.menu-clicked .hamburger__line_first,
 .hamburger.menu-clicked .hamburger__line_second, 
 .hamburger.menu-clicked .hamburger__line_third {
-   top: 0.5rem;
+   top: 0.8rem;
    transform: rotate(45deg);
    transition-delay: 0s;
    transition: top 0.3s 0s, transform 0.3s 0.3s; // время выполнения по 1-му клику
@@ -388,15 +390,19 @@ main {
          margin-left: -10vw;
          display: grid;
          justify-content: center;
-         grid-template-columns: repeat(2, 9.2rem);
-         grid-template-rows: repeat(2, 15rem);
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(2, 1fr);
          grid-column-gap: 1.73em;
          grid-row-gap: 3.5em;
          li {
             background: linear-gradient(180deg, rgba(41, 129, 129, 0.9) 0%, #298181 100%);
             border-radius: 20px;
             box-shadow: 0 0 20px 2px #dbdbdb;
+            height: 14.42rem;
+            width: 9.2rem;
             position: relative;
+            overflow: hidden;
+            transition: height 0.3s;
             .feature__img {
                display: flex;
                margin-top: 1.73em;
@@ -446,10 +452,8 @@ main {
             .watch-img::after {
                margin-top: 6.34em;
             }
-
-            .feature__visible-text {
-               margin-top: 8em;
-               margin-bottom: 2.3em;
+            
+            p {
                margin-left: 1.6em;
                width: 7.85em;
                color: #fff;
@@ -458,27 +462,30 @@ main {
                line-height: 1em;
                letter-spacing: 1px;
             }
-            .feature__text_more-right, .feature__text_more-right-and-down{
+            .feature__visible-text {
+               margin-top: 8em;
+               margin-bottom: 2.3em;
+            }
+            .feature__text_more-right,  .feature__text_more-right-and-down {
                margin-left: 2em;
             }
             .feature__text_more-right-and-down {
-               margin-top: 8.45em;
+               margin-top: 8.35em;
             }
-            .feature__hidden-text {
-               display: none;
-            }
+
+         }
+         .feature-open {
+            height: 20rem;
          }
          .feature__btn_more {
             background: none;
             outline: none;
             border: none;
             display: block;
-            position: absolute;
+            position: relative;
             bottom: 0;
             left: 50%;
             transform: translate(-50%, 0);
-            color: #dbdbdb;
-            font-size: 1.5em;
          }
       }
    }

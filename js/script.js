@@ -8,7 +8,7 @@ menu.addEventListener('click', function () {
 });
 
 function scrollToElem(target) {
-    let elemTo = document.querySelector('#' + target.dataset.link);
+    let elemTo = document.querySelector('.' + target.dataset.link);
     elemTo.classList.contains('make-and-settings') ?// для более корректной работы 
     elemTo.scrollIntoView({ behavior: 'smooth', block: 'start' }) :
     elemTo.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -45,9 +45,9 @@ header.addEventListener('click', function (event) {
         } else {
             if (target.classList.contains('nav__link-small')) {
                 var posAfter;
-                target.id === 'nav__link-4' ?
-                    posAfter = target.id[10] * 10 + 'em' :
-                    posAfter = target.id[10] * 10.645 + 'em';
+                target.id === 'nav__link-5' ?
+                    posAfter = target.id[10] * 10.15 + 'em' :
+                    posAfter = target.id[10] * 10.655 + 'em';
                 var widthAfter = 8.3;
             } else {
                 posAfter = target.id[10] * 10.65 + 'em';
@@ -85,5 +85,15 @@ header.addEventListener('click', function (event) {
 document.querySelector('.why-we').addEventListener('click', function(event) {
     if (event.target.classList.contains('btn-link')) {
         scrollToElem(event.target);
+    }
+});
+
+
+document.querySelector('.interface').addEventListener('click', function(event) {
+    let target = event.target;
+    if (target.classList.contains('feature__btn_more')) {
+        let feature = target.parentNode;
+        console.log(feature);
+        feature.classList.toggle('feature-open');
     }
 });

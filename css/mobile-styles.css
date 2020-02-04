@@ -35,10 +35,12 @@
 .hamburger {
   display: block;
   position: fixed;
-  background-color: white;
+  background-image: radial-gradient(circle, #fff 0%, #fbfbfb 100%);
+  border-radius: 0.5rem;
+  padding: 0.9rem 1rem;
   border: none;
-  top: 10px;
-  left: 10px;
+  top: 0.1rem;
+  left: 0.1rem;
   z-index: 999;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -55,8 +57,8 @@
   display: block;
   position: absolute;
   width: 1.2rem;
-  top: 0.5rem;
-  left: 0;
+  top: 0.8rem;
+  left: 0.4rem;
   height: 0.1rem;
   background: #000;
   -webkit-transition: top 0.3s 0.3s, -webkit-transform 0.3s 0s;
@@ -66,17 +68,17 @@
 }
 
 .hamburger__line_first {
-  top: 0.1rem;
+  top: 0.4rem;
 }
 
 .hamburger__line_third {
-  top: 0.9rem;
+  top: 1.2rem;
 }
 
 .hamburger.menu-clicked .hamburger__line_first,
 .hamburger.menu-clicked .hamburger__line_second,
 .hamburger.menu-clicked .hamburger__line_third {
-  top: 0.5rem;
+  top: 0.8rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition-delay: 0s;
@@ -458,10 +460,10 @@ main .interface .interface__features {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (9.2rem)[2];
-      grid-template-columns: repeat(2, 9.2rem);
-  -ms-grid-rows: (15rem)[2];
-      grid-template-rows: repeat(2, 15rem);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 1.73em;
   grid-row-gap: 3.5em;
 }
@@ -472,7 +474,12 @@ main .interface .interface__features li {
   border-radius: 20px;
   -webkit-box-shadow: 0 0 20px 2px #dbdbdb;
           box-shadow: 0 0 20px 2px #dbdbdb;
+  height: 14.42rem;
+  width: 9.2rem;
   position: relative;
+  overflow: hidden;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
 }
 
 main .interface .interface__features li .feature__img {
@@ -537,9 +544,7 @@ main .interface .interface__features li .watch-img::after {
   margin-top: 6.34em;
 }
 
-main .interface .interface__features li .feature__visible-text {
-  margin-top: 8em;
-  margin-bottom: 2.3em;
+main .interface .interface__features li p {
   margin-left: 1.6em;
   width: 7.85em;
   color: #fff;
@@ -549,16 +554,21 @@ main .interface .interface__features li .feature__visible-text {
   letter-spacing: 1px;
 }
 
+main .interface .interface__features li .feature__visible-text {
+  margin-top: 8em;
+  margin-bottom: 2.3em;
+}
+
 main .interface .interface__features li .feature__text_more-right, main .interface .interface__features li .feature__text_more-right-and-down {
   margin-left: 2em;
 }
 
 main .interface .interface__features li .feature__text_more-right-and-down {
-  margin-top: 8.45em;
+  margin-top: 8.35em;
 }
 
-main .interface .interface__features li .feature__hidden-text {
-  display: none;
+main .interface .interface__features .feature-open {
+  height: 20rem;
 }
 
 main .interface .interface__features .feature__btn_more {
@@ -566,13 +576,11 @@ main .interface .interface__features .feature__btn_more {
   outline: none;
   border: none;
   display: block;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  color: #dbdbdb;
-  font-size: 1.5em;
 }
 
 main .interface::before {
