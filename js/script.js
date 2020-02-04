@@ -1,10 +1,10 @@
 'use strict';
-const menu = document.querySelector('.hamburger');
-const header = document.querySelector('header');
+const MENU = document.querySelector('.hamburger');
+const HEADER = document.querySelector('header');
 
 function headerToggle() {
-    header.classList.toggle('header-visible');
-    menu.classList.toggle('menu-clicked');
+    HEADER.classList.toggle('header-visible');
+    MENU.classList.toggle('menu-clicked');
 }
 
 function scrollToElem(target) {
@@ -14,19 +14,16 @@ function scrollToElem(target) {
     elemTo.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
-menu.addEventListener('click', headerToggle);
+MENU.addEventListener('click', headerToggle);
 
-header.addEventListener('click', function (event) {
-    let target = event.target;
+HEADER.addEventListener('click', function (event) {
+    const target = event.target;
 
     if (target.classList['1'] === 'nav__link') {
-
-        
         const border = document.querySelector('.nav__active-link');
-        
 
-        // Различия между телефоном и десктопом
-        if (document.documentElement.clientWidth < 993) { // для мобилок
+        // Различия между мобильной и десктопной версиями
+        if (document.documentElement.clientWidth < 993) {
             let posAfter = target.id[10] * 3.15 + 'em';
 
             if (border.style.top === posAfter) {
@@ -89,18 +86,9 @@ document.querySelector('.why-we').addEventListener('click', function(event) {
 
 document.querySelectorAll('.feature__btn_more').forEach(elem => {
     elem.addEventListener('click', function(event) {
-        let target = event.target;
-        let feature = target.parentNode;
-        feature.classList.toggle('feature-opened');
-        target.classList.toggle('feature__btn_clicked');
-        // На телефонах список съезжает вниз
-        if (document.documentElement.clientWidth < 993) {
-            if (feature.id[8] >= 2) {
-                feature.classList.toggle('feature-upper');
-                feature.id[8] === 2 ?
-                feature.nextElementSibling.classList.toggle('feature-upper') :
-                feature.previousElementSibling.classList.toggle('feature-upper');
-            }
-        }
+    let target = event.target;
+    let feature = target.parentNode;
+    feature.classList.toggle('feature-opened');
+    target.classList.toggle('feature__btn_clicked');
 });
 });
