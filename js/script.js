@@ -2,10 +2,10 @@
 const menu = document.querySelector('.hamburger');
 const header = document.querySelector('header');
 
-menu.addEventListener('click', function () {
+function headerToggle() {
     header.classList.toggle('header-visible');
     menu.classList.toggle('menu-clicked');
-});
+}
 
 function scrollToElem(target) {
     let elemTo = document.querySelector('.' + target.dataset.link);
@@ -13,6 +13,8 @@ function scrollToElem(target) {
     elemTo.scrollIntoView({ behavior: 'smooth', block: 'start' }) :
     elemTo.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
+
+menu.addEventListener('click', headerToggle);
 
 header.addEventListener('click', function (event) {
     let target = event.target;
@@ -74,10 +76,7 @@ header.addEventListener('click', function (event) {
         }
 
         scrollToElem(target);
-        setTimeout(() => {
-            menu.classList.toggle('menu-clicked');
-            header.classList.toggle('header-visible');
-        }, 1000);
+        setTimeout(headerToggle, 1000);
     }
 });
 
@@ -93,7 +92,16 @@ document.querySelector('.interface').addEventListener('click', function(event) {
     let target = event.target;
     if (target.classList.contains('feature__btn_more')) {
         let feature = target.parentNode;
-        console.log(feature);
-        feature.classList.toggle('feature-open');
+        feature.classList.toggle('feature-opened');
+        target.classList.toggle('feature__btn_clicked');
+        // На телефонах список съезжает вниз
+        if (document.documentElement.clientWidth < 993) {
+            if (feature.id[8] >= 2) {
+                feature.classList.toggle('feature-upper');
+                feature.id[8] === 2 ?
+                feature.nextElementSibling.classList.toggle('feature-upper') :
+                feature.previousElementSibling.classList.toggle('feature-upper');
+            }
+        }
     }
 });

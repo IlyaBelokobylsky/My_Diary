@@ -388,21 +388,18 @@ main {
          font-size: 0.87rem;
          margin-top: 2.3rem;
          margin-left: -10vw;
-         display: grid;
-         justify-content: center;
-         grid-template-columns: repeat(2, 1fr);
-         grid-template-rows: repeat(2, 1fr);
-         grid-column-gap: 1.73em;
-         grid-row-gap: 3.5em;
+         display: flex;
+         flex-wrap: wrap;
          li {
             background: linear-gradient(180deg, rgba(41, 129, 129, 0.9) 0%, #298181 100%);
             border-radius: 20px;
             box-shadow: 0 0 20px 2px #dbdbdb;
-            height: 14.42rem;
-            width: 9.2rem;
+            margin: 0 1em 3.5em;
+            height: 16.57em;
+            width: 10.57em;
             position: relative;
             overflow: hidden;
-            transition: height 0.3s;
+            transition: height 0.3s, top 0.3s;
             .feature__img {
                display: flex;
                margin-top: 1.73em;
@@ -457,6 +454,7 @@ main {
                margin-left: 1.6em;
                width: 7.85em;
                color: #fff;
+               font-size: 1em;
                font-style: normal;
                font-weight: normal;
                line-height: 1em;
@@ -472,23 +470,55 @@ main {
             .feature__text_more-right-and-down {
                margin-top: 8.35em;
             }
+         }
 
+
+         .feature-opened {
+            height: 25em;
          }
-         .feature-open {
-            height: 20rem;
-         }
+
          .feature__btn_more {
             background: none;
             outline: none;
             border: none;
             display: block;
-            position: relative;
+            position: absolute;
             bottom: 0;
+            width: 2em;
+            height: 2em;
             left: 50%;
             transform: translate(-50%, 0);
          }
+         .feature__btn_more::before, .feature__btn_more::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 1em;
+            width: 1em;
+            height: 0.2em;
+            border-radius: 0.1em;
+            background-color: #dbdbdb;
+            transition: transform 0.3s;
+         }
+         .feature__btn_more::before {
+            transform: rotate(45deg);
+            left: 0.425em;
+         }
+         .feature__btn_more::after {
+            transform: rotate(-45deg);
+            left: 0.975em;
+         }
+
+         .feature__btn_clicked::before {
+            transform: rotate(-45deg);
+         }
+         .feature__btn_clicked::after {
+            transform: rotate(45deg);
+         }
       }
    }
+
+
    .interface::before {
       content: '';
       margin-left: -5rem;

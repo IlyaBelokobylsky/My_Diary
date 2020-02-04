@@ -455,17 +455,11 @@ main .interface .interface__features {
   font-size: 0.87rem;
   margin-top: 2.3rem;
   margin-left: -10vw;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 1.73em;
-  grid-row-gap: 3.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .interface .interface__features li {
@@ -474,12 +468,13 @@ main .interface .interface__features li {
   border-radius: 20px;
   -webkit-box-shadow: 0 0 20px 2px #dbdbdb;
           box-shadow: 0 0 20px 2px #dbdbdb;
-  height: 14.42rem;
-  width: 9.2rem;
+  margin: 0 1em 3.5em;
+  height: 16.57em;
+  width: 10.57em;
   position: relative;
   overflow: hidden;
-  -webkit-transition: height 0.3s;
-  transition: height 0.3s;
+  -webkit-transition: height 0.3s, top 0.3s;
+  transition: height 0.3s, top 0.3s;
 }
 
 main .interface .interface__features li .feature__img {
@@ -548,6 +543,7 @@ main .interface .interface__features li p {
   margin-left: 1.6em;
   width: 7.85em;
   color: #fff;
+  font-size: 1em;
   font-style: normal;
   font-weight: normal;
   line-height: 1em;
@@ -567,8 +563,8 @@ main .interface .interface__features li .feature__text_more-right-and-down {
   margin-top: 8.35em;
 }
 
-main .interface .interface__features .feature-open {
-  height: 20rem;
+main .interface .interface__features .feature-opened {
+  height: 25em;
 }
 
 main .interface .interface__features .feature__btn_more {
@@ -576,11 +572,50 @@ main .interface .interface__features .feature__btn_more {
   outline: none;
   border: none;
   display: block;
-  position: relative;
+  position: absolute;
   bottom: 0;
+  width: 2em;
+  height: 2em;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+
+main .interface .interface__features .feature__btn_more::before, main .interface .interface__features .feature__btn_more::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 1em;
+  width: 1em;
+  height: 0.2em;
+  border-radius: 0.1em;
+  background-color: #dbdbdb;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main .interface .interface__features .feature__btn_more::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 0.425em;
+}
+
+main .interface .interface__features .feature__btn_more::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 0.975em;
+}
+
+main .interface .interface__features .feature__btn_clicked::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+main .interface .interface__features .feature__btn_clicked::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 main .interface::before {

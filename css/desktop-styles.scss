@@ -251,12 +251,10 @@
         .interface__features {
             margin-top: -5.5rem;
             margin-left: 0;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 1fr;
-            font-size: 0.615rem;
-            grid-column-gap: 2rem;
+            font-size: 0.65rem;
+            justify-content: space-around;
             li {
-                width: 6.25rem;
+                margin: 0 0 3.5em;
             }
         }
     }
