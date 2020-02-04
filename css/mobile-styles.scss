@@ -399,7 +399,7 @@ main {
             width: 10.57em;
             position: relative;
             overflow: hidden;
-            transition: height 0.3s, top 0.3s;
+            transition: height 0.5s;
             .feature__img {
                display: flex;
                margin-top: 1.73em;
@@ -483,6 +483,7 @@ main {
             border: none;
             display: block;
             position: absolute;
+            cursor: pointer;
             bottom: 0;
             width: 2em;
             height: 2em;
@@ -498,7 +499,7 @@ main {
             height: 0.2em;
             border-radius: 0.1em;
             background-color: #dbdbdb;
-            transition: transform 0.3s;
+            transition: transform 0.5s;
          }
          .feature__btn_more::before {
             transform: rotate(45deg);

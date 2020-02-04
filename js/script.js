@@ -87,10 +87,9 @@ document.querySelector('.why-we').addEventListener('click', function(event) {
     }
 });
 
-
-document.querySelector('.interface').addEventListener('click', function(event) {
-    let target = event.target;
-    if (target.classList.contains('feature__btn_more')) {
+document.querySelectorAll('.feature__btn_more').forEach(elem => {
+    elem.addEventListener('click', function(event) {
+        let target = event.target;
         let feature = target.parentNode;
         feature.classList.toggle('feature-opened');
         target.classList.toggle('feature__btn_clicked');
@@ -103,5 +102,5 @@ document.querySelector('.interface').addEventListener('click', function(event) {
                 feature.previousElementSibling.classList.toggle('feature-upper');
             }
         }
-    }
+});
 });
