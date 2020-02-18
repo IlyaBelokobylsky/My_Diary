@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MyDiary</title>
     <link rel="stylesheet" href="css/normolize.css">
-    <link rel="stylesheet" href="css/mobile-styles.css">
-    <link rel="stylesheet" href="css/desktop-styles.css">
+    <link rel="stylesheet" href="css/src/mobile-styles.css">
+    <link rel="stylesheet" href="css/src/desktop-styles.css">
+    <link rel="stylesheet" href="css/src/mobi-medias.css">
+    <link rel="stylesheet" href="css/src/buttons.css">
+    <link rel="stylesheet" href="css/src/animations.css">
     <script src="https://kit.fontawesome.com/071a28e8c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -17,24 +20,28 @@
         <span class="hamburger__line_third"></span>
     </button>
     
+    <button class="btn-down">
+        <span class="btn-down__arrow"></span>
+    </button>
+
     <header>
-        <a class="a header__head" href="https://play.google.com/store/apps/details?id=moonproject.mydiary">
-            <img class="my-diary_logo header_logo" src="img/logo.svg" alt="">
-            <strong>MyDiary</strong>
+        <a class="a header__head" href="//play.google.com/store/apps/details?id=moonproject.mydiary">
+            <img class="MyDiary_logo header_logo" src="img/logo.svg" alt="">
+            <strong><span class="MyDiary">MyDiary</span></strong>
         </a>
         <nav>
             <span class="nav__active-link"></span>
             <button id="nav__link-0" class="btn-link nav__link" data-link="head-screen">
-                Попробуйте <strong>MyDiary</strong>
+                Попробуйте <strong><span class="MyDiary">MyDiary</span></strong>
                 </button>
             <button id="nav__link-1" class="btn-link nav__link" data-link="why-we">
-                Почему <strong>MyDiary</strong>?
+                Почему <strong><span class="MyDiary">MyDiary</span></strong>?
             </button>
             <button id="nav__link-2" class="btn-link nav__link" data-link="make-and-settings">
                 Быстрое создание
             </button>
             <button id="nav__link-3" class="btn-link nav__link" data-link="interface">
-                Интерфейс <strong>MyDiary</strong>
+                Интерфейс <strong><span class="MyDiary">MyDiary</span></strong>
             </button>
             <button id="nav__link-4" class="btn-link nav__link nav__link-small" data-link="interface">
                 Возможности
@@ -50,41 +57,38 @@
                 <option value="eng">ENG</option>
             </select>
             <br>
-            <a class="a header__moonProd" href="https://play.google.com/store/apps/dev?id=5961568897601928199">
+            <a class="a header__moonProd" href="//play.google.com/store/apps/dev?id=5961568897601928199">
                 moonProd 
                 <img src="img/Moon.svg" alt=""> 
             </a>
         </aside>
     </header>
 
-    <div class="desktop triangle-desktop"></div>
 
     <main>
         <div class="head-screen" id="head-screen">
+            <img src="img/head-triangle.svg" class="head-screen__triangle" alt="">
             <h1 class="head-screen__h1">
-                MyDiary
+                <span class="MyDiary">MyDiary</span>
                 <object class="head-screen__moon-svg" type="image/svg+xml" data="picture.svg">
                     <img class="head-screen__moon-svg_img" src="img/Moon.svg" alt=""> 
                 </object>
             </h1>
-            <h4 class="head-screen__h4">Комфорт.&nbsp;Простота. <br> Скорость</h4>
+            <h4 class="head-screen__h4">Твой&nbsp;учебный <br> дневник</h4>
             <div class="head-screen__phones">
-                <object class="desktop" type="image/svg+xml" data="picture.svg">
-                    <img class="phone" src="img/desktop-mainPhone.svg" alt="">
-                </object>
-                <object type="image/svg+xml" data="picture.svg">
-                    <img class="main-phone" src="img/mainPhone.svg" alt="">
-                </object>
+                <img class="desktop phone" src="img/desktop-mainPhone.svg" alt="">
+                <img class="main-phone" src="img/mainPhone.png" alt="">
             </div>
-            <a class="a head-screen__download-button" href="https://play.google.com/store/apps/details?id=moonproject.mydiary">
-                Скачать MyDiary
+            <a class="a head-screen__download-button" href="//play.google.com/store/apps/details?id=moonproject.mydiary">
+                <i class="fab fa-google-play"></i>
+                Скачать <span class="MyDiary">MyDiary</span>
             </a>
         </div>
         
 
 
         <div class="why-we">
-            <h3 class="why-we__h3">Почему MyDiary?</h3>
+            <h3 class="why-we__h3">Почему <span class="MyDiary">MyDiary</span>?</h3>
             <ul class="why-we__list">
                 <li>
                     <span><i class="fas fa-pen"></i></span>
@@ -111,7 +115,7 @@
                     <button class="why-we__list_link btn-link" data-link="">Удобная система оценок</button>
                 </li>
             </ul>
-            <img class="why-we__phone" src="img/why-we-mobi.svg" alt="">
+            <img class="why-we__phone" src="img/mainPhone.png" alt="">
         </div>
 
 
@@ -121,16 +125,16 @@
                 <div class="description">
                     <h3 class="make__head-text head-text">Простота&nbsp;создания</h3>
                     <p class="description-text">
-                        В MyDiary есть подсказки 
+                        В <span class="MyDiary">MyDiary</span> есть подсказки 
                         с названиями предметов
                         для ускорения процесса 
                         создания расписания
                     </p>
                 </div>
-                <object type="image/svg+xml" data="picture.svg">
-                    <!-- todo: put the img -->
-                    <img class="main-phone" src="img/mainPhone.svg" alt="">
+                <object class="make__object-svg" width="1000" height="1000" data="img/make-background.svg" type="image/svg+xml">
+                    <img src="img/make-background.svg" alt="">
                 </object>
+                <img class="main-phone make__img" src="img/mainPhone.png" alt="Make MyDiary easily">
             </div>
             <div class="settings">
                 <div class="description settings__description">
@@ -142,10 +146,9 @@
                         по своему вкусу
                     </p>
                 </div>
-                <object class="settings__img" type="image/svg+xml" data="picture.svg">
-                    <img class="settings__img-triangle" src="img/settings-triangle.svg" alt="">
-                    <img class="settings__img-phone" src="img/settings.svg" alt="">
-                </object>
+                <div class="settings__img">
+                    <img class="settings__img-phone" src="img/mainPhone.png" alt="">
+                </div>
             </div>
         </div>
 
@@ -206,30 +209,33 @@
                 <form action="send.php" method="post">
                     <input type="email" class="communication__input_text user-email" name="email" required placeholder="Email"><br>
                     <br><textarea rows="5" class="communication__input_text user-message" name="message" placeholder="Ваше сообщение"></textarea><br>
-                    <input type="submit" name="submit" class="communication__btn_send-message" value="Отправить">
+                    <button type="submit" name="submit" class="communication__btn_send-message">
+                        Отправить
+                        <!-- у before нет нормального z-index -->
+                        <span class="communication__btn_send-message__before"></span> 
+                    </button>
                 </form>
             </div>
 
-            <img class="not-triangle" src="img/not-triangle-communication.png" alt="">
             
             <div class="communication__write-us">
                 <h5 class="write-us_text">Напишите нам</h5>
                 <ul class="write-us__media-list">
-                    <li class="write-us__media-link link-2">
-                        <a class="a" href="https://www.instagram.com/moondayj/" target="_blank"> 
+                    <li class="write-us__media-link">
+                        <a class="a" href="//www.instagram.com/moondayj/" target="_blank"> 
                             <i class="fab fa-instagram"></i> 
                             moondayj 
                         </a> 
                     </li>
 
-                    <li class="write-us__media-link link-3">
-                        <a class="a" href="https://vk.com/moon_mydiary" target="_blank"> 
+                    <li class="write-us__media-link">
+                        <a class="a" href="//vk.com/moon_mydiary" target="_blank"> 
                             <i class="fab fa-vk"></i> 
                             moon_mydiary 
                         </a> 
                     </li>
 
-                    <li class="write-us__media-link link-1"> <!-- такая нумерация для десктопов -->
+                    <li class="write-us__media-link">
                         <a class="a" href="mailto:andanonil253@gmail.com">    
                             <i class="fas fa-at"></i> 
                             andanonil253@gmail.com
@@ -239,21 +245,20 @@
             </div>
         </section>
         <div class="footer__bottom">
-            <a class="a" href="https://play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank">
-                <img class="my-diary_logo" src="img/logo.svg" alt="">
-                <strong>Mydiary</strong>
+            <a class="a" href="//play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank">
+                <img class="MyDiary_logo" src="img/logo.svg" alt="">
+                <strong><span class="MyDiary">MyDiary</span></strong>
             </a>
-            <a class="a"  href="https://play.google.com/store/apps/dev?id=5961568897601928199"  target="_blank">
+            <a class="a"  href="//play.google.com/store/apps/dev?id=5961568897601928199"  target="_blank">
                 <span>Moon Production</span>
                 <img class="footer__moon" src="img/Moon.svg" alt="">
             </a>
             <span class="footer__bottom_media">
-                <a class="a footer__bottom_vk" href="https://vk.com/moon_mydiary" target="_blank"> <img src="img/vk.svg" alt=""> </a>
-                <a class="a footer__bottom_google-play" href="https://play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank"> <img src="img/google-play.svg" alt=""> </a>
+                <a class="a footer__bottom_vk" href="//vk.com/moon_mydiary" target="_blank"> <img src="img/vk.svg" alt=""> </a>
+                <a class="a footer__bottom_google-play" href="//play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank"> <img src="img/google-play.svg" alt=""> </a>
             </span>
         </div>
     </footer>
-
 
     <script src="js/script.js"></script>
 </body>

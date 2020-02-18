@@ -1,0 +1,105 @@
+.hamburger__line_first,
+.hamburger__line_second,
+.hamburger__line_third {
+  -webkit-transition: top .3s .3s, -webkit-transform .3s 0s;
+  transition: top .3s .3s, -webkit-transform .3s 0s;
+  transition: top .3s .3s, transform .3s 0s;
+  transition: top .3s .3s, transform .3s 0s, -webkit-transform .3s 0s;
+}
+
+.hamburger.menu-clicked .hamburger__line_first,
+.hamburger.menu-clicked .hamburger__line_second,
+.hamburger.menu-clicked .hamburger__line_third {
+  top: 1.05rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition: top .3s 0s, -webkit-transform .3s .3s;
+  transition: top .3s 0s, -webkit-transform .3s .3s;
+  transition: top .3s 0s, transform .3s .3s;
+  transition: top .3s 0s, transform .3s .3s, -webkit-transform .3s .3s;
+}
+
+.hamburger.menu-clicked .hamburger__line_third {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.btn-down {
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.btn-down .btn-down__arrow {
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.btn-down:hover {
+  height: 3rem;
+  bottom: .25rem;
+}
+
+.btn-down:hover .btn-down__arrow {
+  height: 2rem;
+}
+
+.btn-down:active {
+  border-width: 3px;
+}
+
+.btn-down:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0.25rem 0 var(--main-dark-color-first);
+          box-shadow: 0 0 0.25rem 0 var(--main-dark-color-first);
+}
+
+.head-screen__download-button {
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+}
+
+.head-screen__download-button:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.head-screen__download-button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+.feature__btn_clicked::before,
+.feature__btn_clicked::after {
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.feature__btn_clicked::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.feature__btn_clicked::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.communication__btn_send-message:hover {
+  color: #fff;
+}
+
+.communication__btn_send-message:focus {
+  outline: none;
+}
+
+.communication__btn_send-message:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+/*# sourceMappingURL=animations.css.map */

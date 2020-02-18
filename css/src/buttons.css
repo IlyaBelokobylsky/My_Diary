@@ -1,0 +1,205 @@
+.hamburger {
+  display: block;
+  position: fixed;
+  background-image: radial-gradient(circle, #fff 0%, #fbfbfb 100%);
+  border: 0.1rem solid var(--invisible-color);
+  border-radius: 100%;
+  padding: 1.1rem 1.1rem;
+  top: .1rem;
+  left: .1rem;
+  z-index: 999;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+.hamburger .hamburger__line_first,
+.hamburger .hamburger__line_second,
+.hamburger .hamburger__line_third {
+  display: block;
+  position: absolute;
+  width: 1.25rem;
+  top: 1.05rem;
+  left: .5rem;
+  height: .1rem;
+  background: #000;
+}
+
+.hamburger .hamburger__line_first {
+  top: .65rem;
+}
+
+.hamburger .hamburger__line_third {
+  top: 1.45rem;
+}
+
+.hamburger:focus {
+  outline: none;
+  border-width: 3px;
+  top: calc(.1rem - 1px);
+  left: calc(.1rem - 1px);
+}
+
+.btn-down {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  bottom: .5rem;
+  left: .5rem;
+  width: 1.667rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--main-light-color-first);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.btn-down .btn-down__arrow {
+  display: block;
+  position: relative;
+  width: .1rem;
+  height: 1.5rem;
+  top: calc(50% - 1rem);
+  left: calc(50% - .005rem);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--main-light-color-first)));
+  background-image: linear-gradient(180deg, transparent 0%, var(--main-light-color-first) 100%);
+  border-radius: .5rem;
+}
+
+.btn-down .btn-down__arrow::before,
+.btn-down .btn-down__arrow::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: .1rem;
+  height: .75rem;
+  bottom: -.0735rem;
+  border-radius: .5rem;
+  background-color: var(--main-light-color-first);
+}
+
+.btn-down .btn-down__arrow::before {
+  left: -.2485rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.btn-down .btn-down__arrow::after {
+  left: .2485rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.head-screen__download-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1.5rem;
+  width: 12rem;
+  height: 3rem;
+  background-image: radial-gradient(50% 50% at 50% 50%, #F2CD01 0%, var(--main-light-color-second) 100%);
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 0px 4.8rem var(--main-light-color-second);
+          box-shadow: 0px 0px 4.8rem var(--main-light-color-second);
+  cursor: pointer;
+  font-size: 1rem;
+  color: #1c1c1c;
+}
+
+.head-screen__download-button i {
+  font-size: 1.5rem;
+  margin-right: .5rem;
+  margin-left: -.1rem;
+}
+
+.head-screen__download-button span {
+  margin-left: .2rem;
+}
+
+.feature__btn_more {
+  background: none;
+  outline: none;
+  border: none;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  width: 2em;
+  height: 2em;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.feature__btn_more::before,
+.feature__btn_more::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 1em;
+  width: 1em;
+  height: .2em;
+  border-radius: .1em;
+  background-color: var(--invisible-color);
+}
+
+.feature__btn_more::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: .42em;
+}
+
+.feature__btn_more::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: .98em;
+}
+
+.communication__btn_send-message {
+  display: block;
+  position: relative;
+  z-index: 999;
+  margin-top: -.33rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 2px solid var(--main-dark-color-first);
+  color: #000;
+  cursor: pointer;
+  width: 6.5rem;
+  height: 2rem;
+  -webkit-box-shadow: 0px 0px 0.33rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 0.33rem rgba(0, 0, 0, 0.3);
+  border-radius: 1.5rem;
+  font-size: .6rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.communication__btn_send-message__before {
+  display: block;
+  position: absolute;
+  background-color: var(--main-dark-color-first);
+  width: 0;
+  height: 0;
+  border-radius: 1.5rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.communication__btn_send-message:hover .communication__btn_send-message__before {
+  height: 110%;
+  width: 110%;
+  top: -5%;
+  left: -5%;
+  z-index: -999;
+}
+/*# sourceMappingURL=buttons.css.map */

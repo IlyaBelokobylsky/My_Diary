@@ -1,0 +1,87 @@
+// Hamburger animation
+.hamburger__line_first,
+.hamburger__line_second,
+.hamburger__line_third {
+    // Время анимации по 2-му клику
+    // transition: property duration delay;
+    transition: top .3s .3s, transform .3s 0s;
+}
+
+.hamburger.menu-clicked .hamburger__line_first,
+.hamburger.menu-clicked .hamburger__line_second,
+.hamburger.menu-clicked .hamburger__line_third {
+    top: 1.05rem;
+    transform: rotate(45deg);
+    transition-delay: 0s;
+    transition: top .3s 0s, transform .3s .3s; // время выполнения по 1-му клику
+}
+
+.hamburger.menu-clicked .hamburger__line_third {
+    transform: rotate(-45deg);
+}
+
+
+// Arrow down animation
+.btn-down {
+    transition: .2s ease-in-out;
+    .btn-down__arrow {
+        transition: .2s ease-in-out;
+    }
+}
+
+.btn-down:hover {
+    height: 3rem;
+    bottom: .25rem;
+
+    .btn-down__arrow {
+        height: 2rem;
+    }
+}
+.btn-down:active {
+    border-width: 3px;
+}
+.btn-down:focus {
+    outline: none;
+    box-shadow: 0 0 .25rem 0 var(--main-dark-color-first);
+}
+
+
+// Download button (head screen)
+.head-screen__download-button {
+    transition: transform .1s;
+}
+.head-screen__download-button:hover {
+    transform: scale(1.01);
+}
+.head-screen__download-button:active {
+    transform: scale(.99);
+}
+
+
+// Interface list buttons
+.feature__btn_clicked::before,
+.feature__btn_clicked::after {
+    transition: transform .5s;
+}
+.feature__btn_clicked::before {
+    transform: rotate(-45deg);
+}
+
+.feature__btn_clicked::after {
+    transform: rotate(45deg);
+}
+
+
+
+// Footer send button
+.communication__btn_send-message:hover {
+    color: #fff;
+}
+
+.communication__btn_send-message:focus {
+    outline: none;
+}
+
+.communication__btn_send-message:active {
+    transform: scale(0.95);
+}

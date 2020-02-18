@@ -39,7 +39,7 @@ HEADER.addEventListener('click', function (event) {
 
             border.style.top = posAfter;
             setTimeout( () => border.style.height = '3.15em', 345);
-            setTimeout( () => border.style.width = '13em', 645);
+            setTimeout( () => border.style.width = '13em', 750);
 
         } else {
             if (target.classList.contains('nav__link-small')) {
@@ -68,7 +68,7 @@ HEADER.addEventListener('click', function (event) {
                 border.style.width = widthAfter - 5 + 'em';
             }
             border.style.left = posAfter;
-            setTimeout( () => border.style.width = widthAfter + 'em', 350);
+            setTimeout( () => border.style.width = widthAfter + 'em', 345);
             setTimeout( () => border.style.height = '3.15em', 750);
         }
 

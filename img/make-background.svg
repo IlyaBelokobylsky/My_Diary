@@ -1,0 +1,30 @@
+<svg width="872" height="1041" viewBox="0 0 872 1041" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="331.341" y="728.099" width="146" height="146" rx="18" transform="rotate(-45 331.341 728.099)" stroke="#372DA6" stroke-width="4"/>
+<rect x="333.524" y="243.066" width="146" height="146" rx="18" transform="rotate(-45 333.524 243.066)" stroke="#372DA6" stroke-width="4"/>
+<rect x="434.828" y="831.165" width="146" height="146" rx="18" transform="rotate(-45 434.828 831.165)" stroke="#372DA6" stroke-width="4"/>
+<rect x="437.011" y="346.132" width="146" height="146" rx="18" transform="rotate(-45 437.011 346.132)" stroke="#372DA6" stroke-width="4"/>
+<rect x="227.828" y="831.165" width="146" height="146" rx="18" transform="rotate(-45 227.828 831.165)" stroke="#372DA6" stroke-width="4"/>
+<rect x="230.011" y="346.132" width="146" height="146" rx="18" transform="rotate(-45 230.011 346.132)" stroke="#372DA6" stroke-width="4"/>
+<rect x="331.316" y="934.231" width="146" height="146" rx="18" transform="rotate(-45 331.316 934.231)" stroke="#372DA6" stroke-width="4"/>
+<rect x="333.499" y="449.198" width="146" height="146" rx="18" transform="rotate(-45 333.499 449.198)" stroke="#372DA6" stroke-width="4"/>
+<rect x="558.341" y="455.165" width="146" height="146" rx="18" transform="rotate(-45 558.341 455.165)" stroke="#372DA6" stroke-width="4"/>
+<rect x="661.828" y="558.231" width="146" height="146" rx="18" transform="rotate(-45 661.828 558.231)" stroke="#372DA6" stroke-width="4"/>
+<rect x="454.828" y="558.231" width="146" height="146" rx="18" transform="rotate(-45 454.828 558.231)" stroke="#372DA6" stroke-width="4"/>
+<rect x="558.316" y="661.297" width="146" height="146" rx="18" transform="rotate(-45 558.316 661.297)" stroke="#372DA6" stroke-width="4"/>
+<rect x="106.341" y="455.165" width="146" height="146" rx="18" transform="rotate(-45 106.341 455.165)" stroke="#372DA6" stroke-width="4"/>
+<rect x="209.828" y="558.231" width="146" height="146" rx="18" transform="rotate(-45 209.828 558.231)" stroke="#372DA6" stroke-width="4"/>
+<rect x="2.82843" y="558.231" width="146" height="146" rx="18" transform="rotate(-45 2.82843 558.231)" stroke="#372DA6" stroke-width="4"/>
+<rect x="106.316" y="661.297" width="146" height="146" rx="18" transform="rotate(-45 106.316 661.297)" stroke="#372DA6" stroke-width="4"/>
+<path class="make__path" d="M78 690.819L191.763 795.585C199.534 802.742 211.531 802.62 219.156 795.307L421.987 600.759C429.793 593.273 442.135 593.347 449.849 600.927L647.313 794.958C654.926 802.438 667.071 802.623 674.908 795.378L788 690.819" stroke="url(#paint0_linear)" stroke-width="25"/>
+<path d="M607.858 71.875C607.858 166.552 531.106 0 436.429 0C341.751 0 265 166.552 265 71.875C265 -22.8026 341.751 150 436.429 150C531.106 150 607.858 -22.8026 607.858 71.875Z" fill="url(#paint1_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="445.263" y1="808.319" x2="432.771" y2="599.318" gradientUnits="userSpaceOnUse">
+<stop stop-color="#354FC4" stop-opacity="0.75"/>
+<stop offset="1" stop-color="#372DA6" stop-opacity="0.5"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="436.429" y1="0" x2="436.429" y2="150" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D93FEB"/>
+<stop offset="1" stop-color="#F9F047"/>
+</linearGradient>
+</defs>
+</svg>
