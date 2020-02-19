@@ -34,9 +34,7 @@
 
 .hamburger:focus {
     outline: none;
-    border-width: 3px;
-    top: calc(.1rem - 1px);
-    left: calc(.1rem - 1px);
+    box-shadow: 0 0 .1rem .01rem var(--invisible-color);
 }
 
 

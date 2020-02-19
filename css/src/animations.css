@@ -86,7 +86,7 @@
 
 .btn-down:hover {
   height: 3rem;
-  bottom: .25rem;
+  bottom: .25 rem;
 }
 
 .btn-down:hover .btn-down__arrow {

@@ -79,51 +79,107 @@
 
 
     div.head-screen {
-        margin-left: 12vw;
+        margin-left: 4.67rem;
         margin-top: 4rem;
+        .head-screen__triangle {
+            top: 1.5rem;
+            right: -6.5rem;
+            transform: rotate(55deg);
+        }
         .head-screen__h1 {
             font-size: 3.4rem;
+            .head-screen__moon-svg_img {
+                right: 2.2rem;
+            }
         }
         .head-screen__h4 {
             font-size: 1.25rem;
-            margin-left: -0.75rem;
         }
-        div.head-screen__phones {
+
+        .head-screen__phones {
             position: absolute;
-            display: flex;
-            right: 1.5rem;
-            top: 1.75rem;
+            right: 13rem;
+            top: 4rem;
+            .desktop {
+                display: block;
+                position: relative;
+                z-index: 10;
+                height: 15rem;
+            }
+            .head-screen__phones_blur {
+                position: relative;
+                top: -15rem;
+                img {
+                    display: block;
+                    position: absolute;
+                    z-index: 0;
+                }
+                @for $i from 1 through 3 {
+                    .head-screen__phone-blur-#{$i} {
+                        height: 15rem + .1667rem * $i; 
+                        right: -.4rem * $i;
+                        top: -.1rem * $i;
+                        opacity: 1 / $i;
+                        filter: blur(2px * $i);
+                    }
+                }
+            }
         }
+
         .head-screen__download-button {
             margin-top: 3.4rem;
         }
     }
+    main .head-screen::after {
+        width: 11rem;
+        height: 11rem;
+        top: 11.08rem;
+        left: 22rem;
+        transform: rotate(45deg);
+    }
 
 
     div.why-we {
-        margin-left: 5rem;
+        margin-top: 7.5rem;
+        margin-left: 1.85rem;
+        .why-we__h3 {
+            margin-left: 3.33rem;
+        }
         .why-we__list {
-            margin-left: -4.5rem;
-            margin-top: 3.3rem;
             grid-template-columns: 16rem 16.75rem;
-            .why-we__list_link {
-                font-size: 1rem;
+            grid-row-gap: .5rem;
+            li {
+                padding-top: .5rem;
+                .why-we__list_link {
+                    font-size: 1rem;
+                }
             }
         }
         .why-we__phone {
-            visibility: hidden;
-            top: 28.85rem;
+            // visibility: hidden;  
+            top: 3rem;
+            right: 3rem;
             max-width: 6rem;
         }
     }
 
+    div.why-we::before {
+        right: 0rem;
+        top: .5rem;
+    }
 
 
     div.make-and-settings {
-        overflow: hidden;
-        margin-top: 5rem;
-        padding-top: 1rem;
+        margin-left: 1.85rem;
+        margin-top: 4rem;
         grid-template-columns: 1fr 1fr;
+        .make__object-svg {
+            top: 8.25rem;
+            left: -1.12rem;
+        }
+        .make__img {
+            margin: 1.5rem 5.55rem 0;
+        }
         div.description {
             p.description-text {
                 margin-top: 0.5rem;
@@ -137,10 +193,11 @@
             display: block;
             position: absolute;
             top: 1.5rem;
-            left: 47vw;
+            left: 45vw;
             height: 7.5rem;
             width: 3.5px;
-            background-color: #795547;
+            background-color: var(--main-dark-color-first);
+            border-radius: 10px;
         }
         .settings::after {
             top: 12rem;
@@ -150,35 +207,31 @@
             display: block;
             position: absolute;
             top: 10.325rem;
-            left: calc(47vw - 3.5px);
+            left: calc(45vw - 3.5px);
             height: 10px;
             width: 10px;
-            background-color: #795547;
-            transform: rotate(45deg);
+            background-color: var(--main-dark-color-first);
+            border-radius: 100%;
         }
 
         div.settings {
             flex-direction: column-reverse;
-            margin-left: -0.35rem;
             .settings__description {
                 display: block;
                 position: absolute;
-                bottom: 8rem;
                 margin-bottom: 0;
-                .description-text {
-                    margin-top: -0.75rem;
-                }
+                bottom: 1rem;
             }
             .settings__img {
-                bottom: 10.3rem;
-                left: -2rem;
-                img.settings__img-phone {
-                    left: 10rem;
-                    top: 7.5rem;
-                    width: 5.3rem;
+                top: -8.5rem;
+                left: 2rem;
+                .settings__object-svg {
+                    top: -1rem;
+                    left: -1rem;
+                    width: 16.5rem;
                 }
-                img.settings__img-triangle {
-                    width: 17.3rem;
+                img.settings__img-phone {
+                    width: 5.3rem;
                 }
             }
         }
@@ -186,11 +239,12 @@
 
 
 
-    main .interface {
-        margin-top: 5.5rem;
+    main div.interface {
+        margin-top: 16rem;
+        margin-left: -1rem;
         .interface__head-text {
             position: relative;
-            left: 13rem;
+            left: 10.5rem;
             top: -6.5rem;
         }
         .interface__features {
@@ -199,7 +253,7 @@
             font-size: 0.65rem;
             justify-content: space-around;
             li {
-                margin: 0 0 3.5em;
+                margin: 0;
             }
         }
     }

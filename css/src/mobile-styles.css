@@ -191,13 +191,10 @@ main .head-screen .head-screen__h1 {
   max-width: 15rem;
 }
 
-main .head-screen .head-screen__moon-svg {
+main .head-screen .head-screen__moon-svg_img {
   position: absolute;
   right: 2.7rem;
   top: -5.65rem;
-}
-
-main .head-screen .head-screen__moon-svg .head-screen__moon-svg_img {
   width: 13.33rem;
 }
 
@@ -271,8 +268,6 @@ main .head-screen::after {
   left: 15rem;
   background: linear-gradient(45deg, #F9F047 0.05%, #D93FEB 99.95%);
   border-radius: 100px 500px 100px 0px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 main .head-text, main .why-we__h3 {
@@ -292,7 +287,7 @@ main .why-we {
 }
 
 main .why-we .why-we__h3 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-left: 1.82rem;
 }
 
@@ -303,11 +298,11 @@ main .why-we .why-we__list {
       grid-template-columns: 1fr;
   margin-top: 2rem;
   margin-left: -1rem;
+  grid-row-gap: .5rem;
 }
 
 main .why-we .why-we__list li {
   padding: 1.75rem 0;
-  margin-top: .75rem;
 }
 
 main .why-we .why-we__list li span {
@@ -333,10 +328,10 @@ main .why-we::before {
   content: '';
   display: block;
   position: absolute;
-  right: -4rem;
-  top: 4.25rem;
-  width: 16rem;
-  height: 8rem;
+  right: -4.5rem;
+  top: 4.45rem;
+  width: 15.3rem;
+  height: 9rem;
   background-image: -webkit-gradient(linear, right top, left top, from(var(--main-dark-color-second)), to(var(--main-light-color-first)));
   background-image: linear-gradient(270deg, var(--main-dark-color-second) 0%, var(--main-light-color-first) 100%);
   border-radius: 100rem 100rem 5rem 5rem;
@@ -415,7 +410,7 @@ main .make-and-settings .settings {
 }
 
 main .make-and-settings .settings .settings__head-text {
-  margin-top: 7rem;
+  margin-top: 7.5rem;
   margin-bottom: 0;
   width: 18rem;
   height: 2rem;

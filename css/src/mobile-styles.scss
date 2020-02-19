@@ -162,14 +162,12 @@ main {
          max-height: 6.9rem;
          max-width: 15rem;
       }
-      .head-screen__moon-svg {
-         position: absolute;
-         right: 2.7rem;
-         top: -5.65rem;
          .head-screen__moon-svg_img {
+            position: absolute;
+            right: 2.7rem;
+            top: -5.65rem;
             width: 13.33rem;
          }
-      }
       h4 {
          display: block;
          position: relative;
@@ -227,7 +225,6 @@ main {
       left: 15rem;
       background: linear-gradient(45deg, #F9F047 .05%, #D93FEB 99.95%);
       border-radius: 100px 500px 100px 0px;
-      transform: scale(1);
    }
 
 
@@ -246,7 +243,7 @@ main {
       margin-left: 1rem;
       position: relative;
       .why-we__h3 {
-         font-size: 1.6rem;
+         font-size: 2rem;
          margin-left: 1.82rem;
       }
       .why-we__list {
@@ -254,9 +251,9 @@ main {
          grid-template-columns: 1fr;
          margin-top: 2rem;
          margin-left: -1rem;
+         grid-row-gap: .5rem;
          li {
             padding: 1.75rem 0;
-            margin-top: .75rem;
             span {
                font-size: 1rem;
                color: var(--main-dark-color-first);
@@ -282,10 +279,10 @@ main {
       content: '';
       display: block;
       position: absolute;
-      right: -4rem;
-      top: 4.25rem;
-      width: 16rem;
-      height: 8rem;
+      right: -4.5rem;
+      top: 4.45rem;
+      width: 15.3rem;
+      height: 9rem;
       background-image: linear-gradient(270deg, var(--main-dark-color-second) 0%, var(--main-light-color-first) 100%);
       border-radius: 100rem 100rem 5rem 5rem;
       transform: rotate(60deg); 
@@ -350,7 +347,7 @@ main {
          display: flex;
          flex-direction: column;
          .settings__head-text {
-            margin-top: 7rem;
+            margin-top: 7.5rem;
             margin-bottom: 0;
             width: 18rem;
             height: 2rem;

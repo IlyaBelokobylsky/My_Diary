@@ -35,9 +35,8 @@
 
 .hamburger:focus {
   outline: none;
-  border-width: 3px;
-  top: calc(.1rem - 1px);
-  left: calc(.1rem - 1px);
+  -webkit-box-shadow: 0 0 0.1rem 0.01rem var(--invisible-color);
+          box-shadow: 0 0 0.1rem 0.01rem var(--invisible-color);
 }
 
 .btn-down {
@@ -238,7 +237,7 @@
 
 .question__show-more:active,
 .possibilities__slider-btn:active {
-  opacity: 0.75;
+  opacity: .75;
 }
 
 .question__show-more:focus,
