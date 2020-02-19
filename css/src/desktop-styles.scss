@@ -2,6 +2,9 @@
 @media (min-width: 993px) {
     .desktop {
         display: block;
+    }
+    .mobile {
+        display: none;
     }     
     :root {
         font-size: 23px;
@@ -85,7 +88,7 @@
             font-size: 1.25rem;
             margin-left: -0.75rem;
         }
-        div.head-screen__phone {
+        div.head-screen__phones {
             position: absolute;
             display: flex;
             right: 1.5rem;
