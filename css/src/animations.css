@@ -1,3 +1,51 @@
+.input_text::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.input_text::-moz-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.input_text:-moz-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.input_text:-ms-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.input_text:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.input_text:focus::-moz-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.input_text:focus:-moz-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.input_text:focus:-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
 .hamburger__line_first,
 .hamburger__line_second,
 .hamburger__line_third {
@@ -49,12 +97,6 @@
   border-width: 3px;
 }
 
-.btn-down:focus {
-  outline: none;
-  -webkit-box-shadow: 0 0 0.25rem 0 var(--main-dark-color-first);
-          box-shadow: 0 0 0.25rem 0 var(--main-dark-color-first);
-}
-
 .head-screen__download-button {
   -webkit-transition: -webkit-transform .1s;
   transition: -webkit-transform .1s;
@@ -72,8 +114,8 @@
           transform: scale(0.99);
 }
 
-.feature__btn_clicked::before,
-.feature__btn_clicked::after {
+.feature__btn_more::before,
+.feature__btn_more::after {
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
@@ -94,8 +136,12 @@
   color: #fff;
 }
 
-.communication__btn_send-message:focus {
-  outline: none;
+.communication__btn_send-message:hover .communication__btn_send-message__before {
+  height: 110%;
+  width: 110%;
+  top: -5%;
+  left: -5%;
+  z-index: -999;
 }
 
 .communication__btn_send-message:active {

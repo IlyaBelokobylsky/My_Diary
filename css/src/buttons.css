@@ -63,7 +63,7 @@
   left: calc(50% - .005rem);
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--main-light-color-first)));
   background-image: linear-gradient(180deg, transparent 0%, var(--main-light-color-first) 100%);
-  border-radius: .5rem;
+  border-radius: .75rem;
 }
 
 .btn-down .btn-down__arrow::before,
@@ -72,22 +72,28 @@
   display: block;
   position: absolute;
   width: .1rem;
-  height: .75rem;
-  bottom: -.0735rem;
-  border-radius: .5rem;
+  height: .5rem;
+  bottom: -.01rem;
+  border-radius: .75rem;
   background-color: var(--main-light-color-first);
 }
 
 .btn-down .btn-down__arrow::before {
-  left: -.2485rem;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  left: -.125rem;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
 }
 
 .btn-down .btn-down__arrow::after {
-  left: .2485rem;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  left: .125rem;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.btn-down:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0.25rem 0 var(--main-dark-color-first);
+          box-shadow: 0 0 0.25rem 0 var(--main-dark-color-first);
 }
 
 .head-screen__download-button {
@@ -130,10 +136,11 @@
   display: block;
   position: absolute;
   cursor: pointer;
+  padding: 1rem;
   bottom: 0;
   width: 2em;
   height: 2em;
-  left: 50%;
+  left: 52%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
@@ -160,6 +167,83 @@
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   left: .98em;
+}
+
+.possibilities__slider-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  height: 3.25rem;
+  cursor: pointer;
+  opacity: 0.25;
+}
+
+.possibilities__slider-btn img {
+  height: 3.25rem;
+}
+
+.slider-left {
+  left: -4rem;
+}
+
+.slider-right {
+  right: -4rem;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.faq__search-btn {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -.1rem;
+  border: none;
+  border-left: 0.15rem solid var(--main-light-color-first);
+  background: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 1.3rem;
+  padding-right: .3rem;
+  padding-top: .1rem;
+  color: var(--description-text-color);
+  font-size: .95rem;
+}
+
+.faq__search-btn:hover {
+  font-size: 1rem;
+}
+
+.faq__search-btn:focus {
+  outline: none;
+}
+
+.faq__search-btn:active {
+  font-size: .95rem;
+}
+
+.question__show-more {
+  margin-top: .05rem;
+  opacity: .25;
+  margin-right: .3rem;
+  height: 1rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.question__show-more:hover,
+.possibilities__slider-btn:hover {
+  opacity: .5;
+}
+
+.question__show-more:active,
+.possibilities__slider-btn:active {
+  opacity: 0.75;
+}
+
+.question__show-more:focus,
+.possibilities__slider-btn:focus {
+  outline: none;
 }
 
 .communication__btn_send-message {
@@ -193,13 +277,5 @@
   left: 50%;
   -webkit-transition: all .2s;
   transition: all .2s;
-}
-
-.communication__btn_send-message:hover .communication__btn_send-message__before {
-  height: 110%;
-  width: 110%;
-  top: -5%;
-  left: -5%;
-  z-index: -999;
 }
 /*# sourceMappingURL=buttons.css.map */

@@ -43,7 +43,7 @@
             <button id="nav__link-3" class="btn-link nav__link" data-link="interface">
                 Интерфейс <strong><span class="MyDiary">MyDiary</span></strong>
             </button>
-            <button id="nav__link-4" class="btn-link nav__link nav__link-small" data-link="interface">
+            <button id="nav__link-4" class="btn-link nav__link nav__link-small" data-link="possibilities">
                 Возможности
             </button>
             <button id="nav__link-5" class="btn-link nav__link nav__link-small" data-link="communication">
@@ -75,8 +75,7 @@
                 </object>
             </h1>
             <h4 class="head-screen__h4">Твой&nbsp;учебный <br> дневник</h4>
-            <div class="head-screen__phones">
-                <img class="desktop phone" src="img/desktop-mainPhone.svg" alt="">
+            <div class="head-screen__phone">
                 <img class="main-phone" src="img/mainPhone.png" alt="">
             </div>
             <a class="a head-screen__download-button" href="//play.google.com/store/apps/details?id=moonproject.mydiary">
@@ -104,7 +103,7 @@
                 </li>
                 <li>
                     <span><i class="fas fa-save"></i></span>
-                    <button class="why-we__list_link btn-link" data-link="">Умное сохранение д/з</button>
+                    <button class="why-we__list_link btn-link" data-link="possibilities">Умное сохранение д/з</button>
                 </li>
                 <li>
                     <span><i class="fas fa-pencil-ruler"></i></span>
@@ -112,7 +111,7 @@
                 </li>
                 <li>
                     <span><i class="fas fa-pen-nib"></i></span>
-                    <button class="why-we__list_link btn-link" data-link="">Удобная система оценок</button>
+                    <button class="why-we__list_link btn-link" data-link="possibilities">Удобная система оценок</button>
                 </li>
             </ul>
             <img class="why-we__phone" src="img/mainPhone.png" alt="">
@@ -131,10 +130,10 @@
                         создания расписания
                     </p>
                 </div>
-                <object class="make__object-svg" width="1000" height="1000" data="img/make-background.svg" type="image/svg+xml">
+                <img class="main-phone make__img" src="img/mainPhone.png" alt="Make MyDiary easily">
+                <object class="make__object-svg" data="img/make-background.svg" type="image/svg+xml">
                     <img src="img/make-background.svg" alt="">
                 </object>
-                <img class="main-phone make__img" src="img/mainPhone.png" alt="Make MyDiary easily">
             </div>
             <div class="settings">
                 <div class="description settings__description">
@@ -147,7 +146,10 @@
                     </p>
                 </div>
                 <div class="settings__img">
-                    <img class="settings__img-phone" src="img/mainPhone.png" alt="">
+                    <img class="settings__img-phone" src="img/mainPhone.png" alt="You can customize MyDiary for yourself">
+                    <object class="settings__object-svg" data="img/settings-background.svg" type="image/svg+xml">
+                        <img src="img/settings-background.svg" alt="">
+                    </object>
                 </div>
             </div>
         </div>
@@ -158,36 +160,36 @@
             <h3 class="interface__head-text head-text">Практичный&nbsp;интерфейс</h3>
             <ul class="interface__features">
                 <li id="feature-0">
-                    <object class="feature__img" data="picture.svg" type="image/svg+xml">
+                    <div class="feature__img">
                         <img src="img/design-feat.svg" alt="">
-                    </object>
+                    </div>
                     <p class="feature__visible-text">Интуитивный дизайн дневника очень прост <br> в освоении...</p>
                     <button class="feature__btn_more"></button>
                     <p class="feature__hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                 </li>
 
                 <li id="feature-1">
-                    <object class="diary-img feature__img" data="picture.svg" type="image/svg+xml">
+                    <div class="diary-img feature__img">
                         <img src="img/diary-feat.svg" alt="">
-                    </object>
+                    </div>
                     <p class="feature__visible-text">Значительные преимущества в сравнении с бумажным дневником...</p>
                     <button class="feature__btn_more"></button>
                     <p class="feature__hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                 </li>
 
                 <li id="feature-2">
-                    <object class="list-img feature__img" data="picture.svg" type="image/svg+xml">
+                    <div class="list-img feature__img">
                         <img src="img/list-feat.svg" alt="">
-                    </object>
+                    </div>
                     <p class="feature__visible-text feature__text_more-right">Заметная сортировка сделанной домашней работы...</p>
                     <button class="feature__btn_more"></button>
                     <p class="feature__hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                 </li>
 
                 <li id="feature-3">
-                    <object class="watch-img feature__img" data="picture.svg" type="image/svg+xml">
+                    <div class="watch-img feature__img">
                         <img src="img/watch-feat.svg" alt="">
-                    </object>
+                    </div>
                     <p class="feature__visible-text feature__text_more-right-and-down">Понятный внешний вид структуры расписания дневника...</p>
                     <button class="feature__btn_more"></button>
                     <p class="feature__hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
@@ -196,8 +198,81 @@
         </div>
         
 
-        
-        <!-- todo: possibilities-->
+        <div class="possibilities" id="possibilities">
+            <h3 class="possibilities__head-text head-text">Большие&nbsp;возможности</h3>
+            <div class="possibilities__slider">
+                <p class="possibilities__slider_text description-text" id="slider_left-text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?</p>
+                
+                <button class="possibilities__slider-btn slider-left">
+                    <img src="img/arrow-btn.svg" alt="«">
+                </button>
+
+                <object class="possibilities__slider-background" data="img/slider-background.svg" type="image/svg+xml">
+                    <img src="img/slider-background.svg" alt="">
+                </object>
+
+                <button class="possibilities__slider-btn slider-right">
+                    <img src="img/arrow-btn.svg" alt="»">
+                </button>
+                
+                <p class="possibilities__slider_text description-text" id="slider_right-text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?</p>
+            </div>
+        </div>
+
+
+        <div class="faq" id="faq">
+            <h3 class="head-text faq__head-text">F.A.Q.</h3>
+            <div class="faq__search">
+                <input type="text" name="search" id="search" class="faq__search-text input_text" placeholder="Поиск..." autocomplete="off">
+                <button class="faq__search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <ul class="faq__list">
+                <li>
+                    <p class="faq__list_question">
+                        <i class="fas fa-question-circle"></i>
+                        Lorem ipsum dolor sit?
+                        <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                    </p>
+                    <p class="faq__list_answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptate saepe molestias quas, totam recusandae cum veniam aliquam ex repellendus.
+                    </p>
+                </li>
+
+                <li class="faq__right">
+                    <p class="faq__list_question">
+                        <i class="fas fa-question-circle"></i>
+                        Lorem ipsum dolor sit?
+                        <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                    </p>
+                    <p class="faq__list_answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptate saepe molestias quas, totam recusandae cum veniam aliquam ex repellendus.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="faq__list_question">
+                        <i class="fas fa-question-circle"></i>
+                        Lorem ipsum dolor sit?
+                        <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                    </p>
+                    <p class="faq__list_answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptate saepe molestias quas, totam recusandae cum veniam aliquam ex repellendus.
+                    </p>
+                </li>
+                
+                <li class="faq__right">
+                    <p class="faq__list_question">
+                        <i class="fas fa-question-circle"></i>
+                        Lorem ipsum dolor sit?
+                        <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                    </p>
+                    <p class="faq__list_answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptate saepe molestias quas, totam recusandae cum veniam aliquam ex repellendus.
+                    </p>
+                </li>
+            </ul>
+        </div>
     </main>
     
 
@@ -207,8 +282,8 @@
                 <h4 class="communication__head-text">Связаться с нами</h4>
                 <p>Если заметите ошибки в работе приложения, сообщите нам при помощи формы ниже</p>
                 <form action="send.php" method="post">
-                    <input type="email" class="communication__input_text user-email" name="email" required placeholder="Email"><br>
-                    <br><textarea rows="5" class="communication__input_text user-message" name="message" placeholder="Ваше сообщение"></textarea><br>
+                    <input type="email" class="communication__input_text input_text user-email" name="email" required placeholder="Email"><br>
+                    <br><textarea rows="5" class="communication__input_text input_text user-message" name="message" placeholder="Ваше сообщение"></textarea><br>
                     <button type="submit" name="submit" class="communication__btn_send-message">
                         Отправить
                         <!-- у before нет нормального z-index -->

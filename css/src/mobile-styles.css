@@ -209,13 +209,14 @@ main .head-screen h4 {
   width: 15rem;
   letter-spacing: 1px;
   text-align: center;
+  color: var(--description-text-color);
   text-transform: capitalize;
   font-weight: normal;
   font-size: 1.4rem;
   line-height: 1.4rem;
 }
 
-main .head-screen .head-screen__phones {
+main .head-screen .head-screen__phone {
   margin-top: 2rem;
   margin-left: 3.25rem;
   margin-bottom: 2.5rem;
@@ -258,16 +259,6 @@ main .head-screen .head-screen__download-button span {
   margin-left: .2rem;
 }
 
-main .head-screen .head-screen__download-button:hover {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-}
-
-main .head-screen .head-screen__download-button:active {
-  -webkit-transform: scale(0.99);
-          transform: scale(0.99);
-}
-
 main .head-screen::after {
   content: '';
   display: block;
@@ -283,6 +274,7 @@ main .head-screen::after {
 }
 
 main .head-text, main .why-we__h3 {
+  display: block;
   position: relative;
   z-index: 1;
   font-style: normal;
@@ -322,6 +314,7 @@ main .why-we .why-we__list li span {
 }
 
 main .why-we .why-we__list li .why-we__list_link {
+  color: var(--description-text-color);
   font-size: 1.2rem;
   padding-left: 5px;
   font-weight: 500;
@@ -368,7 +361,7 @@ main .description-text {
   font-weight: 500;
   line-height: 1.6rem;
   letter-spacing: 1px;
-  width: 13rem;
+  width: 14rem;
 }
 
 main .make-and-settings {
@@ -397,34 +390,16 @@ main .make-and-settings .make__head-text::before {
 main .make-and-settings .make__img {
   display: block;
   position: relative;
-  margin: 1.5rem 4.55rem 0;
+  margin: 1.75rem 4.55rem 0;
   z-index: 2;
-  opacity: 0;
 }
 
 main .make-and-settings .make__object-svg {
   display: block;
   position: absolute;
   width: 21.67rem;
-  top: -2rem;
+  top: 12.5rem;
   left: -0.75rem;
-}
-
-main .make-and-settings .make__object-svg .make__path path {
-  stroke-width: 1;
-}
-
-main .make-and-settings .settings__head-text {
-  margin-top: 5.5rem;
-  width: 18rem;
-  height: 2rem;
-}
-
-main .make-and-settings .settings__head-text::before {
-  content: 'Гибкость';
-  font-size: 4.1rem;
-  bottom: -.5rem;
-  right: .55rem;
 }
 
 main .make-and-settings .settings {
@@ -437,9 +412,38 @@ main .make-and-settings .settings {
           flex-direction: column;
 }
 
-main .make-and-settings .settings .settings__img-phone {
+main .make-and-settings .settings .settings__head-text {
+  margin-top: 7rem;
+  margin-bottom: 0;
+  width: 18rem;
+  height: 2rem;
+}
+
+main .make-and-settings .settings .settings__head-text::before {
+  content: 'Гибкость';
+  font-size: 4.1rem;
+  bottom: -.5rem;
+  right: .55rem;
+}
+
+main .make-and-settings .settings .settings__img {
+  position: relative;
+}
+
+main .make-and-settings .settings .settings__img .settings__object-svg {
+  display: block;
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  width: 22rem;
+}
+
+main .make-and-settings .settings .settings__img .settings__img-phone {
+  display: block;
+  position: relative;
+  z-index: 2;
   width: 6.7rem;
-  z-index: 1;
+  left: 4rem;
 }
 
 main .interface {
@@ -511,7 +515,8 @@ main .interface .interface__features li .diary-img::before {
   display: block;
   position: absolute;
   margin-top: 2.9em;
-  border-bottom: 10px solid #fff;
+  border-bottom: .4rem solid #fff;
+  border-radius: 1rem;
   width: 8.65em;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
@@ -570,6 +575,123 @@ main .interface .interface__features li .feature__text_more-right, main .interfa
 
 main .interface .interface__features li .feature__text_more-right-and-down {
   margin-top: 8.35em;
+}
+
+main .possibilities {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .possibilities .possibilities__head-text::before {
+  content: 'Возможности';
+  font-size: 3.1rem;
+  right: 0;
+  bottom: -.28rem;
+}
+
+main .possibilities .possibilities__slider {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+main .possibilities .possibilities__slider .possibilities__slider-background {
+  max-width: 75vw;
+  width: 13.5rem;
+}
+
+main .faq {
+  margin-top: 2rem;
+}
+
+main .faq .faq__head-text {
+  background-image: url(../../img/faq-back.svg);
+  margin-left: 1.5rem;
+  font-size: 3rem;
+  width: 15.633rem;
+  height: 13.133rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 4.2rem;
+  padding-left: 3.77rem;
+}
+
+main .faq .faq__head-text::before {
+  content: '???';
+  font-size: 6rem;
+  left: 4.1rem;
+  top: 1.7rem;
+}
+
+main .faq .faq__search {
+  position: relative;
+  width: 10rem;
+  top: -6.5rem;
+  margin-right: 2rem;
+  margin-left: auto;
+  height: 1.5rem;
+  border: 0.15rem solid var(--main-light-color-first);
+  border-radius: 1rem;
+}
+
+main .faq .faq__search .faq__search-text {
+  display: block;
+  position: absolute;
+  left: 0;
+  padding-left: .67rem;
+  font-size: .65rem;
+  width: calc(100% - 3rem);
+  height: 1.25rem;
+  border: none;
+  background: none;
+}
+
+main .faq .faq__search .faq__search-text:focus {
+  outline: none;
+}
+
+main .faq .faq__list {
+  margin-top: -4rem;
+}
+
+main .faq .faq__list li {
+  margin-top: 2rem;
+  width: 13.5rem;
+  height: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--main-dark-color-second);
+  border-radius: 1rem;
+}
+
+main .faq .faq__list li .faq__list_question {
+  margin-top: .4rem;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .faq .faq__list li .faq__list_question i {
+  margin-left: .3rem;
+  margin-top: .05rem;
+  color: var(--main-dark-color-first);
+}
+
+main .faq .faq__list .faq__right {
+  margin-left: auto;
+  margin-right: 2rem;
 }
 
 footer {
@@ -643,54 +765,6 @@ footer .communication form .communication__input_text:focus {
 footer .communication form .user-message {
   margin-top: -1.75rem;
   resize: none;
-}
-
-footer .communication form .communication__input_text::-webkit-input-placeholder {
-  opacity: 1;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-}
-
-footer .communication form .communication__input_text::-moz-placeholder {
-  opacity: 1;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-}
-
-footer .communication form .communication__input_text:-moz-placeholder {
-  opacity: 1;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-}
-
-footer .communication form .communication__input_text:-ms-input-placeholder {
-  opacity: 1;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-}
-
-footer .communication form .communication__input_text:focus::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-}
-
-footer .communication form .communication__input_text:focus::-moz-placeholder {
-  opacity: 0;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-}
-
-footer .communication form .communication__input_text:focus:-moz-placeholder {
-  opacity: 0;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-}
-
-footer .communication form .communication__input_text:focus:-ms-input-placeholder {
-  opacity: 0;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
 }
 
 footer .communication .communication__write-us {

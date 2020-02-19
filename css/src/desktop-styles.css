@@ -12,61 +12,6 @@
     max-height: 600px;
     z-index: 1;
   }
-  .main-phone,
-  .phone,
-  .settings__img-phone {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
-  }
-  .main-phone:hover, .phone:hover {
-    -webkit-transform: translateY(-0.25rem);
-            transform: translateY(-0.25rem);
-  }
-  .hamburger {
-    height: 2.4rem;
-    width: 2.4rem;
-    background-image: url(../img/hamburger-background.svg);
-    background-color: transparent;
-    position: fixed;
-    background-size: cover;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-  }
-  .hamburger__line_first, .hamburger__line_second, .hamburger__line_third {
-    margin-top: 0.35rem;
-    margin-left: 0.215rem;
-  }
-  .triangle-desktop {
-    height: 35.23rem;
-    width: 23.8rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0.91%, #7FC7C6), color-stop(0.92%, #7FC7C6), color-stop(100.57%, #298181));
-    background: linear-gradient(90deg, #7FC7C6 0.91%, #7FC7C6 0.92%, #298181 100.57%);
-    -webkit-box-shadow: 15px 0 5px -5px #fff inset;
-            box-shadow: 15px 0 5px -5px #fff inset;
-  }
-  .triangle-desktop::after, .triangle-desktop::before {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-  }
-  .triangle-desktop::before {
-    top: 0;
-    border-left: 14rem solid white;
-    border-bottom: 17.25rem solid transparent;
-  }
-  .triangle-desktop::after {
-    bottom: 0;
-    border-left: 23.8rem solid white;
-    border-top: 18.8rem solid transparent;
-  }
   header {
     padding-top: 2rem;
     height: 4.75rem;
@@ -150,18 +95,13 @@
     font-size: 1.25rem;
     margin-left: -0.75rem;
   }
-  div.head-screen div.head-screen__phones {
+  div.head-screen div.head-screen__phone {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     right: 1.5rem;
     top: 1.75rem;
-  }
-  div.head-screen div.head-screen__phones .desktop img {
-    width: 4.6625rem;
-    margin-top: 5.5rem;
-    margin-right: 1.5rem;
   }
   div.head-screen .head-screen__download-button {
     margin-top: 3.4rem;
@@ -246,10 +186,6 @@
     top: 7.5rem;
     width: 5.3rem;
   }
-  div.make-and-settings div.settings .settings__img .settings__img-phone:hover {
-    -webkit-transform: translateX(-0.25rem);
-            transform: translateX(-0.25rem);
-  }
   div.make-and-settings div.settings .settings__img img.settings__img-triangle {
     width: 17.3rem;
   }
@@ -270,14 +206,6 @@
   }
   main .interface .interface__features li {
     margin: 0 0 3.5em;
-  }
-  main .interface::before {
-    margin-left: 0;
-    left: -7rem;
-    z-index: -1;
-    height: 30.9rem;
-    width: 27.4rem;
-    background-size: 30.9rem 27.4rem;
   }
   footer .communication {
     margin-top: 4.94rem;
@@ -303,13 +231,6 @@
     width: 5rem;
     height: 1.5rem;
   }
-  footer .communication .not-triangle {
-    width: 21.6rem;
-    height: 18.75rem;
-    top: -2.93rem;
-    left: 2rem;
-    right: auto;
-  }
   footer .communication .communication__write-us {
     margin-left: 1.6rem;
   }
@@ -324,34 +245,8 @@
             flex-direction: column-reverse;
     font-size: 0.8rem;
   }
-  footer .communication .communication__write-us .write-us__media-list .link-1 {
-    margin-left: 1.5rem;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
-  footer .communication .communication__write-us .write-us__media-list .link-2 {
-    margin-left: 3rem;
-    -webkit-box-ordinal-group: -1;
-        -ms-flex-order: -2;
-            order: -2;
-  }
-  footer .communication .communication__write-us .write-us__media-list .link-3 {
-    margin-left: 4.5rem;
-    -webkit-box-ordinal-group: -2;
-        -ms-flex-order: -3;
-            order: -3;
-  }
   footer .communication .communication__write-us .write-us__media-list .write-us__media-link {
     margin-top: 1.735rem;
-  }
-  footer::after {
-    border-top: 38.49vw solid white;
-    border-left: 60vw solid transparent;
-  }
-  footer::before {
-    border-top: 27vw solid white;
-    border-right: 50vw solid transparent;
   }
   footer .footer__bottom .footer__bottom_media .footer__bottom_vk img, .footer__bottom_google-play img {
     height: 1rem;
@@ -411,9 +306,6 @@
   :root {
     font-size: 34px;
   }
-  .hamburger {
-    padding: 0.8rem 0.55rem;
-  }
   div.why-we {
     margin-top: 22vh;
   }
@@ -432,9 +324,6 @@
 @media (min-width: 1599px) {
   :root {
     font-size: 38px;
-  }
-  .hamburger {
-    padding: 0.9rem 0.65rem;
   }
   div.why-we {
     margin-top: 18vh;
@@ -455,26 +344,17 @@
   div.make-and-settings .settings::before {
     left: calc(49vw - 3.58px);
   }
-  footer .communication img.not-triangle {
-    left: 3.5rem;
-  }
 }
 
 @media (min-width: 1919px) {
   :root {
     font-size: 44px;
   }
-  .hamburger {
-    padding: 0.8rem 0.6rem;
-  }
   div.why-we {
     margin-top: 18vh;
   }
   div.make-and-settings div.settings .settings__img {
     bottom: 17rem;
-  }
-  footer .communication img.not-triangle {
-    left: 7rem;
   }
 }
 /*# sourceMappingURL=desktop-styles.css.map */
