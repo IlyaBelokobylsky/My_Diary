@@ -32,27 +32,22 @@
 }
 
 
-// Arrow down animation
-.btn-down, 
+// Arrow up animation
 .btn-up {
     transition: .2s ease-in-out;
-    .btn-down__arrow, 
     .btn-up__arrow {
         transition: .2s ease-in-out;
     }
 }
 
-.btn-down:hover,
 .btn-up:hover {
     height: 3rem;
     transform: translateY(.25rem);
     
-    .btn-down__arrow,
     .btn-up__arrow {
         height: 2rem;
     }
 }
-.btn-down:active,
 .btn-up:active {
     border-width: 3px;
 }

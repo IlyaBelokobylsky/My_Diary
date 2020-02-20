@@ -91,7 +91,8 @@
 .btn-down:hover,
 .btn-up:hover {
   height: 3rem;
-  bottom: .25 rem;
+  -webkit-transform: translateY(0.25rem);
+          transform: translateY(0.25rem);
 }
 
 .btn-down:hover .btn-down__arrow,
