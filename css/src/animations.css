@@ -74,35 +74,26 @@
           transform: rotate(-45deg);
 }
 
-.btn-down,
 .btn-up {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
 
-.btn-down .btn-down__arrow,
-.btn-down .btn-up__arrow,
-.btn-up .btn-down__arrow,
 .btn-up .btn-up__arrow {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
 
-.btn-down:hover,
 .btn-up:hover {
   height: 3rem;
   -webkit-transform: translateY(0.25rem);
           transform: translateY(0.25rem);
 }
 
-.btn-down:hover .btn-down__arrow,
-.btn-down:hover .btn-up__arrow,
-.btn-up:hover .btn-down__arrow,
 .btn-up:hover .btn-up__arrow {
   height: 2rem;
 }
 
-.btn-down:active,
 .btn-up:active {
   border-width: 3px;
 }
@@ -139,5 +130,36 @@
 .communication__btn_send-message:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+@media (min-width: 993px) {
+  @-webkit-keyframes head-screen-scale {
+    0% {
+      height: 15.5001rem;
+      right: -1.2rem;
+      top: -0.3rem;
+    }
+    100% {
+      top: 0;
+      right: 0;
+      height: 15rem;
+    }
+  }
+  @keyframes head-screen-scale {
+    0% {
+      height: 15.5001rem;
+      right: -1.2rem;
+      top: -0.3rem;
+    }
+    100% {
+      top: 0;
+      right: 0;
+      height: 15rem;
+    }
+  }
+  .head-screen__phones > .desktop {
+    -webkit-animation: head-screen-scale 1s linear;
+            animation: head-screen-scale 1s linear;
+  }
 }
 /*# sourceMappingURL=animations.css.map */

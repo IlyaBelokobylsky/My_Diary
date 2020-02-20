@@ -131,25 +131,34 @@
     height: 15.1667rem;
     right: -0.4rem;
     top: -0.1rem;
-    opacity: 1;
+    opacity: 0;
     -webkit-filter: blur(1.5px);
             filter: blur(1.5px);
+  }
+  div.head-screen .head-screen__phones .head-screen__phones_blur .head-screen__phones_blur-visible-1 {
+    opacity: 1;
   }
   div.head-screen .head-screen__phones .head-screen__phones_blur .head-screen__phone-blur-2 {
     height: 15.3334rem;
     right: -0.8rem;
     top: -0.2rem;
-    opacity: 0.5;
+    opacity: 0;
     -webkit-filter: blur(3px);
             filter: blur(3px);
+  }
+  div.head-screen .head-screen__phones .head-screen__phones_blur .head-screen__phones_blur-visible-2 {
+    opacity: 0.5;
   }
   div.head-screen .head-screen__phones .head-screen__phones_blur .head-screen__phone-blur-3 {
     height: 15.5001rem;
     right: -1.2rem;
     top: -0.3rem;
-    opacity: 0.33333;
+    opacity: 0;
     -webkit-filter: blur(4.5px);
             filter: blur(4.5px);
+  }
+  div.head-screen .head-screen__phones .head-screen__phones_blur .head-screen__phones_blur-visible-3 {
+    opacity: 0.33333;
   }
   main .head-screen::after {
     width: 11rem;
@@ -382,33 +391,11 @@
   :root {
     font-size: 38px;
   }
-  div.why-we {
-    margin-top: 18vh;
-  }
-  div.make-and-settings div.settings .settings__img {
-    bottom: 15rem;
-  }
-  div.make-and-settings div.settings .settings__description {
-    bottom: 3rem;
-  }
-}
-
-@media (min-width: 1800px) {
-  div.make-and-settings .make::after,
-  div.make-and-settings .settings::after {
-    left: 49vw;
-  }
-  div.make-and-settings .settings::before {
-    left: calc(49vw - 3.58px);
-  }
 }
 
 @media (min-width: 1919px) {
   :root {
     font-size: 44px;
-  }
-  div.why-we {
-    margin-top: 18vh;
   }
   div.make-and-settings div.settings .settings__img {
     bottom: 17rem;

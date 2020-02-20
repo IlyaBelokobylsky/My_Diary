@@ -84,3 +84,23 @@
 .communication__btn_send-message:active {
     transform: scale(0.95);
 }
+
+
+
+@media  (min-width: 993px) {
+    @keyframes head-screen-scale {
+        0% {
+            height: 15.5001rem;
+            right: -1.2rem;
+            top: -0.3rem;
+        }
+        100% {
+            top: 0;
+            right: 0;
+            height: 15rem;
+        }
+    }
+    .head-screen__phones > .desktop {
+        animation: head-screen-scale 1s linear;
+    }
+}

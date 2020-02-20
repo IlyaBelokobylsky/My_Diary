@@ -1,10 +1,10 @@
 'use strict';
-const MENU = document.querySelector('.hamburger');
-const HEADER = document.querySelector('header');
+const menu = document.querySelector('.hamburger');
+const header = document.querySelector('header');
 
 function headerToggle() {
-    HEADER.classList.toggle('header-visible');
-    MENU.classList.toggle('menu-clicked');
+    header.classList.toggle('header-visible');
+    menu.classList.toggle('menu-clicked');
 }
 
 function scrollToElem(target) {
@@ -14,9 +14,9 @@ function scrollToElem(target) {
     elemTo.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
-MENU.addEventListener('click', headerToggle);
+menu.addEventListener('click', headerToggle);
 
-HEADER.addEventListener('click', function (event) {
+header.addEventListener('click', function (event) {
     const target = event.target;
 
     if (target.classList['1'] === 'nav__link') {
@@ -92,3 +92,9 @@ document.querySelectorAll('.feature__btn_more').forEach(elem => {
     target.classList.toggle('feature__btn_clicked');
 });
 });
+
+for (let i = 3; i >= 1; i--) {
+    setTimeout(() => 
+        document.querySelector(`.head-screen__phone-blur-${i}`).classList.add(`head-screen__phones_blur-visible-${i}`)
+    , 667 * Math.pow(i, -1));
+}
