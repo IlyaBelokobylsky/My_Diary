@@ -93,7 +93,8 @@
   }
   div.head-screen .head-screen__triangle {
     top: 1.5rem;
-    right: -6.5rem;
+    right: -7.5rem;
+    width: 26rem;
     -webkit-transform: rotate(55deg);
             transform: rotate(55deg);
   }
@@ -108,7 +109,7 @@
   }
   div.head-screen .head-screen__phones {
     position: absolute;
-    right: 13rem;
+    right: 12rem;
     top: 4rem;
   }
   div.head-screen .head-screen__phones .desktop {
@@ -124,40 +125,37 @@
   div.head-screen .head-screen__phones .head-screen__phones_blur img {
     display: block;
     position: absolute;
-    z-index: 0;
+    z-index: 5;
   }
   div.head-screen .head-screen__phones .head-screen__phones_blur .head-screen__phone-blur-1 {
     height: 15.1667rem;
     right: -0.4rem;
     top: -0.1rem;
     opacity: 1;
-    -webkit-filter: blur(2px);
-            filter: blur(2px);
+    -webkit-filter: blur(1.5px);
+            filter: blur(1.5px);
   }
   div.head-screen .head-screen__phones .head-screen__phones_blur .head-screen__phone-blur-2 {
     height: 15.3334rem;
     right: -0.8rem;
     top: -0.2rem;
     opacity: 0.5;
-    -webkit-filter: blur(4px);
-            filter: blur(4px);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
   }
   div.head-screen .head-screen__phones .head-screen__phones_blur .head-screen__phone-blur-3 {
     height: 15.5001rem;
     right: -1.2rem;
     top: -0.3rem;
     opacity: 0.33333;
-    -webkit-filter: blur(6px);
-            filter: blur(6px);
-  }
-  div.head-screen .head-screen__download-button {
-    margin-top: 3.4rem;
+    -webkit-filter: blur(4.5px);
+            filter: blur(4.5px);
   }
   main .head-screen::after {
     width: 11rem;
     height: 11rem;
-    top: 11.08rem;
-    left: 22rem;
+    top: 11.68rem;
+    left: 23rem;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
@@ -171,12 +169,10 @@
   div.why-we .why-we__list {
     -ms-grid-columns: 16rem 16.75rem;
         grid-template-columns: 16rem 16.75rem;
-    grid-row-gap: .5rem;
+    grid-row-gap: 2.5rem;
   }
   div.why-we .why-we__list li {
     padding-top: .5rem;
-  }
-  div.why-we .why-we__list li .why-we__list_link {
     font-size: 1rem;
   }
   div.why-we .why-we__phone {
@@ -185,8 +181,18 @@
     max-width: 6rem;
   }
   div.why-we::before {
-    right: 0rem;
-    top: .5rem;
+    right: -2rem;
+    top: 1rem;
+    height: 9rem;
+    width: 15.3rem;
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  div.why-we::after {
+    display: none;
+  }
+  p.description-text {
+    font-size: 0.625rem;
   }
   div.make-and-settings {
     margin-left: 1.85rem;
@@ -198,14 +204,11 @@
     top: 8.25rem;
     left: -1.12rem;
   }
+  div.make-and-settings p.description-text {
+    width: 18.5rem;
+  }
   div.make-and-settings .make__img {
     margin: 1.5rem 5.55rem 0;
-  }
-  div.make-and-settings div.description p.description-text {
-    margin-top: 0.5rem;
-    width: 18.5rem;
-    font-size: 0.8rem;
-    line-height: 1.2rem;
   }
   div.make-and-settings .make::after, div.make-and-settings .settings::after {
     content: '';
@@ -226,9 +229,9 @@
     display: block;
     position: absolute;
     top: 10.325rem;
-    left: calc(45vw - 3.5px);
-    height: 10px;
-    width: 10px;
+    left: calc(45vw - 1.75px);
+    height: .35rem;
+    width: .35rem;
     background-color: var(--main-dark-color-first);
     border-radius: 100%;
   }
@@ -256,24 +259,32 @@
   div.make-and-settings div.settings .settings__img img.settings__img-phone {
     width: 5.3rem;
   }
-  main div.interface {
-    margin-top: 16rem;
-    margin-left: -1rem;
+  div.possibilities {
+    margin-top: 7rem;
   }
-  main div.interface .interface__head-text {
-    position: relative;
-    left: 10.5rem;
-    top: -6.5rem;
+  div.possibilities .possibilities__head-text {
+    margin-left: auto;
+    margin-right: 3.33rem;
   }
-  main div.interface .interface__features {
-    margin-top: -5.5rem;
-    margin-left: 0;
-    font-size: 0.65rem;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  div.possibilities .possibilities__slider {
+    position: static;
+    grid-auto-flow: column;
   }
-  main div.interface .interface__features li {
-    margin: 0;
+  div.possibilities .slider_right-text {
+    margin-left: 1.5rem;
+  }
+  div.faq .faq__search {
+    top: -13rem;
+    margin-right: 3.33rem;
+    width: 12rem;
+    height: 2rem;
+  }
+  div.faq .faq__search .faq__search-text {
+    height: 1.75rem;
+  }
+  div.faq .faq__list {
+    margin-top: -13rem;
+    margin-left: 18rem;
   }
   footer .communication {
     margin-top: 4.94rem;
@@ -299,6 +310,11 @@
     width: 5rem;
     height: 1.5rem;
   }
+  footer .communication .footer__not-circle {
+    width: 18.5rem;
+    bottom: -1.875rem;
+    left: 1rem;
+  }
   footer .communication .communication__write-us {
     margin-left: 1.6rem;
   }
@@ -311,10 +327,19 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    font-size: 0.8rem;
+    margin-top: -.735rem;
+    font-size: 0.85rem;
+  }
+  footer .communication .communication__write-us .write-us__media-list i {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: middle;
   }
   footer .communication .communication__write-us .write-us__media-list .write-us__media-link {
     margin-top: 1.735rem;
+  }
+  footer .communication .communication__write-us .write-us__media-list .write-us__vk {
+    margin-left: 1rem;
   }
   footer .footer__bottom .footer__bottom_media .footer__bottom_vk img, .footer__bottom_google-play img {
     height: 1rem;
@@ -325,39 +350,11 @@
   :root {
     font-size: 26px;
   }
-  .hamburger {
-    padding: 0.85rem 0.5rem;
-  }
-  div.make-and-settings div.settings .settings__description {
-    bottom: 5rem;
-  }
-  main .interface {
-    margin-top: 8.5rem;
-  }
 }
 
 @media (min-width: 1280px) {
   :root {
     font-size: 29px;
-  }
-  .hamburger {
-    padding: 0.8rem 0.5rem;
-  }
-  div.make-and-settings div.settings {
-    margin-left: 0.4rem;
-  }
-  div.make-and-settings div.settings .settings__description {
-    bottom: 2.5rem;
-  }
-  div.make-and-settings .make::after,
-  div.make-and-settings .settings::after {
-    left: 48vw;
-  }
-  div.make-and-settings .settings::before {
-    left: calc(48vw - 3.58px);
-  }
-  main .interface {
-    margin-top: 10rem;
   }
 }
 
@@ -374,18 +371,10 @@
   :root {
     font-size: 34px;
   }
-  div.why-we {
-    margin-top: 22vh;
-  }
-  div.make-and-settings div.settings .settings__img {
-    bottom: 13rem;
-  }
-  div.make-and-settings .make::after,
-  div.make-and-settings .settings::after {
-    left: 49vw;
-  }
-  div.make-and-settings .settings::before {
-    left: calc(49vw - 3.58px);
+  footer .footer__not-circle {
+    width: 18.25rem;
+    bottom: -2rem;
+    left: 1rem;
   }
 }
 

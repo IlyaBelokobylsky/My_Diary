@@ -153,7 +153,6 @@ main {
       .head-screen__h1 {
          display: block;
          position: relative;
-         z-index: 1;
          margin-top: 3rem;
          margin-left: 1.8rem;
          font-size: 3.2rem;
@@ -161,17 +160,23 @@ main {
          line-height: 58%;
          max-height: 6.9rem;
          max-width: 15rem;
-      }
+         .MyDiary {
+            display: block;
+            position: relative;
+            z-index: 10;
+         }
          .head-screen__moon-svg_img {
             position: absolute;
+            z-index: 0;
             right: 2.7rem;
             top: -5.65rem;
             width: 13.33rem;
          }
+      }
       h4 {
          display: block;
          position: relative;
-         z-index: 1;
+         z-index: 10;
          margin-top: 3rem;
          width: 15rem;
          letter-spacing: 1px;
@@ -251,19 +256,18 @@ main {
          grid-template-columns: 1fr;
          margin-top: 2rem;
          margin-left: -1rem;
-         grid-row-gap: .5rem;
+         grid-row-gap: 3rem;
          li {
-            padding: 1.75rem 0;
-            span {
-               font-size: 1rem;
+            height: 2rem;
+            color: var(--description-text-color);
+            font-size: 1.2rem;
+            padding-left: 5px;
+            font-weight: 500;
+            i {
+               display: inline-block;
+               vertical-align: middle;
+               font-size: 1.5rem;
                color: var(--main-dark-color-first);
-            }
-            .why-we__list_link {
-               color: var(--description-text-color);
-               font-size: 1.2rem;
-               padding-left: 5px;
-               font-weight: 500;
-               
             }
          }
       }
@@ -275,17 +279,22 @@ main {
       }
    }
 
-   .why-we::before {
+   .why-we::before, .why-we::after {
       content: '';
       display: block;
       position: absolute;
-      right: -4.5rem;
-      top: 4.45rem;
-      width: 15.3rem;
-      height: 9rem;
+      right: -1.5rem;
+      top: 4rem;
+      width: 10.2rem;
+      height: 6rem;
       background-image: linear-gradient(270deg, var(--main-dark-color-second) 0%, var(--main-light-color-first) 100%);
       border-radius: 100rem 100rem 5rem 5rem;
-      transform: rotate(60deg); 
+      transform: rotate(75deg); 
+   }
+   .why-we::after {
+      transform: rotate(-105deg);
+      right: -2rem;
+      top: 16rem;
    }
 
 
@@ -306,9 +315,9 @@ main {
       font-style: normal;
       color: var(--description-text-color);
       font-weight: 500;
-      line-height: 1.6rem;
+      line-height: 1.6em;
       letter-spacing: 1px;
-      width: 14rem;
+      width: 14em;
    }
 
    .make-and-settings {
@@ -380,110 +389,6 @@ main {
    
 
    
-   .interface {
-      margin-top: 4rem;
-      margin-left: 1rem;
-      position: relative;
-      .interface__head-text {
-         font-size: 1.7rem;
-         margin: 0 auto;
-         width: 21rem;
-      }
-      .interface__head-text::before {
-         content: 'Практичность';
-         font-size: 3rem;
-         right: .68rem;
-         bottom: -.28rem;
-      }
-      .interface__features {
-         font-size: .87rem;
-         margin: 2.3rem auto 0;
-         display: flex;
-         flex-wrap: wrap;
-         li {
-            background: linear-gradient(180deg, rgba(55, 45, 166, .85) 0%, var(--main-dark-color-first) 100%);
-            border-radius: 0px 3.2rem 1.6rem;
-            box-shadow: 0 0 20px 2px var(--invisible-color);
-            margin: 0 1em 3.5em;
-            height: 16.57em;
-            width: 10.57em;
-            position: relative;
-            overflow: hidden;
-            transition: height .5s;
-            .feature__img {
-               display: flex;
-               margin-top: 1.73em;
-               justify-content: center;
-               img {
-                  display: block;
-                  position: absolute;
-                  height: 5.2em;
-               }
-            }
-            .diary-img {
-               img {
-                  height: 6.5em;
-               }
-            }
-            .diary-img::before {
-               content: '';
-               display: block;
-               position: absolute;
-               margin-top: 2.9em;
-               border-bottom: .4rem solid #fff;
-               border-radius: 1rem;
-               width: 8.65em;
-               transform: rotate(135deg);
-            }
-            .feature__img::after {
-               content: '';
-               display: block;
-               position: absolute;
-               margin-top: 6.9em;
-               border-bottom: 1px solid var(--invisible-color);
-               width: 10.54em;
-            }
-            .list-img {
-               margin-left: -.77em;
-            }
-            .watch-img {
-               margin-left: .77em;
-               margin-top: 2.3em;
-               margin-bottom: -15px;
-            }
-            .list-img::after, .watch-img::after{
-               margin-left: .38em;
-            }
-            .watch-img::after{
-               margin-left: -.38em;
-            }
-            .watch-img::after {
-               margin-top: 6.34em;
-            }
-            
-            p {
-               margin-left: 1.6em;
-               width: 7.85em;
-               color: #fff;
-               font-size: 1em;
-               font-style: normal;
-               font-weight: normal;
-               line-height: 1em;
-               letter-spacing: 1px;
-            }
-            .feature__visible-text {
-               margin-top: 8em;
-               margin-bottom: 2.3em;
-            }
-            .feature__text_more-right,  .feature__text_more-right-and-down {
-               margin-left: 2em;
-            }
-            .feature__text_more-right-and-down {
-               margin-top: 8.35em;
-            }
-         }
-      }
-   }
 
 
 
@@ -579,6 +484,12 @@ main {
                   color: var(--main-dark-color-first);
                }
             }
+
+            .faq__list_answer {
+               margin-left: 1rem;
+               font-size: 0.625rem;
+               color: var(--description-text-color);
+            }
          }
          .faq__right {
             margin-left: auto;
@@ -661,6 +572,12 @@ footer {
       }
    }
    
+   .footer__not-circle {
+      display: block;
+      position: absolute;
+      width: 16.67rem;
+      bottom: -1.7rem;
+   }
 
    .footer__bottom {
       position: relative;
@@ -673,7 +590,7 @@ footer {
       strong {
          padding-right: .33rem;
       }
-      .my-diary_logo {
+      .MyDiary_logo {
          position: relative;
          top: .25rem;
       }
@@ -681,7 +598,7 @@ footer {
          display: block;
          position: absolute;
          bottom: -.75rem;
-         left: 6.4rem;
+         left: 6.2rem;
          width: 3rem;
          height: 3rem;
       }

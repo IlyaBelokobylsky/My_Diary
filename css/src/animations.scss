@@ -33,22 +33,27 @@
 
 
 // Arrow down animation
-.btn-down {
+.btn-down, 
+.btn-up {
     transition: .2s ease-in-out;
-    .btn-down__arrow {
+    .btn-down__arrow, 
+    .btn-up__arrow {
         transition: .2s ease-in-out;
     }
 }
 
-.btn-down:hover {
+.btn-down:hover,
+.btn-up:hover {
     height: 3rem;
-    bottom: .25 rem;
+    transform: translateY(.25rem);
     
-    .btn-down__arrow {
+    .btn-down__arrow,
+    .btn-up__arrow {
         height: 2rem;
     }
 }
-.btn-down:active {
+.btn-down:active,
+.btn-up:active {
     border-width: 3px;
 }
 
@@ -65,19 +70,6 @@
     transform: scale(.99);
 }
 
-
-// Interface list buttons
-.feature__btn_more::before,
-.feature__btn_more::after {
-    transition: transform .5s;
-}
-.feature__btn_clicked::before {
-    transform: rotate(-45deg);
-}
-
-.feature__btn_clicked::after {
-    transform: rotate(45deg);
-}
 
 
 

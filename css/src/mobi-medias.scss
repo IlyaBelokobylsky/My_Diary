@@ -10,7 +10,7 @@
         right: 0;
     }
 
-    footer>div.footer__bottom>p>a>img.footer__moon {
+    footer > div.footer__bottom > p > a > img.footer__moon {
         bottom: -0.26rem;
     }
 }
@@ -41,12 +41,6 @@
     }
 
 
-
-    main>div.interface .interface__features {
-        margin-top: 2rem;
-        margin-left: -11vw;
-    }
-
     footer .footer__bottom .footer__bottom_media {
         bottom: -0.6rem;
 
@@ -69,7 +63,7 @@
         max-width: 100px;
     }
 
-    footer .footer__bottom span.footer__bottom_media {
+    /* footer .footer__bottom span.footer__bottom_media {
         bottom: -0.38rem;
 
         .footer__bottom_vk,
@@ -77,7 +71,7 @@
             transform: scale(0.6);
             padding: 0;
         }
-    }
+    } */
 }
 
 

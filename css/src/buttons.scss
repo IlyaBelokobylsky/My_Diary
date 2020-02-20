@@ -38,7 +38,7 @@
 }
 
 
-.btn-down {
+.btn-down, .btn-up {
     display: block;
     position: fixed;
     z-index: 999;
@@ -50,7 +50,7 @@
     border: 1px solid var(--main-light-color-first);
     border-radius: 1rem;
     cursor: pointer;
-    .btn-down__arrow {
+    .btn-down__arrow, .btn-up__arrow {
         display: block;
         position: relative;
         width: .1rem;
@@ -62,7 +62,9 @@
     }
 
     .btn-down__arrow::before,
-    .btn-down__arrow::after {
+    .btn-down__arrow::after,
+    .btn-up__arrow::before,
+    .btn-up__arrow::after {
         content: '';
         display: block;
         position: absolute;
@@ -83,11 +85,31 @@
         transform: rotate(30deg);
     }
 }
-.btn-down:focus {
+
+.btn-up {
+    right: .5rem;
+    left: auto;
+    transform: rotate(180deg);
+    .btn-up__arrow {
+        left: 43%;
+        bottom: 48%;
+        top: auto;
+    }
+    .btn-up__arrow::before {
+        left: -.125rem;
+        transform: rotate(-30deg);
+    }
+    .btn-up__arrow::after {
+        left: .125rem;
+        transform: rotate(30deg);
+    }
+}
+
+.btn-down:focus,
+.btn-up:focus {
     outline: none;
     box-shadow: 0 0 .25rem 0 var(--main-dark-color-first);
 }
-
 
 .head-screen__download-button {
     display: flex;
@@ -116,43 +138,6 @@
 }
 
 
-.feature__btn_more {
-    background: none;
-    outline: none;
-    border: none;
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    padding: 1rem;
-    bottom: 0;
-    width: 2em;
-    height: 2em;
-    left: 52%;
-    transform: translate(-50%, 0);
-}
-
-.feature__btn_more::before,
-.feature__btn_more::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 1em;
-    width: 1em;
-    height: .2em;
-    border-radius: .1em;
-    background-color: var(--invisible-color);
-}
-
-.feature__btn_more::before {
-    transform: rotate(45deg);
-    left: .42em;
-}
-
-.feature__btn_more::after {
-    transform: rotate(-45deg);
-    left: .98em;
-}
-
 
 .possibilities__slider-btn {
     position: absolute;
@@ -172,6 +157,7 @@
     right: -4rem;
     transform: scaleX(-1);
 }
+
 
 .faq__search-btn {
     display: block;
@@ -249,4 +235,21 @@
     top: 50%;
     left: 50%;
     transition: all .2s;
+}
+
+
+
+@media (min-width: 993px) {
+    .head-screen__download-button {
+        margin-top: 4rem;
+    }
+    
+    .slider-left, .slider-right {
+        position: static;
+    }
+
+    .faq__search-btn {
+        width: 2.5rem;
+        height: 1.85rem;
+    }
 }

@@ -181,7 +181,6 @@ main .head-screen .head-screen__triangle {
 main .head-screen .head-screen__h1 {
   display: block;
   position: relative;
-  z-index: 1;
   margin-top: 3rem;
   margin-left: 1.8rem;
   font-size: 3.2rem;
@@ -191,8 +190,15 @@ main .head-screen .head-screen__h1 {
   max-width: 15rem;
 }
 
-main .head-screen .head-screen__moon-svg_img {
+main .head-screen .head-screen__h1 .MyDiary {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+main .head-screen .head-screen__h1 .head-screen__moon-svg_img {
   position: absolute;
+  z-index: 0;
   right: 2.7rem;
   top: -5.65rem;
   width: 13.33rem;
@@ -201,7 +207,7 @@ main .head-screen .head-screen__moon-svg_img {
 main .head-screen h4 {
   display: block;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   margin-top: 3rem;
   width: 15rem;
   letter-spacing: 1px;
@@ -298,23 +304,22 @@ main .why-we .why-we__list {
       grid-template-columns: 1fr;
   margin-top: 2rem;
   margin-left: -1rem;
-  grid-row-gap: .5rem;
+  grid-row-gap: 3rem;
 }
 
 main .why-we .why-we__list li {
-  padding: 1.75rem 0;
-}
-
-main .why-we .why-we__list li span {
-  font-size: 1rem;
-  color: var(--main-dark-color-first);
-}
-
-main .why-we .why-we__list li .why-we__list_link {
+  height: 2rem;
   color: var(--description-text-color);
   font-size: 1.2rem;
   padding-left: 5px;
   font-weight: 500;
+}
+
+main .why-we .why-we__list li i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  color: var(--main-dark-color-first);
 }
 
 main .why-we .why-we__phone {
@@ -324,19 +329,26 @@ main .why-we .why-we__phone {
   max-width: 205px;
 }
 
-main .why-we::before {
+main .why-we::before, main .why-we::after {
   content: '';
   display: block;
   position: absolute;
-  right: -4.5rem;
-  top: 4.45rem;
-  width: 15.3rem;
-  height: 9rem;
+  right: -1.5rem;
+  top: 4rem;
+  width: 10.2rem;
+  height: 6rem;
   background-image: -webkit-gradient(linear, right top, left top, from(var(--main-dark-color-second)), to(var(--main-light-color-first)));
   background-image: linear-gradient(270deg, var(--main-dark-color-second) 0%, var(--main-light-color-first) 100%);
   border-radius: 100rem 100rem 5rem 5rem;
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
+  -webkit-transform: rotate(75deg);
+          transform: rotate(75deg);
+}
+
+main .why-we::after {
+  -webkit-transform: rotate(-105deg);
+          transform: rotate(-105deg);
+  right: -2rem;
+  top: 16rem;
 }
 
 main .head-text::before {
@@ -356,9 +368,9 @@ main .description-text {
   font-style: normal;
   color: var(--description-text-color);
   font-weight: 500;
-  line-height: 1.6rem;
+  line-height: 1.6em;
   letter-spacing: 1px;
-  width: 14rem;
+  width: 14em;
 }
 
 main .make-and-settings {
@@ -441,137 +453,6 @@ main .make-and-settings .settings .settings__img .settings__img-phone {
   z-index: 2;
   width: 6.7rem;
   left: 4rem;
-}
-
-main .interface {
-  margin-top: 4rem;
-  margin-left: 1rem;
-  position: relative;
-}
-
-main .interface .interface__head-text {
-  font-size: 1.7rem;
-  margin: 0 auto;
-  width: 21rem;
-}
-
-main .interface .interface__head-text::before {
-  content: 'Практичность';
-  font-size: 3rem;
-  right: .68rem;
-  bottom: -.28rem;
-}
-
-main .interface .interface__features {
-  font-size: .87rem;
-  margin: 2.3rem auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main .interface .interface__features li {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 45, 166, 0.85)), to(var(--main-dark-color-first)));
-  background: linear-gradient(180deg, rgba(55, 45, 166, 0.85) 0%, var(--main-dark-color-first) 100%);
-  border-radius: 0px 3.2rem 1.6rem;
-  -webkit-box-shadow: 0 0 20px 2px var(--invisible-color);
-          box-shadow: 0 0 20px 2px var(--invisible-color);
-  margin: 0 1em 3.5em;
-  height: 16.57em;
-  width: 10.57em;
-  position: relative;
-  overflow: hidden;
-  -webkit-transition: height .5s;
-  transition: height .5s;
-}
-
-main .interface .interface__features li .feature__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1.73em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main .interface .interface__features li .feature__img img {
-  display: block;
-  position: absolute;
-  height: 5.2em;
-}
-
-main .interface .interface__features li .diary-img img {
-  height: 6.5em;
-}
-
-main .interface .interface__features li .diary-img::before {
-  content: '';
-  display: block;
-  position: absolute;
-  margin-top: 2.9em;
-  border-bottom: .4rem solid #fff;
-  border-radius: 1rem;
-  width: 8.65em;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-
-main .interface .interface__features li .feature__img::after {
-  content: '';
-  display: block;
-  position: absolute;
-  margin-top: 6.9em;
-  border-bottom: 1px solid var(--invisible-color);
-  width: 10.54em;
-}
-
-main .interface .interface__features li .list-img {
-  margin-left: -.77em;
-}
-
-main .interface .interface__features li .watch-img {
-  margin-left: .77em;
-  margin-top: 2.3em;
-  margin-bottom: -15px;
-}
-
-main .interface .interface__features li .list-img::after, main .interface .interface__features li .watch-img::after {
-  margin-left: .38em;
-}
-
-main .interface .interface__features li .watch-img::after {
-  margin-left: -.38em;
-}
-
-main .interface .interface__features li .watch-img::after {
-  margin-top: 6.34em;
-}
-
-main .interface .interface__features li p {
-  margin-left: 1.6em;
-  width: 7.85em;
-  color: #fff;
-  font-size: 1em;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1em;
-  letter-spacing: 1px;
-}
-
-main .interface .interface__features li .feature__visible-text {
-  margin-top: 8em;
-  margin-bottom: 2.3em;
-}
-
-main .interface .interface__features li .feature__text_more-right, main .interface .interface__features li .feature__text_more-right-and-down {
-  margin-left: 2em;
-}
-
-main .interface .interface__features li .feature__text_more-right-and-down {
-  margin-top: 8.35em;
 }
 
 main .possibilities {
@@ -687,6 +568,12 @@ main .faq .faq__list li .faq__list_question i {
   color: var(--main-dark-color-first);
 }
 
+main .faq .faq__list li .faq__list_answer {
+  margin-left: 1rem;
+  font-size: 0.625rem;
+  color: var(--description-text-color);
+}
+
 main .faq .faq__list .faq__right {
   margin-left: auto;
   margin-right: 2rem;
@@ -794,6 +681,13 @@ footer .communication .write-us__media-list .write-us__media-link a {
   padding-top: 1.5rem;
 }
 
+footer .footer__not-circle {
+  display: block;
+  position: absolute;
+  width: 16.67rem;
+  bottom: -1.7rem;
+}
+
 footer .footer__bottom {
   position: relative;
   height: 1.5rem;
@@ -808,7 +702,7 @@ footer .footer__bottom strong {
   padding-right: .33rem;
 }
 
-footer .footer__bottom .my-diary_logo {
+footer .footer__bottom .MyDiary_logo {
   position: relative;
   top: .25rem;
 }
@@ -817,7 +711,7 @@ footer .footer__bottom .footer__moon {
   display: block;
   position: absolute;
   bottom: -.75rem;
-  left: 6.4rem;
+  left: 6.2rem;
   width: 3rem;
   height: 3rem;
 }
