@@ -120,7 +120,6 @@
                         height: 15rem + .1667rem * $i; 
                         right: -.4rem * $i;
                         top: -.1rem * $i;
-                        // transition: opacity  3s 3s * $i;
                         opacity: 0;
                         filter: blur(1.5px * $i);
                     }

@@ -98,5 +98,5 @@ document.querySelectorAll('.feature__btn_more').forEach(elem => {
 for (let i = 3; i >= 1; i--) {
     setTimeout(() => 
         document.querySelector(`.head-screen__phone-blur-${i}`).classList.add(`head-screen__phones_blur-visible-${i}`)
-    , 667 * Math.pow(i, -1));
+    , 1333 * Math.pow(i, -1));
 }
