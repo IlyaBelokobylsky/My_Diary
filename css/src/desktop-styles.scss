@@ -22,6 +22,7 @@
         padding-top: 2rem;
         font-size: 1.75rem;
         display: flex;
+        background-image: linear-gradient(180deg, var(--main-light-color-first) 0%, rgba(55, 45, 166, 0.5) 100%);
         .header__head {
             margin: .5em 0 0 1.5em;
         }
@@ -56,6 +57,15 @@
             .languages {
                 margin-top: 1.25em;
             }
+            .arrow-down_languages {
+                display: block;
+                position: absolute;
+                font-size: .85em;
+                top: 5.6em;
+                left: 3em;
+                transition: .2s;
+            }
+
             .header__moonProd {
                 margin: 0;
                 margin-left: .5em;
@@ -142,7 +152,7 @@
             }
         }
         .why-we__phone {
-            top: 3rem;
+            top: 5rem;
             right: 3rem;
             max-width: 6rem;
         }
@@ -293,7 +303,8 @@
                 }
                 .write-us__media-list {
                     flex-direction: column-reverse;
-                    margin-top: -.735rem;
+                    margin-top: 0;
+                    margin-left: .2rem;
                     font-size: 0.85rem;
                     i {
                         display: inline-block;
@@ -304,7 +315,10 @@
                         margin-top: 1.735rem;
                     }
                     .write-us__vk {
-                        margin-left: 1rem;
+                        margin-left: .4rem;
+                    }
+                    .write-us__email {
+                        margin-left: -.85rem;
                     }
                 }
             }

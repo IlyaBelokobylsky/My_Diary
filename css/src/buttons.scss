@@ -49,6 +49,7 @@
     background-color: rgba(255, 255, 255, .5);
     border: 1px solid var(--btn-up-color);
     border-radius: 1rem;
+    opacity: 1;
     cursor: pointer;
     .btn-up__arrow {
         display: block;
@@ -90,9 +91,7 @@
     outline: none;
     box-shadow: 0 0 .25rem 0 var(--invisible-color);
 }
-.btn-up-hidden {
-    display: none;
-}
+
 
 
 .head-screen__download-button {

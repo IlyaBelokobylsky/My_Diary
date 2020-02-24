@@ -21,6 +21,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--main-light-color-first)), to(rgba(55, 45, 166, 0.5)));
+    background-image: linear-gradient(180deg, var(--main-light-color-first) 0%, rgba(55, 45, 166, 0.5) 100%);
   }
   header .header__head {
     margin: .5em 0 0 1.5em;
@@ -64,6 +66,15 @@
   }
   header aside .languages {
     margin-top: 1.25em;
+  }
+  header aside .arrow-down_languages {
+    display: block;
+    position: absolute;
+    font-size: .85em;
+    top: 5.6em;
+    left: 3em;
+    -webkit-transition: .2s;
+    transition: .2s;
   }
   header aside .header__moonProd {
     margin: 0;
@@ -167,7 +178,7 @@
     font-size: 1rem;
   }
   div.why-we .why-we__phone {
-    top: 3rem;
+    top: 5rem;
     right: 3rem;
     max-width: 6rem;
   }
@@ -318,7 +329,8 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin-top: -.735rem;
+    margin-top: 0;
+    margin-left: .2rem;
     font-size: 0.85rem;
   }
   footer .communication .communication__write-us .write-us__media-list i {
@@ -330,7 +342,10 @@
     margin-top: 1.735rem;
   }
   footer .communication .communication__write-us .write-us__media-list .write-us__vk {
-    margin-left: 1rem;
+    margin-left: .4rem;
+  }
+  footer .communication .communication__write-us .write-us__media-list .write-us__email {
+    margin-left: -.85rem;
   }
   footer .footer__bottom .footer__bottom_media .footer__bottom_vk img, .footer__bottom_google-play img {
     height: 1rem;
