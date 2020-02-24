@@ -145,7 +145,7 @@
   main .head-screen::after {
     width: 11rem;
     height: 11rem;
-    top: 12.25rem;
+    top: 11.7rem;
     left: 23rem;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
