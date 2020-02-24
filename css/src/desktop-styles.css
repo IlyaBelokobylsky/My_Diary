@@ -17,7 +17,7 @@
   }
   header {
     padding-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -26,7 +26,7 @@
     margin: .5em 0 0 1.5em;
   }
   header nav {
-    font-size: .8rem;
+    font-size: .75rem;
     margin-left: .25rem;
   }
   header nav ul {

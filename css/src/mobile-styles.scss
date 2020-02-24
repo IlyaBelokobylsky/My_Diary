@@ -155,11 +155,11 @@ header {
 
 .container {
    position: absolute;
-   top: -.5rem;
-   left: -.5rem;
-   padding: .5rem 0 0 .5rem;
+   top: 0;
+   left: 0;
    margin-top: 0;
    z-index: 0;
+   width: 100vw;
    background-color: #fff;
    overflow: visible;
 }

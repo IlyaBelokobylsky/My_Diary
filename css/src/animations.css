@@ -207,8 +207,8 @@
     right: 0;
   }
   .container-translated {
-    -webkit-transform: translateY(3rem) scale3d(0.9, 0.9, 1);
-            transform: translateY(3rem) scale3d(0.9, 0.9, 1);
+    -webkit-transform: translateY(2.25rem) scale3d(0.9, 0.9, 1);
+            transform: translateY(2.25rem) scale3d(0.9, 0.9, 1);
   }
 }
 /*# sourceMappingURL=animations.css.map */
