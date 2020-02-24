@@ -15,14 +15,14 @@
     font-size: 18px;
   }
   main .head-screen .head-screen__triangle {
-    top: 5.5rem;
+    top: 6rem;
     width: 20rem;
     right: -5rem;
   }
   main .head-screen::after {
     width: 7.5rem;
     height: 7.5rem;
-    top: 26.5rem;
+    top: 26rem;
   }
   main > .why-we > .why-we__list {
     margin-left: -2rem;
@@ -49,15 +49,15 @@
   main > .why-we > img.why-we__phone {
     max-width: 100px;
   }
-  /* footer .footer__bottom span.footer__bottom_media {
-        bottom: -0.38rem;
-
-        .footer__bottom_vk,
-        .footer__bottom_google-play {
+  footer .footer__bottom span.footer__bottom_media {
+    bottom: -0.38rem;
+  }
+  footer .footer__bottom span.footer__bottom_media .footer__bottom_vk,
+  footer .footer__bottom span.footer__bottom_media .footer__bottom_google-play {
+    -webkit-transform: scale(0.6);
             transform: scale(0.6);
-            padding: 0;
-        }
-    } */
+    padding: 0;
+  }
 }
 
 @media (min-width: 850px) {

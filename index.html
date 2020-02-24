@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,43 +14,45 @@
     <link rel="stylesheet" href="css/src/animations.css">
     <script src="https://kit.fontawesome.com/071a28e8c4.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <button class="hamburger">
         <span class="hamburger__line_first"></span>
         <span class="hamburger__line_second"></span>
         <span class="hamburger__line_third"></span>
     </button>
-    
+
     <button class="btn-up">
         <span class="btn-up__arrow"></span>
     </button>
-    
+
 
     <header>
         <a class="a header__head" href="//play.google.com/store/apps/details?id=moonproject.mydiary">
             <img class="MyDiary_logo header_logo" src="img/logo.svg" alt="">
-            <strong><span class="MyDiary">MyDiary</span></strong>
+            <span class="MyDiary">MyDiary</span><span>
         </a>
         <nav>
-            <span class="nav__active-link"></span>
-            <button id="nav__link-0" class="btn-link nav__link" data-link="head-screen">
-                Попробуйте <strong><span class="MyDiary">MyDiary</span></strong>
-                </button>
-            <button id="nav__link-1" class="btn-link nav__link" data-link="why-we">
-                Почему <strong><span class="MyDiary">MyDiary</span></strong>?
-            </button>
-            <button id="nav__link-2" class="btn-link nav__link" data-link="make-and-settings">
-                Быстрое создание
-            </button>
-            <button id="nav__link-3" class="btn-link nav__link" data-link="possibilities">
-                Возможности <strong><span class="MyDiary">MyDiary</span></strong>
-            </button>
-            <button id="nav__link-4" class="btn-link nav__link nav__link-small" data-link="faq">
-                FAQ
-            </button>
-            <button id="nav__link-5" class="btn-link nav__link nav__link-small" data-link="communication">
-                Связь с нами
-            </button>
+            <ul>
+                <li class="header__nav_list-link nav__active-link"><a href="#head-screen" class="a nav__link">
+                        Попробуйте <strong><span class="MyDiary">MyDiary</span></strong>
+                    </a></li>
+                <li class="header__nav_list-link"><a href="#why-we" class="a nav__link">
+                        Почему <strong><span class="MyDiary">MyDiary</span></strong>?
+                    </a></li>
+                <li class="header__nav_list-link"><a href="#make-and-settings" class="a nav__link">
+                        Быстрое создание
+                    </a></li>
+                <li class="header__nav_list-link"><a href="#possibilities" class="a nav__link">
+                        Возможности <strong><span class="MyDiary">MyDiary</span></strong>
+                    </a></li>
+                <li class="header__nav_list-link"><a href="#faq" class="a nav__link">
+                        FAQ
+                    </a></li>
+                <li class="header__nav_list-link"><a href="#communication" class="a nav__link">
+                        Связь с нами
+                    </a></li>
+            </ul>
         </nav>
         <br>
         <aside>
@@ -57,250 +60,265 @@
                 <option value="rus" selected>РУС</option>
                 <option value="eng">ENG</option>
             </select>
-            <br>
             <a class="a header__moonProd" href="//play.google.com/store/apps/dev?id=5961568897601928199">
-                moonProd 
-                <img src="img/Moon.svg" alt=""> 
+                <img src="img/moon-prod-logo.svg" alt="moonProd">
             </a>
         </aside>
     </header>
 
-
-    <main>
-        <div class="head-screen" id="head-screen">
-            <img src="img/head-triangle.svg" class="head-screen__triangle" alt="">
-            <h1 class="head-screen__h1">
-                <span class="MyDiary">MyDiary</span>
-                <img class="head-screen__moon-svg_img" src="img/Moon.svg" alt=""> 
-            </h1>
-            <h4 class="head-screen__h4">Твой&nbsp;учебный <br> дневник</h4>
-            <div class="head-screen__phones">
-                <img class="mobile" src="img/head-scr-mobi.png" alt="">
-                <img class="desktop" src="img/head-scr-desktop.png" alt="">
-                <div class="head-screen__phones_blur">
-                    <img class="desktop head-screen__phone-blur-3" src="img/head-scr-desktop.png" alt="">
-                    <img class="desktop head-screen__phone-blur-2" src="img/head-scr-desktop.png" alt="">
-                    <img class="desktop head-screen__phone-blur-1" src="img/head-scr-desktop.png" alt="">
+    <div class="container">
+        <main>
+            <div class="head-screen" id="head-screen">
+                <img src="img/head-triangle.svg" class="head-screen__triangle" alt="">
+                <h1 class="head-screen__h1">
+                    <span class="MyDiary">MyDiary</span>
+                    <img class="head-screen__moon-svg_img" src="img/Moon.svg" alt="">
+                </h1>
+                <h4 class="head-screen__h4">Твой&nbsp;учебный <br> дневник</h4>
+                <div class="head-screen__phones">
+                    <img class="mobile" src="img/head-scr.png" alt="">
+                    <img class="rotated-screen head-scr desktop" src="img/head-scr.png" alt="">
+                    <div class="head-screen__phones_blur desktop">
+                        <img class="head-screen__phone-blur-3 rotated-screen" src="img/head-scr.png" alt="">
+                        <img class="head-screen__phone-blur-2 rotated-screen" src="img/head-scr.png" alt="">
+                        <img class="head-screen__phone-blur-1 rotated-screen" src="img/head-scr.png" alt="">
+                    </div>
                 </div>
+                <a class="a head-screen__download-button"
+                    href="//play.google.com/store/apps/details?id=moonproject.mydiary">
+                    <i class="fab fa-google-play"></i>
+                    Скачать сейчас
+                </a>
             </div>
-            <a class="a head-screen__download-button" href="//play.google.com/store/apps/details?id=moonproject.mydiary">
-                <i class="fab fa-google-play"></i>
-                Скачать сейчас
-            </a>
-        </div>
-        
-
-
-        <div class="why-we">
-            <h3 class="why-we__h3">Почему <span class="MyDiary">MyDiary</span>?</h3>
-            <ul class="why-we__list">
-                <li>
-                    <i class="fas fa-pen"></i>
-                    Простое создание
-                </li>
-                <li>
-                    <i class="fas fa-list"></i>
-                    Практичный интерфейс
-                </li>
-                <li>
-                    <i class="fas fa-cog"></i>
-                    Гибкая настройка
-                </li>
-                <li>
-                    <i class="fas fa-save"></i>
-                    Умное сохранение д/з
-                </li>
-                <li>
-                    <i class="fas fa-pencil-ruler"></i>
-                    Своеобразный дизайн
-                </li>
-                <li>
-                    <i class="fas fa-pen-nib"></i>
-                    Удобная система оценок
-                </li>
-            </ul>
-            <img class="why-we__phone desktop" src="img/mainPhone.png" alt="">
-        </div>
 
 
 
-        <div class="make-and-settings" id="make-and-settings">
-            <div class="make">
-                <div class="description">
-                    <h3 class="make__head-text head-text">Простота&nbsp;создания</h3>
-                    <p class="description-text">
-                        В <span class="MyDiary">MyDiary</span> есть подсказки 
-                        с названиями предметов
-                        для ускорения процесса 
-                        создания расписания
-                    </p>
-                </div>
-                <img class="main-phone make__img" src="img/mainPhone.png" alt="Make MyDiary easily">
-                <object class="make__object-svg" data="img/make-background.svg" type="image/svg+xml">
-                    <img src="img/make-background.svg" alt="">
-                </object>
+            <div class="why-we">
+                <h3 class="why-we__h3">Почему <span class="MyDiary">MyDiary</span>?</h3>
+                <ul class="why-we__list">
+                    <li>
+                        <i class="fas fa-pen"></i>
+                        Простое создание
+                    </li>
+                    <li>
+                        <i class="fas fa-list"></i>
+                        Практичный интерфейс
+                    </li>
+                    <li>
+                        <i class="fas fa-cog"></i>
+                        Гибкая настройка
+                    </li>
+                    <li>
+                        <i class="fas fa-save"></i>
+                        Умное сохранение д/з
+                    </li>
+                    <li>
+                        <i class="fas fa-pencil-ruler"></i>
+                        Своеобразный дизайн
+                    </li>
+                    <li>
+                        <i class="fas fa-pen-nib"></i>
+                        Удобная система оценок
+                    </li>
+                </ul>
+                <img class="why-we__phone desktop" src="img/mainPhone.png" alt="">
             </div>
-            <div class="settings">
-                <div class="description settings__description">
-                    <h3 class="settings__head-text head-text">Настройте&nbsp;под&nbsp;себя</h3>
-                    <p class="description-text">
-                        Благодаря гибким 
-                        настройкам Вы сможете
-                        сделать дневник 
-                        по своему вкусу
-                    </p>
-                </div>
-                <div class="settings__img">
-                    <img class="settings__img-phone" src="img/mainPhone.png" alt="You can customize MyDiary for yourself">
-                    <object class="settings__object-svg" data="img/settings-background.svg" type="image/svg+xml">
-                        <img src="img/settings-background.svg" alt="">
+
+
+
+            <div class="make-and-settings" id="make-and-settings">
+                <div class="make">
+                    <div class="description">
+                        <h3 class="make__head-text head-text">Простота&nbsp;создания</h3>
+                        <p class="description-text">
+                            В <span class="MyDiary">MyDiary</span> есть подсказки
+                            с названиями предметов
+                            для ускорения процесса
+                            создания расписания
+                        </p>
+                    </div>
+                    <img class="main-phone make__img" src="img/mainPhone.png" alt="Make MyDiary easily">
+                    <object class="make__object-svg" data="img/make-background.svg" type="image/svg+xml">
+                        <img src="img/make-background.svg" alt="">
                     </object>
                 </div>
-            </div>
-        </div>
-
-        
-
-        <div class="possibilities" id="possibilities">
-            <h3 class="possibilities__head-text head-text">Большие&nbsp;возможности</h3>
-            <div class="possibilities__slider">
-                <p class="possibilities__slider_text description-text" id="slider_left-text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?</p>
-                
-                <button class="possibilities__slider-btn slider-left">
-                    <img src="img/arrow-btn.svg" alt="«">
-                </button>
-
-                <object class="possibilities__slider-background" data="img/slider-background.svg" type="image/svg+xml">
-                    <img src="img/slider-background.svg" alt="">
-                </object>
-
-                <button class="possibilities__slider-btn slider-right">
-                    <img src="img/arrow-btn.svg" alt="»">
-                </button>
-                
-                <p class="possibilities__slider_text slider_right-text description-text" id="slider_right-text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?</p>
-            </div>
-        </div>
-
-
-        <div class="faq" id="faq">
-            <h3 class="head-text faq__head-text">F.A.Q.</h3>
-            <div class="faq__search">
-                <input type="text" name="search" id="search" class="faq__search-text input_text" placeholder="Поиск..." autocomplete="off">
-                <button class="faq__search-btn"><i class="fas fa-search"></i></button>
+                <div class="settings">
+                    <div class="description settings__description">
+                        <h3 class="settings__head-text head-text">Настройте&nbsp;под&nbsp;себя</h3>
+                        <p class="description-text">
+                            Благодаря гибким
+                            настройкам Вы сможете
+                            сделать дневник
+                            по своему вкусу
+                        </p>
+                    </div>
+                    <div class="settings__img">
+                        <img class="settings__img-phone" src="img/mainPhone.png"
+                            alt="You can customize MyDiary for yourself">
+                        <object class="settings__object-svg" data="img/settings-background.svg" type="image/svg+xml">
+                            <img src="img/settings-background.svg" alt="">
+                        </object>
+                    </div>
+                </div>
             </div>
 
-            <ul class="faq__list">
-                <li>
-                    <p class="faq__list_question">
-                        <i class="fas fa-question-circle"></i>
-                        Lorem ipsum dolor sit?
-                        <img src="img/arrow-btn.svg" alt="" class="question__show-more">
-                    </p>
-                    <p class="faq__list_answer">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse quod dolores?
-                    </p>
-                </li>
 
-                <li class="faq__right">
-                    <p class="faq__list_question">
-                        <i class="fas fa-question-circle"></i>
-                        Lorem ipsum dolor sit?
-                        <img src="img/arrow-btn.svg" alt="" class="question__show-more">
-                    </p>
-                    <p class="faq__list_answer">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse quod dolores?
-                    </p>
-                </li>
 
-                <li>
-                    <p class="faq__list_question">
-                        <i class="fas fa-question-circle"></i>
-                        Lorem ipsum dolor sit?
-                        <img src="img/arrow-btn.svg" alt="" class="question__show-more">
-                    </p>
-                    <p class="faq__list_answer">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse quod dolores?
-                    </p>
-                </li>
-                
-                <li class="faq__right">
-                    <p class="faq__list_question">
-                        <i class="fas fa-question-circle"></i>
-                        Lorem ipsum dolor sit?
-                        <img src="img/arrow-btn.svg" alt="" class="question__show-more">
-                    </p>
-                    <p class="faq__list_answer">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse quod dolores?
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </main>
-    
+            <div class="possibilities" id="possibilities">
+                <h3 class="possibilities__head-text head-text">Большие&nbsp;возможности</h3>
+                <div class="possibilities__slider">
+                    <p class="possibilities__slider_text description-text" id="slider_left-text-1">Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Aut, praesentium?</p>
 
-    <footer>
-        <section class="communication" id="communication">
-            <div class="communication__write-menu">
-                <h4 class="communication__head-text">Связаться с нами</h4>
-                <p>Если заметите ошибки в работе приложения, сообщите нам при помощи формы ниже</p>
-                <form action="send.php" method="post">
-                    <input type="email" class="communication__input_text input_text user-email" name="email" required placeholder="Email"><br>
-                    <br><textarea rows="5" class="communication__input_text input_text user-message" name="message" placeholder="Ваше сообщение"></textarea><br>
-                    <button type="submit" name="submit" class="communication__btn_send-message">
-                        Отправить
-                        <!-- у before нет нормального z-index -->
-                        <span class="communication__btn_send-message__before"></span> 
+                    <button class="possibilities__slider-btn slider-left">
+                        <img src="img/arrow-btn.svg" alt="«">
                     </button>
-                </form>
+
+                    <object class="possibilities__slider-background" data="img/slider-background.svg"
+                        type="image/svg+xml">
+                        <img src="img/slider-background.svg" alt="">
+                    </object>
+
+                    <button class="possibilities__slider-btn slider-right">
+                        <img src="img/arrow-btn.svg" alt="»">
+                    </button>
+
+                    <p class="possibilities__slider_text slider_right-text description-text" id="slider_right-text-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?</p>
+                </div>
             </div>
 
-            <object class="footer__not-circle" data="img/not-circle.svg" type="image/svg+xml">
-                <img src="img/not-circle.svg" alt="">
-            </object>
-            
-            <div class="communication__write-us">
-                <h5 class="write-us_text">Напишите нам</h5>
-                <ul class="write-us__media-list">
-                    <li class="write-us__media-link">
-                        <a class="a" href="//www.instagram.com/moondayj/" target="_blank"> 
-                            <i class="fab fa-instagram"></i> 
-                            moondayj 
-                        </a> 
+
+            <div class="faq" id="faq">
+                <h3 class="head-text faq__head-text">F.A.Q.</h3>
+                <div class="faq__search">
+                    <input type="text" name="search" id="search" class="faq__search-text input_text"
+                        placeholder="Поиск..." autocomplete="off">
+                    <button class="faq__search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <ul class="faq__list">
+                    <li>
+                        <p class="faq__list_question">
+                            <i class="fas fa-question-circle"></i>
+                            Lorem ipsum dolor sit?
+                            <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                        </p>
+                        <p class="faq__list_answer">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse
+                            quod dolores?
+                        </p>
                     </li>
 
-                    <li class="write-us__media-link write-us__vk">
-                        <a class="a" href="//vk.com/moon_mydiary" target="_blank"> 
-                            <i class="fab fa-vk"></i> 
-                            moon_mydiary 
-                        </a> 
+                    <li class="faq__right">
+                        <p class="faq__list_question">
+                            <i class="fas fa-question-circle"></i>
+                            Lorem ipsum dolor sit?
+                            <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                        </p>
+                        <p class="faq__list_answer">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse
+                            quod dolores?
+                        </p>
                     </li>
 
-                    <li class="write-us__media-link">
-                        <a class="a" href="mailto:andanonil253@gmail.com">    
-                            <i class="fas fa-at"></i> 
-                            andanonil253@gmail.com
-                        </a> 
+                    <li>
+                        <p class="faq__list_question">
+                            <i class="fas fa-question-circle"></i>
+                            Lorem ipsum dolor sit?
+                            <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                        </p>
+                        <p class="faq__list_answer">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse
+                            quod dolores?
+                        </p>
+                    </li>
+
+                    <li class="faq__right">
+                        <p class="faq__list_question">
+                            <i class="fas fa-question-circle"></i>
+                            Lorem ipsum dolor sit?
+                            <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                        </p>
+                        <p class="faq__list_answer">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse
+                            quod dolores?
+                        </p>
                     </li>
                 </ul>
             </div>
-        </section>
-        <div class="footer__bottom">
-            <a class="a" href="//play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank">
-                <img class="MyDiary_logo" src="img/logo.svg" alt="">
-                <strong><span class="MyDiary">MyDiary</span></strong>
-            </a>
-            <a class="a"  href="//play.google.com/store/apps/dev?id=5961568897601928199"  target="_blank">
-                <span>Moon Production</span>
-                <img class="footer__moon" src="img/Moon.svg" alt="">
-            </a>
-            <span class="footer__bottom_media">
-                <a class="a footer__bottom_vk" href="//vk.com/moon_mydiary" target="_blank"> <img src="img/vk.svg" alt=""> </a>
-                <a class="a footer__bottom_google-play" href="//play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank"> <img src="img/google-play.svg" alt=""> </a>
-            </span>
-        </div>
-    </footer>
+        </main>
+
+
+        <footer>
+            <section class="communication" id="communication">
+                <div class="communication__write-menu">
+                    <h4 class="communication__head-text">Связаться с нами</h4>
+                    <p>Если заметите ошибки в работе приложения, сообщите нам при помощи формы ниже</p>
+                    <form action="send.php" method="post">
+                        <input type="email" class="communication__input_text input_text user-email" name="email"
+                            required placeholder="Email"><br>
+                        <br><textarea rows="5" class="communication__input_text input_text user-message" name="message"
+                            placeholder="Ваше сообщение"></textarea><br>
+                        <button type="submit" name="submit" class="communication__btn_send-message">
+                            Отправить
+                            <!-- у before нет нормального z-index -->
+                            <span class="communication__btn_send-message__before"></span>
+                        </button>
+                    </form>
+                </div>
+
+                <object class="footer__not-circle" data="img/not-circle.svg" type="image/svg+xml">
+                    <img src="img/not-circle.svg" alt="">
+                </object>
+
+                <div class="communication__write-us">
+                    <h5 class="write-us_text">Напишите нам</h5>
+                    <ul class="write-us__media-list">
+                        <li class="write-us__media-link">
+                            <a class="a" href="mailto:andanonil253@gmail.com">
+                                <i class="fas fa-at"></i>
+                                andanonil253@gmail.com
+                            </a>
+                        </li>
+
+                        <li class="write-us__media-link write-us__vk">
+                            <a class="a" href="//vk.com/moon_mydiary" target="_blank">
+                                <i class="fab fa-vk"></i>
+                                moon_mydiary
+                            </a>
+                        </li>
+
+                        <li class="write-us__media-link">
+                            <a class="a" href="//www.instagram.com/moondayj/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                moondayj
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <div class="footer__bottom">
+                <a class="a" href="//play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank">
+                    <img class="MyDiary_logo" src="img/logo.svg" alt="">
+                    <strong><span class="MyDiary">MyDiary</span></strong>
+                </a>
+                <a class="a" href="//play.google.com/store/apps/dev?id=5961568897601928199" target="_blank">
+                    <span>Moon Production</span>
+                    <img class="footer__moon" src="img/Moon.svg" alt="">
+                </a>
+                <span class="footer__bottom_media">
+                    <a class="a footer__bottom_vk" href="//vk.com/moon_mydiary" target="_blank"> <img src="img/vk.svg"
+                            alt=""> </a>
+                    <a class="a footer__bottom_google-play"
+                        href="//play.google.com/store/apps/details?id=moonproject.mydiary" target="_blank"> <img
+                            src="img/google-play.svg" alt=""> </a>
+                </span>
+            </div>
+        </footer>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

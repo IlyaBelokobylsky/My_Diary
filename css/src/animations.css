@@ -84,18 +84,25 @@
   transition: .2s ease-in-out;
 }
 
-.btn-up:hover {
+.btn-up:active {
   height: 3rem;
   -webkit-transform: translateY(0.25rem);
           transform: translateY(0.25rem);
 }
 
-.btn-up:hover .btn-up__arrow {
+.btn-up:active .btn-up__arrow {
   height: 2rem;
 }
 
-.btn-up:active {
-  border-width: 3px;
+.container {
+  -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.4, 1), height 5s 5s;
+  transition: 0.6s cubic-bezier(0.4, 0, 0.4, 1), height 5s 5s;
+}
+
+.container-translated {
+  border-radius: 5rem;
+  -webkit-filter: brightness(80%) blur(1px);
+          filter: brightness(80%) blur(1px);
 }
 
 .head-screen__download-button {
@@ -132,11 +139,19 @@
           transform: scale(0.95);
 }
 
+@media (max-width: 992px) {
+  .container-translated {
+    top: 5rem;
+    -webkit-transform: translateX(13rem) rotate3d(0, -2, 0.01, 30deg);
+            transform: translateX(13rem) rotate3d(0, -2, 0.01, 30deg);
+  }
+}
+
 @media (min-width: 993px) {
   @-webkit-keyframes head-screen-scale {
     0% {
-      height: 15.5001rem;
-      right: -1.2rem;
+      height: 15.668rem;
+      right: -1.5rem;
       top: -0.3rem;
     }
     100% {
@@ -147,8 +162,8 @@
   }
   @keyframes head-screen-scale {
     0% {
-      height: 15.5001rem;
-      right: -1.2rem;
+      height: 15.668rem;
+      right: -1.5rem;
       top: -0.3rem;
     }
     100% {
@@ -157,9 +172,43 @@
       height: 15rem;
     }
   }
-  .head-screen__phones > .desktop {
-    -webkit-animation: head-screen-scale 2s linear;
-            animation: head-screen-scale 2s linear;
+  .head-screen__phones > .head-scr {
+    -webkit-animation: head-screen-scale 3s ease-in-out;
+            animation: head-screen-scale 3s ease-in-out;
+  }
+  div.head-screen__phones > div.head-screen__phones_blur .head-screen__phones_blur-visible-1 {
+    -webkit-transition: 1.5s, 1.5s;
+    transition: 1.5s, 1.5s;
+  }
+  div.head-screen__phones > div.head-screen__phones_blur .head-screen__phones_blur-visible-2 {
+    -webkit-transition: 3s, 0.75s;
+    transition: 3s, 0.75s;
+  }
+  div.head-screen__phones > div.head-screen__phones_blur .head-screen__phones_blur-visible-3 {
+    -webkit-transition: 4.5s, 0.5s;
+    transition: 4.5s, 0.5s;
+  }
+  div.head-screen__phones:hover > div.head-screen__phones_blur .head-screen__phones_blur-visible-1 {
+    opacity: 0;
+    height: 15rem;
+    top: 0;
+    right: 0;
+  }
+  div.head-screen__phones:hover > div.head-screen__phones_blur .head-screen__phones_blur-visible-2 {
+    opacity: 0;
+    height: 15rem;
+    top: 0;
+    right: 0;
+  }
+  div.head-screen__phones:hover > div.head-screen__phones_blur .head-screen__phones_blur-visible-3 {
+    opacity: 0;
+    height: 15rem;
+    top: 0;
+    right: 0;
+  }
+  .container-translated {
+    -webkit-transform: translateY(3rem) scale3d(0.9, 0.9, 1);
+            transform: translateY(3rem) scale3d(0.9, 0.9, 1);
   }
 }
 /*# sourceMappingURL=animations.css.map */
