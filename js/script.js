@@ -2,6 +2,7 @@
 const menu = document.querySelector('.hamburger');
 const header = document.querySelector('header');
 const container = document.querySelector('.container');
+const navMenu = document.querySelector('.header__nav_list');
 
 function headerToggle() {
     menu.classList.toggle('menu-clicked');
@@ -23,13 +24,14 @@ function headerToggle() {
     }
 }
 
-function scrollToElem(elem) {
+menu.addEventListener('click', headerToggle);
+
+function scrollToElem(elem) {/* 
     elem.classList.contains('make-and-settings') ?// для более корректной работы 
-    elem.scrollIntoView({ behavior: 'smooth', block: 'start' }) :
+    elem.scrollIntoView({ behavior: 'smooth', block: 'start' }) : */
     elem.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
-menu.addEventListener('click', headerToggle);
 
 // Анимация для блюра на первом экране
 for (let i = 3; i >= 1; i--) {

@@ -41,9 +41,9 @@
 
 // Arrow up animation
 .btn-up {
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
     .btn-up__arrow {
-        transition: .3s ease-in-out;
+        transition: .2s ease-in-out;
     }
 }
 
@@ -71,15 +71,29 @@
 
 
 // Download button (head screen)
+@keyframes download-button_breathing {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.025);
+    }
+}
 .head-screen__download-button {
-    transition: transform .1s;
+    animation: download-button_breathing 2s ease-in-out infinite alternate;
 }
-.head-screen__download-button:hover {
-    transform: scale(1.01);
+.head-screen__download-button > .fa-google-play,
+.head-screen__download-button > .fa-long-arrow-alt-down {
+    transition: .4s cubic-bezier(.35,-0.3,.15,1.15);
 }
-.head-screen__download-button:active {
-    transform: scale(.99);
+.head-screen__download-button:hover > .fa-google-play {
+    transform: translateY(200%) scale(.5);
 }
+.head-screen__download-button:hover > .fa-long-arrow-alt-down {
+    top: calc(50% - .667rem);
+    transform: scale(1.2);
+}
+
 
 
 
@@ -142,6 +156,6 @@
         }
     }
     .container-translated {
-        transform: perspective(100rem) scale3d(.95, .95, 1) rotateX(7.5deg);
+        transform: perspective(100rem) scale3d(.975, .975, 1) rotateX(8.5deg);
     }
 }
