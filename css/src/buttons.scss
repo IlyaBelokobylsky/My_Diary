@@ -91,6 +91,9 @@
     outline: none;
     box-shadow: 0 0 .25rem 0 var(--invisible-color);
 }
+.btn-up_hidden {
+    bottom: -3rem;
+}
 
 
 
@@ -233,6 +236,7 @@
 @media (min-width: 993px) {
     .head-screen__download-button {
         margin-top: 4rem;
+        margin-left: 1.75rem;
     }
     
     .slider-left, .slider-right {

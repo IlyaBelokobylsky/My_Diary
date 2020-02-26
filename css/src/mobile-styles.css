@@ -346,8 +346,8 @@ main .why-we .why-we__list li {
 }
 
 main .why-we .why-we__list li i {
+  vertical-align: -10%;
   display: inline-block;
-  vertical-align: middle;
   font-size: 1.5rem;
   color: var(--main-dark-color-first);
 }

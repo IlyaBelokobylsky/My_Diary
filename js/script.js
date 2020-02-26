@@ -1,22 +1,24 @@
 'use strict';
-const menu = document.querySelector('.hamburger');
-const header = document.querySelector('header');
-const container = document.querySelector('.container');
-const navMenu = document.querySelector('.header__nav_list');
+const menu = document.querySelector('.hamburger'),
+    header = document.querySelector('header'),
+    container = document.querySelector('.container'),
+    navMenu = document.querySelector('.header__nav_list'),
+    arrow = document.querySelector('.btn-up');
+
 
 function headerToggle() {
     menu.classList.toggle('menu-clicked');
     document.querySelector('.btn-up').classList.toggle('btn-up-hidden');
     container.classList.toggle('container-translated')
-
+    
     if (menu.classList.contains('menu-clicked')) {
         // Без этого перемещение наверх резкое
-        scrollToElem(document.querySelector('.head-screen'));
-
+        document.querySelector('.head-screen').scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+        
         // Убрать/вернуть скролл
         document.documentElement.style.overflow = 'hidden';
         pageYOffset > 0 ?
-        setTimeout(() => document.documentElement.style.position = 'fixed', 1500) :
+        setTimeout(() => document.documentElement.style.position = 'fixed', 1200) :
         document.documentElement.style.position = 'fixed';
     } else {
         document.documentElement.style.position = 'absolute';
@@ -26,16 +28,36 @@ function headerToggle() {
 
 menu.addEventListener('click', headerToggle);
 
-function scrollToElem(elem) {/* 
-    elem.classList.contains('make-and-settings') ?// для более корректной работы 
-    elem.scrollIntoView({ behavior: 'smooth', block: 'start' }) : */
-    elem.scrollIntoView({ behavior: 'smooth', block: 'end' });
-}
+
+// Обработка нажатий на ссылки в nav меню
+navMenu.addEventListener('click', function (event) {
+    event.preventDefault(); // дабы не было "как обычно"
+    const href = event.target.getAttribute('href');
+    const beforeActive = document.querySelector('.nav__active-link');
+    const active = event.target.closest('li');
+
+    beforeActive.classList.remove('nav__active-link');
+    active.classList.add('nav__active-link');
+
+    headerToggle();
+    setTimeout(function() { // чтобы хедер успел убраться
+        document.querySelector(`${href}`).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 600);
+});
 
 
-// Анимация для блюра на первом экране
-for (let i = 3; i >= 1; i--) {
-    setTimeout(() => 
-        document.querySelector(`.head-screen__phone-blur-${i}`).classList.add(`head-screen__phones_blur-visible-${i}`)
-    , 1333 * Math.pow(i, -1));
-}
+let pagePosition = pageYOffset;
+
+// Появление стрелочки для перехода вверх
+document.addEventListener('scroll', function(event) {
+    // В случае, если скролл идет вверх
+    if (pagePosition >= pageYOffset) {
+        pageYOffset >= document.documentElement.clientHeight ?
+        arrow.classList.remove('btn-up_hidden') :
+        arrow.classList.add('btn-up_hidden');
+    } else arrow.classList.add('btn-up_hidden');
+
+    // Перезапись свойства для следующей проверки
+    pagePosition = pageYOffset;
+})
+arrow.onclick = () => container.scrollIntoView({ behavior: 'smooth', block: 'start'});

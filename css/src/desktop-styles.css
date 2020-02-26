@@ -231,7 +231,7 @@
     display: block;
     position: absolute;
     top: 10.325rem;
-    left: calc(45vw - 1.75px);
+    left: calc(45vw - .125rem);
     height: .35rem;
     width: .35rem;
     background-color: var(--main-dark-color-first);
@@ -329,7 +329,7 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin-top: 0;
+    margin-top: -.2rem;
     margin-left: .2rem;
     font-size: 0.85rem;
   }

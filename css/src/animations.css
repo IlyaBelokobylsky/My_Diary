@@ -126,8 +126,8 @@
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(1.025);
-            transform: scale(1.025);
+    -webkit-transform: scale(1.045);
+            transform: scale(1.045);
   }
 }
 
@@ -137,8 +137,8 @@
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(1.025);
-            transform: scale(1.025);
+    -webkit-transform: scale(1.045);
+            transform: scale(1.045);
   }
 }
 
