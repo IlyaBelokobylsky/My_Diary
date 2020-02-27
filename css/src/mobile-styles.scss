@@ -32,6 +32,12 @@ html, body {
    cursor: pointer;
 }
 
+.hidden {
+   opacity: 0;
+}
+.visible {
+   opacity: 1;
+}
 
 .MyDiary_logo {
    width: 1rem;
@@ -201,7 +207,7 @@ main {
          .head-screen__moon-svg_img {
             position: absolute;
             z-index: 0;
-            right: 2.7rem;
+            right: 2.2rem;
             top: -5.65rem;
             width: 13.33rem;
          }
@@ -318,7 +324,7 @@ main {
       display: block;
       position: absolute;
       right: -1.5rem;
-      top: 6rem;
+      top: 6.5rem;
       width: 10.2rem;
       height: 6rem;
       background-image: linear-gradient(270deg, var(--main-dark-color-second) 0%, var(--main-light-color-first) 100%);
@@ -328,7 +334,7 @@ main {
    .why-we::after {
       transform: rotate(-105deg);
       right: -2rem;
-      top: 20rem;
+      top: 20.5rem;
    }
 
 
@@ -399,7 +405,7 @@ main {
             content: 'Гибкость';
             font-size: 4.1rem;
             bottom: -.5rem;
-            right: .55rem;
+            right: .56rem;
          }
          .settings__img {
             position: relative;

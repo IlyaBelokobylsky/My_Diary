@@ -95,7 +95,7 @@
     font-size: 3.4rem;
   }
   div.head-screen .head-screen__h1 .head-screen__moon-svg_img {
-    right: 2.2rem;
+    right: 1.5rem;
   }
   div.head-screen .head-screen__h4 {
     font-size: 1.25rem;
@@ -181,6 +181,8 @@
     top: 5rem;
     right: 3rem;
     max-width: 6rem;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
   }
   div.why-we::before {
     right: -2rem;

@@ -35,6 +35,14 @@ html, body {
   cursor: pointer;
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
 .MyDiary_logo {
   width: 1rem;
   height: 1rem;
@@ -228,7 +236,7 @@ main .head-screen .head-screen__h1 .MyDiary {
 main .head-screen .head-screen__h1 .head-screen__moon-svg_img {
   position: absolute;
   z-index: 0;
-  right: 2.7rem;
+  right: 2.2rem;
   top: -5.65rem;
   width: 13.33rem;
 }
@@ -364,7 +372,7 @@ main .why-we::before, main .why-we::after {
   display: block;
   position: absolute;
   right: -1.5rem;
-  top: 6rem;
+  top: 6.5rem;
   width: 10.2rem;
   height: 6rem;
   background-image: -webkit-gradient(linear, right top, left top, from(var(--main-dark-color-second)), to(var(--main-light-color-first)));
@@ -378,7 +386,7 @@ main .why-we::after {
   -webkit-transform: rotate(-105deg);
           transform: rotate(-105deg);
   right: -2rem;
-  top: 20rem;
+  top: 20.5rem;
 }
 
 main .head-text::before {
@@ -462,7 +470,7 @@ main .make-and-settings .settings .settings__head-text::before {
   content: 'Гибкость';
   font-size: 4.1rem;
   bottom: -.5rem;
-  right: .55rem;
+  right: .56rem;
 }
 
 main .make-and-settings .settings .settings__img {

@@ -86,7 +86,7 @@
         .head-screen__h1 {
             font-size: 3.4rem;
             .head-screen__moon-svg_img {
-                right: 2.2rem;
+                right: 1.5rem;
             }
         }
         .head-screen__h4 {
@@ -155,6 +155,7 @@
             top: 5rem;
             right: 3rem;
             max-width: 6rem;
+            transition: opacity .5s;
         }
     }
 
