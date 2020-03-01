@@ -5,7 +5,7 @@
   .mobile {
     display: none;
   }
-  :root {
+  html {
     font-size: 23px;
   }
   img.main-phone {
@@ -181,19 +181,18 @@
     top: 5rem;
     right: 3rem;
     max-width: 6rem;
-    -webkit-transition: opacity .5s;
-    transition: opacity .5s;
+    -webkit-transition: opacity .75s;
+    transition: opacity .75s;
   }
-  div.why-we::before {
+  div.why-we__semicircle-top {
     right: -2rem;
     top: 3rem;
     height: 9rem;
     width: 15.3rem;
+    background-image: -webkit-gradient(linear, right top, left top, from(var(--main-dark-color-second)), to(var(--main-light-color-first)));
+    background-image: linear-gradient(270deg, var(--main-dark-color-second) 0%, var(--main-light-color-first) 100%);
     -webkit-transform: rotate(60deg);
             transform: rotate(60deg);
-  }
-  div.why-we::after {
-    display: none;
   }
   p.description-text {
     font-size: 0.625rem;
@@ -355,19 +354,19 @@
 }
 
 @media (min-width: 1160px) {
-  :root {
+  html {
     font-size: 26px;
   }
 }
 
 @media (min-width: 1280px) {
-  :root {
+  html {
     font-size: 29px;
   }
 }
 
 @media (min-width: 1360px) {
-  :root {
+  html {
     font-size: 31px;
   }
   div.make-and-settings div.settings .settings__img {
@@ -376,7 +375,7 @@
 }
 
 @media (min-width: 1439px) {
-  :root {
+  html {
     font-size: 34px;
   }
   footer .footer__not-circle {
@@ -387,13 +386,13 @@
 }
 
 @media (min-width: 1599px) {
-  :root {
+  html {
     font-size: 38px;
   }
 }
 
 @media (min-width: 1919px) {
-  :root {
+  html {
     font-size: 44px;
   }
   div.make-and-settings div.settings .settings__img {

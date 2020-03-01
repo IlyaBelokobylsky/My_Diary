@@ -2,7 +2,7 @@
 // более подробные названия 
 // для перекрытия основных стилей
 @media (max-width: 690px) {
-    :root {
+    html {
         font-size: 24px;
     }
 
@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 600px) {
-    :root {
+    html {
         font-size: 18px;
     }
     main .head-screen .head-screen__triangle {
@@ -35,11 +35,13 @@
         margin-left: -2rem;
     }
 
-    main>.why-we>img.why-we__phone {
-        right: 0;
-        max-width: 125px;
+    div.why-we__semicircle-top {
+        transform: rotate(-75deg) scale(.75);
+        right: .8rem;
     }
-
+    div.why-we__semicircle-bottom {
+        transform: rotate(105deg) scale(.75);
+    }
 
     footer .footer__bottom .footer__bottom_media {
         bottom: -0.6rem;
@@ -55,12 +57,8 @@
 
 
 @media (max-width: 400px) {
-    :root {
+    html {
         font-size: 15px;
-    }
-
-    main>.why-we>img.why-we__phone {
-        max-width: 100px;
     }
 
     footer .footer__bottom span.footer__bottom_media {
@@ -76,7 +74,7 @@
 
 
 @media (min-width: 850px) {
-    :root {
+    html {
         font-size: 36px;
     }
 }

@@ -147,21 +147,39 @@
           animation: download-button_breathing 2s ease-in-out infinite alternate;
 }
 
-.head-screen__download-button > .fa-google-play,
-.head-screen__download-button > .fa-long-arrow-alt-down {
-  -webkit-transition: 0.4s cubic-bezier(0.35, -0.3, 0.15, 1.15);
-  transition: 0.4s cubic-bezier(0.35, -0.3, 0.15, 1.15);
+.head-screen__download-button::before {
+  -webkit-transition: opacity 0.4s cubic-bezier(0.35, -0.3, 0.15, 1.15);
+  transition: opacity 0.4s cubic-bezier(0.35, -0.3, 0.15, 1.15);
 }
 
-.head-screen__download-button:hover > .fa-google-play {
-  -webkit-transform: translateY(200%) scale(0.5);
-          transform: translateY(200%) scale(0.5);
+@-webkit-keyframes download-button_hover {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 125%;
+    height: 150%;
+    opacity: 0;
+  }
 }
 
-.head-screen__download-button:hover > .fa-long-arrow-alt-down {
-  top: calc(50% - .667rem);
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+@keyframes download-button_hover {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 125%;
+    height: 150%;
+    opacity: 0;
+  }
+}
+
+.head-screen__download-button:hover::before {
+  opacity: 1;
+  -webkit-animation: download-button_hover .8s .2s ease-in-out infinite;
+          animation: download-button_hover .8s .2s ease-in-out infinite;
 }
 
 .communication__btn_send-message:hover {

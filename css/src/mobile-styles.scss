@@ -6,7 +6,7 @@
    
 }
 
-:root {
+html {
    font-size: 28px;
    font-family: 'Roboto', sans-serif;
    --main-dark-color-first: #372DA6; 
@@ -319,22 +319,21 @@ main {
       }
    }
 
-   .why-we::before, .why-we::after {
-      content: '';
-      display: block;
+   .why-we__semicircle-top, .why-we__semicircle-bottom {
       position: absolute;
-      right: -1.5rem;
-      top: 6.5rem;
+      z-index: -1;
+      right: 2.5rem;
+      top: 5rem;
       width: 10.2rem;
       height: 6rem;
-      background-image: linear-gradient(270deg, var(--main-dark-color-second) 0%, var(--main-light-color-first) 100%);
+      background-image: linear-gradient(90deg, var(--main-dark-color-second) 0%, var(--main-light-color-first) 100%);
       border-radius: 100rem 100rem 5rem 5rem;
-      transform: rotate(75deg); 
+      transform: rotate(-75deg); 
    }
-   .why-we::after {
-      transform: rotate(-105deg);
-      right: -2rem;
-      top: 20.5rem;
+   .why-we__semicircle-bottom {
+      transform: rotate(105deg);
+      right: -1.85rem;
+      top: 12rem;
    }
 
 

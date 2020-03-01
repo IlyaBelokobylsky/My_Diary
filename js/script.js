@@ -2,9 +2,8 @@
 const menu = document.querySelector('.hamburger'),
     header = document.querySelector('header'),
     container = document.querySelector('.container'),
-    navMenu = document.querySelector('.header__nav_list'),
-    arrow = document.querySelector('.btn-up'),
-    sections = document.querySelectorAll('.js-section');
+    navMenu = document.querySelector('.header__nav_list');
+    
 
 
 function headerToggle() {
@@ -70,23 +69,6 @@ navMenu.addEventListener('click', function (event) {
         }, 600);
     }
 });
-
-
-let pagePosition = pageYOffset;
-
-// Появление стрелочки для перехода вверх
-document.addEventListener('scroll', function(event) {
-    // В случае, если скролл идет вверх
-    if (pagePosition >= pageYOffset) {
-        pageYOffset >= document.documentElement.clientHeight ?
-        arrow.classList.remove('btn-up_hidden') :
-        arrow.classList.add('btn-up_hidden');
-    } else arrow.classList.add('btn-up_hidden');
-
-    // Перезапись свойства для следующей проверки
-    pagePosition = pageYOffset;
-})
-arrow.onclick = () => container.scrollIntoView({ behavior: 'smooth', block: 'start'});
 
 
 // Появление телефона при наведении на текст
