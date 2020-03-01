@@ -143,9 +143,10 @@
   height: 100%;
   width: 100%;
   border: 5px solid var(--main-light-color-second);
-  -webkit-box-shadow: 0 0 0 0.5rem var(--main-light-color-second) inset;
-          box-shadow: 0 0 0 0.5rem var(--main-light-color-second) inset;
+  -webkit-box-shadow: 0 0 0.5rem var(--main-light-color-second) inset;
+          box-shadow: 0 0 0.5rem var(--main-light-color-second) inset;
   border-radius: inherit;
+  opacity: 0;
 }
 
 .possibilities__slider-btn {

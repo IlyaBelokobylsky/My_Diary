@@ -127,8 +127,9 @@
         height: 100%;
         width: 100%;
         border: 5px solid var(--main-light-color-second);
-        box-shadow: 0 0 0 .5rem var(--main-light-color-second) inset;
+        box-shadow: 0 0 .5rem var(--main-light-color-second) inset;
         border-radius: inherit;
+        opacity: 0;
     }
 }
 
