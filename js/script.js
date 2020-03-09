@@ -72,7 +72,7 @@ navMenu.addEventListener('click', function (event) {
 
 
 // Появление телефона при наведении на текст
-document.querySelectorAll('.why-we__list_elem-js').forEach(function(item) {
+document.querySelectorAll('.why-we__paragraph-js').forEach(function(item) {
     item.onmouseover = () => {
         let phone = document.querySelector('.why-we__phone');
         phone.classList.remove('hidden');
