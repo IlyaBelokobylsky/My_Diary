@@ -178,11 +178,11 @@
     font-size: 1rem;
   }
   div.why-we .why-we__phone {
-    top: 5rem;
+    top: 6rem;
     right: 3rem;
     max-width: 6rem;
-    -webkit-transition: opacity .75s;
-    transition: opacity .75s;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
   }
   div.why-we__semicircle-top {
     right: -2rem;
