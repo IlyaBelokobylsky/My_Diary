@@ -3,7 +3,16 @@ const centerX = document.documentElement.clientWidth / 2,
     centerY = document.documentElement.clientHeight / 2,
     moveableElements = document.querySelectorAll('.js-moveable'),
     arrow = document.querySelector('.btn-up'),
-    rootFontSize = parseFloat(window.getComputedStyle(document.documentElement).fontSize)
+    rootFontSize = parseFloat(window.getComputedStyle(document.documentElement).fontSize);
+
+
+function checkItemVisibility(item) {
+    item.top = item.getBoundingClientRect().top + pageYOffset;
+    item.bottom = item.getBoundingClientRect().bottom + pageYOffset;
+    return pageYOffset + document.documentElement.clientHeight - item.bottom > 0 && 
+    pageYOffset - item.top < 0;
+}
+
 
 let pagePosition = pageYOffset;
 
@@ -17,8 +26,6 @@ document.querySelector('.why-we__semicircle-bottom').semicircleMoving = function
 
 // Узнать местоположение каждой секции относительно документа
 moveableElements.forEach(function(item) {
-    item.top = item.getBoundingClientRect().top + pageYOffset;
-    item.bottom = item.getBoundingClientRect().bottom + pageYOffset;
     item.movingFunction = function(step) {
         let action = item.dataset.action;
         if (action) {
@@ -50,9 +57,7 @@ document.addEventListener('scroll', function(event) {
     // Анимация движения полукругов на мобилках
     if (document.documentElement.clientWidth < 993) {
         const step = (pageYOffset - pagePosition) / 50;
-        const perhapsForMove = [].filter.call(moveableElements, 
-            item => pageYOffset + document.documentElement.clientHeight - item.bottom > 0 && 
-            pageYOffset - item.top < 0);
+        const perhapsForMove = [].filter.call(moveableElements, checkItemVisibility);
         for(let item of perhapsForMove) {
             item.movingFunction(step);
         }
@@ -63,3 +68,19 @@ document.addEventListener('scroll', function(event) {
 arrow.onclick = () => container.scrollIntoView({ behavior: 'smooth', block: 'start'});
 
 
+
+// Появление текста по скроллу
+document.addEventListener('scroll', function (e) {
+    const text = document.querySelectorAll('.text-animated');
+    // Спрятать текст (который уже за экраном)
+    for(let key of text) {
+        key.classList.add('text-hidden');
+        key.classList.remove('text-visible');
+    }
+    let visibleText = [].filter.call(text, checkItemVisibility);
+    // Показать текст (который на экране)
+    for(let key of visibleText) {
+        key.classList.remove('text-hidden');
+        key.classList.add('text-visible');
+    }
+});

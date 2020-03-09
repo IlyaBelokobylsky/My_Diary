@@ -16,6 +16,20 @@
 }
 
 
+.text-animated {
+    position: relative;
+    transition: all .25s ease-in-out;
+}
+.text-visible {
+    left: 0;
+    opacity: 1;
+}
+.text-hidden {
+    left: -1rem;
+    opacity: 0;
+}
+
+
 // Hamburger animation
 .hamburger__line_first,
 .hamburger__line_second,
@@ -99,7 +113,6 @@
 .head-screen__download-button:hover::before {
     opacity: 1;
     animation: download-button_hover .8s .2s ease-in-out infinite;
-
 }
 
 
