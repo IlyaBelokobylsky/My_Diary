@@ -57,18 +57,17 @@
 }
 
 .text-animated {
-  position: relative;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
 
 .text-visible {
-  left: 0;
   opacity: 1;
 }
 
 .text-hidden {
-  left: -1rem;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
   opacity: 0;
 }
 

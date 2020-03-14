@@ -17,15 +17,13 @@
 
 
 .text-animated {
-    position: relative;
     transition: all .25s ease-in-out;
 }
 .text-visible {
-    left: 0;
     opacity: 1;
 }
 .text-hidden {
-    left: -1rem;
+    transform: translateY(1rem);
     opacity: 0;
 }
 
