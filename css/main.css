@@ -622,7 +622,7 @@ main .faq {
 }
 
 main .faq .faq__head-text {
-  background-image: url(../../img/faq-back.svg);
+  background-image: url(../img/faq-back.svg);
   margin-left: 1.5rem;
   font-size: 3rem;
   width: 15.633rem;
@@ -1367,6 +1367,7 @@ footer::before {
 }
 
 .container-translated {
+  overflow: hidden;
   border-radius: 5rem;
   -webkit-filter: brightness(80%) blur(1px);
           filter: brightness(80%) blur(1px);
