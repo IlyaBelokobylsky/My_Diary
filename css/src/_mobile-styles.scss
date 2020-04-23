@@ -170,7 +170,7 @@ header {
          font-size: 1em;
          padding: .417em;
          max-height: 2em;
-         width: 3.65em;
+         width: 3.8em;
          appearance: none;
 
          &:focus {
@@ -184,7 +184,7 @@ header {
          position: absolute;
          font-size: .85em;
          top: .7em;
-         left: 2.65em;
+         left: 2.8em;
       }
 
 
@@ -659,7 +659,7 @@ main {
             overflow: hidden;
             border: 1px solid var(--main-dark-color-second);
             border-radius: 1rem;
-            transition: .5s ease-in-out;
+            transition: .25s ease-in-out;
             .faq__question {
                margin-top: .4rem;
                white-space: nowrap;
@@ -684,13 +684,10 @@ main {
                margin-left: 1rem;
                font-size: 0.625rem;
                color: var(--description-text-color);
-               position: absolute;
-               opacity: 0;
-            }
-            
-            &.opened .faq__answer {
                position: static;
-               opacity: 1;
+            }
+            &.closed {
+               height: 1.75rem;
             }
          }
 

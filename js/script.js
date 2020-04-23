@@ -109,7 +109,8 @@ sliderBtns.forEach(function(item) {
 
 // FAQ
 // Коррекция ширины блоков
-const questList = [...document.querySelectorAll('.faq__question')];
+const questList = [...document.querySelectorAll('.faq__question')],
+    faqElems = [...document.querySelector('.faq__list').children];
 questList.forEach(function(item) {
     let width = 0;
     for(let i = 0; i < item.children.length; i++) {
@@ -118,13 +119,28 @@ questList.forEach(function(item) {
     width += 1.5;
     item.closest('li').style.width = width + 'rem'; // ширина для родителя
 });
+
+// Правки для transition
+faqElems.forEach(function(item) {
+    item.dataset.height = parseFloat(getComputedStyle(item).height) / rem + 'rem';
+    item.classList.add('closed');
+})
+
 // Клик по кнопке
 const faqBtns = [...document.querySelectorAll('.question__show-more')];
 faqBtns.forEach(function(item) {
     item.addEventListener('click', function(event) {
         const faqEl = event.target.closest('li');
-        faqEl.classList.toggle('opened');
-        event.target.closest('button').classList.toggle('clicked')
+        if(faqEl.classList.contains('closed')) {
+            faqEl.classList.remove('closed');
+            faqEl.style.height = faqEl.dataset.height;
+        } else {
+            faqEl.classList.add('closed');
+            faqEl.style.height = '';
+        }
+        const btn = event.target.closest('button');
+        console.log(btn)
+        btn.classList.toggle('clicked');
     });
 });
 
@@ -147,7 +163,6 @@ faqSearch.addEventListener('input', function(e) {
             return part;
         });
     });
-    console.log(confused);
     if (confused) {
         faqSearch.parentElement.classList.add('errored');
         setTimeout(() => {
