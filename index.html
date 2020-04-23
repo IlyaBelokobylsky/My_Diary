@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MyDiary</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/071a28e8c4.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <title>MyDiary</title>
 </head>
 
 <body>
@@ -92,30 +93,31 @@
 
             <div class="why-we js-section" id="why-we">
                 <div class="why-we__semicircle-top"></div>
-                <div class="why-we__semicircle-bottom js-moveable mobile" data-max="22" data-min="12" data-action="semicircleMoving"></div>
+                <div class="why-we__semicircle-bottom js-moveable mobile" data-max="22" data-min="12"
+                    data-action="semicircleMoving"></div>
                 <h3 class="why-we__h3">Почему <span class="MyDiary">MyDiary</span>?</h3>
                 <ul class="why-we__list">
-                    <li class="why-we__paragraph-js text-hidden text-animated">
+                    <li class="why-we__paragraph-js temp-hidden temp-animated">
                         <i class="fas fa-pen"></i>
                         Простое создание
                     </li>
-                    <li class="why-we__paragraph-js text-hidden text-animated">
+                    <li class="why-we__paragraph-js text-hidden temp-animated">
                         <i class="fas fa-list"></i>
                         Практичный интерфейс
                     </li>
-                    <li class="why-we__paragraph-js text-hidden text-animated">
+                    <li class="why-we__paragraph-js temp-hidden temp-animated">
                         <i class="fas fa-cog"></i>
                         Гибкая настройка
                     </li>
-                    <li class="why-we__paragraph-js text-hidden text-animated">
+                    <li class="why-we__paragraph-js temp-hidden temp-animated">
                         <i class="fas fa-save"></i>
                         Умное сохранение д/з
                     </li>
-                    <li class="why-we__paragraph-js text-hidden text-animated">
+                    <li class="why-we__paragraph-js temp-hidden temp-animated">
                         <i class="fas fa-pencil-ruler"></i>
                         Своеобразный дизайн
                     </li>
-                    <li class="why-we__paragraph-js text-hidden text-animated">
+                    <li class="why-we__paragraph-js temp-hidden temp-animated">
                         <i class="fas fa-pen-nib"></i>
                         Удобная система оценок
                     </li>
@@ -128,7 +130,7 @@
             <div class="make-and-settings js-section" id="make-and-settings">
                 <div class="make">
                     <div class="description">
-                        <h3 class="make__head-text head-text">Простота&nbsp;создания</h3>
+                        <h3 class="make__head-text head-text">Простота&nbsp;с&nbsp;создания</h3>
                         <p class="description-text">
                             В <span class="MyDiary">MyDiary</span> есть подсказки
                             с названиями предметов
@@ -166,24 +168,49 @@
             <div class="possibilities js-section" id="possibilities">
                 <h3 class="possibilities__head-text head-text">Большие&nbsp;возможности</h3>
                 <div class="possibilities__slider">
-                    <p class="possibilities__slider_text description-text" id="slider_left-text-1">Lorem ipsum dolor sit
-                        amet consectetur adipisicing elit. Aut, praesentium?</p>
+                    <ul class="possibilities__texts" data-position="left">
+                        <li class="description-text slider_text-1 slider_text-visible">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?
+                        </li>
+                        <li class="description-text slider_text-2 slider_text-hidden">
+                            In nulla sunt cupiditate sit maxime a, illo sequi consequatur animi eaque?
+                        </li>
+                    </ul>
 
-                    <button class="possibilities__slider-btn slider-left">
+                    <button class="possibilities__slider-btn slider-left" data-direction="-1">
                         <img src="img/arrow-btn.svg" alt="«">
                     </button>
+                    
+                    <div class="possibilities__img-with-bg">
+                        <ul class="possibilities__images">
+                            <li class="visible-images" data-position="1">
+                                <img class="rotated-screen head-scr first-image" src="img/head-scr.png" alt="">
+                                <img class="rotated-screen head-scr right-image second-image" src="img/head-scr.png" alt="">
+                            </li>
+                            <li class="hidden-images" data-position="2">
+                                <img class="rotated-screen head-scr left-image second-image" src="img/head-scr.png" alt="">
+                                <img class="rotated-screen head-scr right-image first-image" src="img/head-scr.png" alt="">
+                            </li>
+                        </ul>
 
-                    <object class="possibilities__slider-background" data="img/slider-background.svg"
-                        type="image/svg+xml">
-                        <img src="img/slider-background.svg" alt="">
-                    </object>
+                        <object class="possibilities__slider-background" data="img/slider-background.svg"
+                            type="image/svg+xml">
+                            <img src="img/slider-background.svg" alt="">
+                        </object>
+                    </div>
 
-                    <button class="possibilities__slider-btn slider-right">
+                    <button class="possibilities__slider-btn slider-right" data-direction="1">
                         <img src="img/arrow-btn.svg" alt="»">
                     </button>
 
-                    <p class="possibilities__slider_text slider_right-text description-text" id="slider_right-text-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?</p>
+                    <ul class="possibilities__texts" data-position="right">
+                        <li class="description-text slider_text-1 slider_text-visible">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?
+                        </li>
+                        <li class="description-text slider_text-2 slider_text-hidden">
+                            In nulla sunt cupiditate sit maxime a, illo sequi consequatur animi eaque?
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -191,64 +218,69 @@
             <div class="faq js-section" id="faq">
                 <h3 class="head-text faq__head-text">F.A.Q.</h3>
                 <div class="faq__search">
-                    <input type="text" name="search" id="search" class="faq__search-text input_text"
+                    <input type="text" name="search" id="faq-search" class="faq__input-search input_text"
                         placeholder="Поиск..." autocomplete="off">
-                    <button class="faq__search-btn"><i class="fas fa-search"></i></button>
+                    <label for="faq-search" class="faq__label-search"><i class="fas fa-search"></i></label>
                 </div>
 
                 <ul class="faq__list">
                     <li>
-                        <p class="faq__list_question">
+                        <p class="faq__question">
                             <i class="fas fa-question-circle"></i>
-                            Lorem ipsum dolor sit?
-                            <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                            <span class="question-title">Можно ли скачать дневник на iPhone?</span>
+                            <button class="question__show-more">
+                                <img src="img/arrow-btn.svg" alt="">
+                            </button>
                         </p>
-                        <p class="faq__list_answer">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse
-                            quod dolores?
+                        <p class="faq__answer">
+                            К сожалению, MyDiary работает только лишь на платформе Android.
+                            Надеемся, в будущем он будет присутствовать на всех платформах.
                         </p>
                     </li>
 
                     <li class="faq__right">
-                        <p class="faq__list_question">
+                        <p class="faq__question">
                             <i class="fas fa-question-circle"></i>
-                            Lorem ipsum dolor sit?
-                            <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                            <span class="question-title">Как выбрать тему оформления?</span>
+                            <button class="question__show-more">
+                                <img src="img/arrow-btn.svg" alt="">
+                            </button>
                         </p>
-                        <p class="faq__list_answer">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse
-                            quod dolores?
+                        <p class="faq__answer">
+                            *Ответ на вопрос*
                         </p>
                     </li>
 
                     <li>
-                        <p class="faq__list_question">
+                        <p class="faq__question">
                             <i class="fas fa-question-circle"></i>
-                            Lorem ipsum dolor sit?
-                            <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                            <span class="question-title">Где можно посмотреть домашнее задание?</span>
+                            <button class="question__show-more">
+                                <img src="img/arrow-btn.svg" alt="">
+                            </button>
                         </p>
-                        <p class="faq__list_answer">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse
-                            quod dolores?
+                        <p class="faq__answer">
+                            *Ответ на вопрос*
                         </p>
                     </li>
 
                     <li class="faq__right">
-                        <p class="faq__list_question">
+                        <p class="faq__question">
                             <i class="fas fa-question-circle"></i>
-                            Lorem ipsum dolor sit?
-                            <img src="img/arrow-btn.svg" alt="" class="question__show-more">
+                            <span class="question-title">Зачем мне нужен MyDiary?</span>
+                            <button class="question__show-more">
+                                <img src="img/arrow-btn.svg" alt="">
+                            </button>
                         </p>
-                        <p class="faq__list_answer">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur saepe nemo, esse
-                            quod dolores?
+                        <p class="faq__answer">
+                            Просто так.
                         </p>
                     </li>
                 </ul>
             </div>
         </main>
 
-        
+
         <footer>
             <section class="communication js-section" id="communication">
                 <div class="communication__write-menu">
@@ -260,8 +292,6 @@
                         <br><textarea rows="5" class="communication__input_text input_text user-message" name="message"
                             placeholder="Ваше сообщение"></textarea><br>
                         <button type="submit" name="submit" class="communication__btn_send-message">
-                            <!-- у before нет нормального z-index -->
-                            <span class="communication__btn_send-message__before"></span>
                             Отправить
                         </button>
                     </form>
@@ -320,4 +350,5 @@
     <script async src="js/animations.js"></script>
     <script async src="js/script.js"></script>
 </body>
+
 </html>

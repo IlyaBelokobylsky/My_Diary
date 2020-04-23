@@ -126,7 +126,10 @@
             }
         }
 
-        
+        .head-screen__download-button {
+            margin-top: 4rem;
+            margin-left: 1.75rem;
+        }
     }
     main .head-screen::after {
         width: 11rem;
@@ -233,8 +236,11 @@
             }
         }
     }
-
-
+    
+    
+    
+    
+    
     div.possibilities {
         margin-top: 7rem;
         .possibilities__head-text {
@@ -244,10 +250,17 @@
         .possibilities__slider {
             position: static;
             grid-auto-flow: column;
+            .possibilities__texts li {
+                font-size: .625rem;
+                margin-left: -2.5rem;
+            }
         }
-        .slider_right-text {
+        .possibilities__texts[data-position="right"] {
             margin-left: 1.5rem;
         }
+    }
+    .slider-left, .slider-right {
+        position: static;
     }
 
 
@@ -256,8 +269,12 @@
         margin-right: 3.33rem;
         width: 12rem;
         height: 2rem;
-        .faq__search-text {
+        .faq__input-search {
             height: 1.75rem;
+        }
+        .faq__search-btn {
+            width: 2.5rem;
+            height: 1.85rem;
         }
     }
 
@@ -292,7 +309,6 @@
             .footer__not-circle {
                 width: 18.5rem;
                 bottom: -1.865rem;
-                left: 1rem;
             }
             .communication__write-us {
                 margin-left: 1.6rem;
@@ -337,7 +353,6 @@
     html {
         font-size: 26px;
     }
-    
 } 
 @media (min-width: 1280px) {
     html {
@@ -356,17 +371,19 @@
     html {
         font-size: 34px;
     }
-    footer .footer__not-circle {
-        width: 18.25rem;
-        bottom: -2rem;
-        left: 1rem;
+    footer .communication .footer__not-circle {
+        width: 19.1rem;
+        bottom: -1.95rem;
     }
 }
 @media (min-width: 1599px) {
     html {
         font-size: 38px;
     }
-    
+    footer .communication .footer__not-circle {
+        width: 18.825rem;
+        bottom: -1.9rem;
+    }
 }
 
 @media (min-width: 1919px) {

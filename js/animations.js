@@ -71,16 +71,11 @@ arrow.onclick = () => container.scrollIntoView({ behavior: 'smooth', block: 'sta
 
 // Появление текста по скроллу
 document.addEventListener('scroll', function (e) {
-    const text = document.querySelectorAll('.text-animated');
-    // Спрятать текст (который уже за экраном)
-    for(let key of text) {
-        key.classList.add('text-hidden');
-        key.classList.remove('text-visible');
-    }
+    const text = document.querySelectorAll('.temp-animated');
     let visibleText = [].filter.call(text, checkItemVisibility);
     // Показать текст (который на экране)
     for(let key of visibleText) {
-        key.classList.remove('text-hidden');
-        key.classList.add('text-visible');
+        key.classList.remove('temp-hidden');
+        key.classList.add('temp-visible');
     }
 });
