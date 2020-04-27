@@ -124,7 +124,12 @@ questList.forEach(function(item) {
 faqElems.forEach(function(item) {
     item.dataset.height = parseFloat(getComputedStyle(item).height) / rem + 'rem';
     item.classList.add('closed');
-})
+});
+
+// Сортировка блоков право-лево
+faqElems.forEach(function(item, index) {
+    if(index % 2 === 0) item.classList.add('faq__right')
+});
 
 // Клик по кнопке
 const faqBtns = [...document.querySelectorAll('.question__show-more')];
@@ -139,7 +144,6 @@ faqBtns.forEach(function(item) {
             faqEl.style.height = '';
         }
         const btn = event.target.closest('button');
-        console.log(btn)
         btn.classList.toggle('clicked');
     });
 });
@@ -153,13 +157,16 @@ quesTitletList.forEach(function(item) {
 })
 
 faqSearch.addEventListener('input', function(e) {
-    const valueReg = new RegExp(faqSearch.value, "gi");
+    let value = faqSearch.value;
+    if (~value.search(/\?/)) {
+        value = value.replace(/\?/gi, '[?]');
+    }
+    const valueReg = new RegExp(value, "gi");
     let confused = true;
     quesTitletList.forEach(function(item) {
         item.innerHTML = item.dataset.content.replace(valueReg, function(part) {
             part = '<mark>' + part + '</mark>';
             confused = false;
-            console.log(confused);
             return part;
         });
     });

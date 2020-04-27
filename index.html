@@ -170,10 +170,22 @@
                 <div class="possibilities__slider">
                     <ul class="possibilities__texts" data-position="left">
                         <li class="description-text slider_text-1 slider_text-visible">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?
+                            Поделись расписанием с одноклассниками
                         </li>
                         <li class="description-text slider_text-2 slider_text-hidden">
-                            In nulla sunt cupiditate sit maxime a, illo sequi consequatur animi eaque?
+                            Заполнение расписания за минуту
+                        </li>
+                        <li class="description-text slider_text-3 slider_text-hidden">
+                            Сохранение домашнего задания в один клик
+                        </li>
+                        <li class="description-text slider_text-4 slider_text-hidden">
+                            Время до конца урока всегда на виду
+                        </li>
+                        <li class="description-text slider_text-5 slider_text-hidden">
+                            Поставь себе оценку, если учитель отметил твои знания
+                        </li>
+                        <li class="description-text slider_text-6 slider_text-hidden">
+                            Пять интересных тем
                         </li>
                     </ul>
 
@@ -183,13 +195,30 @@
                     
                     <div class="possibilities__img-with-bg">
                         <ul class="possibilities__images">
+                            <!-- Классы first(second)-image решают то, куда пойдет изображение при наведении/нажатии на кнопку -->
                             <li class="visible-images" data-position="1">
-                                <img class="rotated-screen head-scr first-image" src="img/head-scr.png" alt="">
-                                <img class="rotated-screen head-scr right-image second-image" src="img/head-scr.png" alt="">
+                                <img class="rotated-screen first-image" src="img/slider/1l.jpg" alt="">
+                                <img class="rotated-screen right-image second-image" src="img/slider/1r.jpg" alt="">
                             </li>
                             <li class="hidden-images" data-position="2">
-                                <img class="rotated-screen head-scr left-image second-image" src="img/head-scr.png" alt="">
-                                <img class="rotated-screen head-scr right-image first-image" src="img/head-scr.png" alt="">
+                                <img class="rotated-screen second-image" src="img/slider/2l.jpg" alt="">
+                                <img class="rotated-screen right-image first-image" src="img/slider/2r.jpg" alt="">
+                            </li>
+                            <li class="hidden-images" data-position="3">
+                                <img class="rotated-screen first-image" src="img/slider/3l.jpg" alt="">
+                                <img class="rotated-screen right-image second-image" src="img/slider/3r.jpg" alt="">
+                            </li>
+                            <li class="hidden-images" data-position="4">
+                                <img class="rotated-screen second-image" src="img/slider/4l.jpg" alt="">
+                                <img class="rotated-screen right-image first-image" src="img/slider/4r.jpg" alt="">
+                            </li>
+                            <li class="hidden-images" data-position="5">
+                                <img class="rotated-screen first-image" src="img/slider/5l.jpg" alt="">
+                                <img class="rotated-screen right-image second-image" src="img/slider/5r.jpg" alt="">
+                            </li>
+                            <li class="hidden-images" data-position="6">
+                                <img class="rotated-screen second-image" src="img/slider/6l.jpg" alt="">
+                                <img class="rotated-screen right-image first-image" src="img/slider/6r.jpg" alt="">
                             </li>
                         </ul>
 
@@ -205,10 +234,22 @@
 
                     <ul class="possibilities__texts" data-position="right">
                         <li class="description-text slider_text-1 slider_text-visible">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, praesentium?
+                            Новые пользователи при первом запуске смогут его вставить                        
                         </li>
                         <li class="description-text slider_text-2 slider_text-hidden">
-                            In nulla sunt cupiditate sit maxime a, illo sequi consequatur animi eaque?
+                            Подсказки при вводе предмета
+                        </li>
+                        <li class="description-text slider_text-3 slider_text-hidden">
+                            Просмотр заданий на главном экране
+                        </li>
+                        <li class="description-text slider_text-4 slider_text-hidden">
+                            Отображение полноэкранного таймера при запуске приложения
+                        </li>
+                        <li class="description-text slider_text-5 slider_text-hidden">
+                            Подтверди оценку подписью учителя
+                        </li>
+                        <li class="description-text slider_text-6 slider_text-hidden">
+                            Тонкая настройка дневника
                         </li>
                     </ul>
                 </div>
@@ -227,27 +268,41 @@
                     <li>
                         <p class="faq__question">
                             <i class="fas fa-question-circle"></i>
-                            <span class="question-title">Можно ли скачать дневник на iPhone?</span>
+                            <span class="question-title">У меня двухнедельное/модульное расписание, что делать?</span>
                             <button class="question__show-more">
                                 <img src="img/arrow-btn.svg" alt="">
                             </button>
                         </p>
                         <p class="faq__answer">
-                            К сожалению, MyDiary работает только лишь на платформе Android.
-                            Надеемся, в будущем он будет присутствовать на всех платформах.
+                            MyDiary поддерживает модульное расписание. 
+                            Количество недель в цикле расписания также можно выбрать. 
                         </p>
                     </li>
 
-                    <li class="faq__right">
+                    <li>
                         <p class="faq__question">
                             <i class="fas fa-question-circle"></i>
-                            <span class="question-title">Как выбрать тему оформления?</span>
+                            <span class="question-title">Что делать если в подсказках нет нужного предмета?</span>
                             <button class="question__show-more">
                                 <img src="img/arrow-btn.svg" alt="">
                             </button>
                         </p>
                         <p class="faq__answer">
-                            *Ответ на вопрос*
+                            В подсказках отображаются только основные школьные предметы; 
+                            введи предмет вручную, если его нет в подсказках.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p class="faq__question">
+                            <i class="fas fa-question-circle"></i>
+                            <span class="question-title">Что делать если в у меня нет какого-то урока?</span>
+                            <button class="question__show-more">
+                                <img src="img/arrow-btn.svg" alt="">
+                            </button>
+                        </p>
+                        <p class="faq__answer">
+                            Можно просто оставить поле пустым.
                         </p>
                     </li>
 
@@ -260,20 +315,35 @@
                             </button>
                         </p>
                         <p class="faq__answer">
-                            *Ответ на вопрос*
+                            На главном меню. Для этого нажми на иконку «Домашнее задание» в левом верхнем углу. 
+                            Доступен просмотр домашнего задания на выбранный день (один клик по иконке) и на дни грядущие (два клика по иконке). 
                         </p>
                     </li>
 
-                    <li class="faq__right">
+                    <li>
                         <p class="faq__question">
                             <i class="fas fa-question-circle"></i>
-                            <span class="question-title">Зачем мне нужен MyDiary?</span>
+                            <span class="question-title">Хочу сменить тему приложения, как это сделать?</span>
                             <button class="question__show-more">
                                 <img src="img/arrow-btn.svg" alt="">
                             </button>
                         </p>
                         <p class="faq__answer">
-                            Просто так.
+                            Для этого необходимо перейти в настройки приложения, 
+                            далее кликнуть по пункту «Тема приложения» и выбрать понравившуюся тему
+                        </p>
+                    </li>
+
+                    <li>
+                        <p class="faq__question">
+                            <i class="fas fa-question-circle"></i>
+                            <span class="question-title">Доступен ли MyDiary на IOS?</span>
+                            <button class="question__show-more">
+                                <img src="img/arrow-btn.svg" alt="">
+                            </button>
+                        </p>
+                        <p class="faq__answer">
+                            На данный момент нет, но это вопрос времени.
                         </p>
                     </li>
                 </ul>

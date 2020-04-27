@@ -270,8 +270,12 @@
         width: 12rem;
         height: 2rem;
         .faq__input-search {
-            height: 1.75rem;
+            height: 1.7rem;
         }
+        .faq__label-search{
+            padding-top: 0.25rem;
+            height: 1.75rem;
+        } 
         .faq__search-btn {
             width: 2.5rem;
             height: 1.85rem;

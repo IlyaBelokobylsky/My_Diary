@@ -88,6 +88,53 @@ img.main-phone {
 
 
 header {
+   position: fixed;
+   top: 0;
+   right: 0;
+   z-index: 500;
+   height: 0;
+   width: 0;
+   background-color: var(--time-color-second);
+   box-shadow: 0 0 .5rem;
+   overflow: hidden;
+   transition: 1s ease;
+   .header__title {
+       font-family: 'Russo One';
+       font-size: 2rem;
+       margin-left: 1rem;
+       margin-top: 1rem;
+       color: #fff;
+       white-space: nowrap;
+   }
+   .navigation {
+       position: relative;
+       right: 1rem;
+       display: flex;
+       flex-direction: column;
+       height: 14.5rem;
+       justify-content: space-evenly;
+       .nav__link {
+           display: block;
+           font-family: 'Oswald';
+           font-size: 1rem;
+           text-align: right;
+           position: relative;
+           right: 0;
+           color: var(--font-color-light);
+           text-decoration: underline;
+           white-space: nowrap;
+       }
+       .return-link {
+           font-size: 1.5rem;
+       }
+   }
+}
+.header-visible {
+   height: 22rem;
+   width: 22rem;
+   border-radius: 0 0 0 20rem;
+}
+/* header {
    font-size: 2.5rem;
    padding-top: 3rem;
    background-image: linear-gradient(90deg, var(--main-light-color-first) 0%, rgba(55, 45, 166, 0.5) 100%);
@@ -198,7 +245,7 @@ header {
          }
       }
    }
-}
+} */
 
 
 .container {
@@ -519,11 +566,13 @@ main {
                text-align: center;
                font-size: 1rem;
                margin-left: -3.5em;
+               margin-top: -.5em;
                transition: opacity .5s ease-in-out;
             }
 
             .slider_text-hidden {
                position: absolute;
+               height: 0;
                opacity: 0;
             }
          }
@@ -614,7 +663,7 @@ main {
          top: -6.5rem;
          margin-right: 2rem;
          margin-left: auto;
-         height: 1.5rem;
+         height: 1.75rem;
          border: .15rem solid var(--main-light-color-first);
          border-radius: 1rem;
 
@@ -623,11 +672,11 @@ main {
             position: absolute;
             right: 0;
             padding-left: .25rem;
-            padding-top: .25rem;
+            padding-top: .125rem;
             top: 0;
             border-left: .15rem solid var(--main-light-color-first);
             width: 2rem;
-            height: 1.75rem;
+            height: 1.5rem;
             color: var(--description-text-color);
             font-size: .95rem;
          }
