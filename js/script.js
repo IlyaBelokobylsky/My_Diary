@@ -12,6 +12,12 @@ function headerToggle() {
     header.classList.toggle('header-visible');
     menu.classList.toggle('menu-clicked');
     container.classList.toggle('container-darken');
+    if(header.classList.contains('header-visible')) {
+        document.querySelector('.btn-up').classList.add('btn-up_hidden');
+    }
+    setTimeout(() =>
+        document.querySelector('.btn-up').classList.add('display-none'),
+    200)
 }
 
 menu.addEventListener('click', headerToggle);

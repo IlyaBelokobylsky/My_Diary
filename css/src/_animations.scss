@@ -90,14 +90,6 @@
 
 
 // Arrow up animation
-.btn-up {
-    transition: .2s ease-in-out;
-
-    .btn-up__arrow {
-        transition: .2s ease-in-out;
-    }
-}
-
 .btn-up:active {
     height: 3rem;
     transform: translateY(.25rem);
