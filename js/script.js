@@ -9,38 +9,18 @@ const menu = document.querySelector('.hamburger'),
 
 let headerTimerID ;
 function headerToggle() {
-    let headerActiveLink = document.querySelector(`.nav__link[href*=head-screen]`).parentNode;
-
+    header.classList.toggle('header-visible');
     menu.classList.toggle('menu-clicked');
-    document.querySelector('.btn-up').classList.toggle('btn-up-hidden');
-    container.classList.toggle('container-translated');
-    
-
-    if (menu.classList.contains('menu-clicked')) {
-        // Без этого перемещение наверх резкое
-        document.body.scrollIntoView({ behavior: 'smooth', block: 'start' })
-
-        // С задержкой или нет?
-        headerTimerID = setTimeout(() => {
-            document.documentElement.style.overflow = 'hidden';
-            document.documentElement.style.position = 'fixed';
-            document.querySelector('.nav__active-link').classList.remove('nav__active-link')
-            headerActiveLink.classList.add('nav__active-link');
-        }, 1300);
-    } else {
-        clearTimeout(headerTimerID);
-        document.documentElement.style.position = 'absolute';
-        document.documentElement.style.overflow = 'visible';
-    }
+    container.classList.toggle('container-darken');
 }
 
 menu.addEventListener('click', headerToggle);
 
 // Изменение активной ссылки в хедере при скролле
 document.addEventListener('scroll', function (e) {
-    const centerX = document.documentElement.clientWidth / 2,
-        centerY = document.documentElement.clientHeight / 2,
-        centerElem = document.elementFromPoint(centerX, centerY),
+    const centerXish = document.documentElement.clientWidth / 1.75, // чтобы хедер не перекрыл
+        centerYish = document.documentElement.clientHeight / 1.75,
+        centerElem = document.elementFromPoint(centerXish, centerYish),
         centerSection = centerElem.closest('.js-section');
     if (!centerSection) return;
     let headerActiveLink = document.querySelector(`.nav__link[href*=${centerSection.id}]`).parentNode;
@@ -64,7 +44,7 @@ navMenu.addEventListener('click', function (event) {
         headerToggle();
         setTimeout(function() { // чтобы хедер успел убраться
             document.querySelector(`${href}`).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 600);
+        }, 400);
     }
 });
 
@@ -105,12 +85,21 @@ sliderBtns.forEach(function(item) {
 });
 
 
-
-
 // FAQ
-// Коррекция ширины блоков
 const questList = [...document.querySelectorAll('.faq__question')],
     faqElems = [...document.querySelector('.faq__list').children];
+// Коррекция высоты блоков
+faqElems.forEach(function(item, index) {
+    const quest = item.querySelector('.question-title');
+    if (~quest.innerHTML.search(/<br>/)){
+        item.dataset.strings = 2;
+    }
+    // Сортировка блоков право-лево
+    if(index % 2 === 0) item.classList.add('faq__right')
+});
+
+// Коррекция ширины блоков
+
 questList.forEach(function(item) {
     let width = 0;
     for(let i = 0; i < item.children.length; i++) {
@@ -126,10 +115,6 @@ faqElems.forEach(function(item) {
     item.classList.add('closed');
 });
 
-// Сортировка блоков право-лево
-faqElems.forEach(function(item, index) {
-    if(index % 2 === 0) item.classList.add('faq__right')
-});
 
 // Клик по кнопке
 const faqBtns = [...document.querySelectorAll('.question__show-more')];
@@ -164,12 +149,18 @@ faqSearch.addEventListener('input', function(e) {
     const valueReg = new RegExp(value, "gi");
     let confused = true;
     quesTitletList.forEach(function(item) {
+        if(~value.search(/[<>]/)) return;
         item.innerHTML = item.dataset.content.replace(valueReg, function(part) {
             part = '<mark>' + part + '</mark>';
             confused = false;
             return part;
         });
     });
+    if (!value) { // теги внутри превращаются в текст
+        quesTitletList.forEach(function(item) {
+            item.innerHTML = item.dataset.content;
+        })
+    }
     if (confused) {
         faqSearch.parentElement.classList.add('errored');
         setTimeout(() => {

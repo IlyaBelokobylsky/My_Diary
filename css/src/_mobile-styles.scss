@@ -90,65 +90,23 @@ img.main-phone {
 header {
    position: fixed;
    top: 0;
-   right: 0;
+   left: 0;
    z-index: 500;
    height: 0;
    width: 0;
-   background-color: var(--time-color-second);
+   font-size: 2.5rem;
+   background-image: linear-gradient(90deg, var(--main-light-color-first) 0%, rgb(55, 45, 166) 100%);
    box-shadow: 0 0 .5rem;
    overflow: hidden;
    transition: 1s ease;
-   .header__title {
-       font-family: 'Russo One';
-       font-size: 2rem;
-       margin-left: 1rem;
-       margin-top: 1rem;
-       color: #fff;
-       white-space: nowrap;
-   }
-   .navigation {
-       position: relative;
-       right: 1rem;
-       display: flex;
-       flex-direction: column;
-       height: 14.5rem;
-       justify-content: space-evenly;
-       .nav__link {
-           display: block;
-           font-family: 'Oswald';
-           font-size: 1rem;
-           text-align: right;
-           position: relative;
-           right: 0;
-           color: var(--font-color-light);
-           text-decoration: underline;
-           white-space: nowrap;
-       }
-       .return-link {
-           font-size: 1.5rem;
-       }
-   }
-}
-.header-visible {
-   height: 22rem;
-   width: 22rem;
-   border-radius: 0 0 0 20rem;
-}
-/* header {
-   font-size: 2.5rem;
-   padding-top: 3rem;
-   background-image: linear-gradient(90deg, var(--main-light-color-first) 0%, rgba(55, 45, 166, 0.5) 100%);
-   position: fixed;
-   overflow: hidden;
-   z-index: -99;
-   height: 100vh;
-   width: 100vw;
+
+   white-space: nowrap;
 
    .header__head {
       display: block;
       color: #fff;
       font-size: inherit;
-      margin: 0 0 .4em 1em;
+      margin: .25em 0 .4em 1.75em;
 
       .header_logo {
          margin-bottom: .25em;
@@ -165,12 +123,11 @@ header {
 
    nav {
       margin-left: -1em;
-      font-size: 1.2rem;
-
+      font-size: 1rem;
       .header__nav_list-link {
          position: relative;
-         margin: 1em 0;
-         padding: .5em 0;
+         margin: .4em 0;
+         padding: .4em 0;
 
          .nav__link,
          .nav__link:active,
@@ -194,8 +151,12 @@ header {
             box-shadow: .1em .167em .167em rgba(0, 0, 0, 0.25);
             transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
          }
+         &:not(.nav__active-link):hover > .nav__link::before {
+            width: 1em;
+            height: 1em;
+            border-width: .08em;
+         }
       }
-
       .nav__active-link>.nav__link::before {
          width: 100%;
          height: 1.375em;
@@ -206,57 +167,35 @@ header {
    aside {
       display: flex;
       position: absolute;
-      bottom: 5%;
+      top: 25%;
+      right: 10%;
       font-size: 1.2rem;
       margin-left: .8em;
-
-      .languages {
-         position: relative;
-         border: 1px solid var(--invisible-color);
-         border-radius: .417em;
-         font-size: 1em;
-         padding: .417em;
-         max-height: 2em;
-         width: 3.8em;
-         appearance: none;
-
-         &:focus {
-            outline: none;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-         }
-      }
-
-      .arrow-down_languages {
-         display: block;
-         position: absolute;
-         font-size: .85em;
-         top: .7em;
-         left: 2.8em;
-      }
-
+      flex-direction: column;
 
       .header__moonProd {
          display: block;
-         margin-top: -.2em;
-         margin-left: 3.33em;
+         margin-top: 2em;
+         margin-left: .5em;
 
          img {
             width: 2.5em;
          }
       }
    }
-} */
-
+}
+.header-visible {
+   height: 100vw;
+   width: 100vw;
+   border-radius: 0 0 20rem 0;
+}
 
 .container {
    position: absolute;
    top: 0;
    left: 0;
-   margin-top: 0;
-   z-index: 0;
-   width: 100vw;
+   transition: 1s ease;
    background-color: #fff;
-   overflow: visible;
 }
 
 main {
@@ -702,21 +641,24 @@ main {
 
       .faq__list {
          margin-top: -4rem;
-
          li {
+            margin-left: -1rem;
             margin-top: 2rem;
             overflow: hidden;
             border: 1px solid var(--main-dark-color-second);
             border-radius: 1rem;
             transition: .25s ease-in-out;
+
             .faq__question {
                margin-top: .4rem;
                white-space: nowrap;
                display: flex;
+               position: relative;
                flex-wrap: nowrap;
                justify-content: space-around;
                margin-bottom: .25rem;
-               font-size: .75rem;
+               font-size: .65rem;
+
                mark {
                   background-color: var(--main-light-color-second);
                }
@@ -735,8 +677,21 @@ main {
                color: var(--description-text-color);
                position: static;
             }
+
             &.closed {
-               height: 1.75rem;
+               height: 1.5rem;
+            }
+            &[data-strings='2'] {
+               i {
+                  font-size: 2em;
+                  margin-right: .25em;
+               }
+               .question__show-more {
+                  margin-top: .25rem;
+               }
+               &.closed {
+                  height: 2.25rem;
+               }
             }
          }
 

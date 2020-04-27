@@ -39,6 +39,10 @@
     transition: opacity .5s ease;
 }
 
+.container-darken {
+    filter: grayscale(.65) brightness(65%);
+}
+
 .arrow-down_languages {
     transition: .2s;
 }
@@ -105,17 +109,6 @@
 
 .btn-up-hidden {
     opacity: 0;
-}
-
-
-.container {
-    transition:.6s cubic-bezier(.4, 0, .4, 1), height 5s 5s;
-}
-
-.container-translated {
-    overflow: hidden;
-    border-radius: 5rem;
-    filter: brightness(80%) blur(1px);
 }
 
 
@@ -209,13 +202,6 @@
 }
 
 
-@media (max-width: 992px) {
-    .container-translated {
-        top: 5rem;
-        transform: translateX(13rem) rotate3d(0, -2, .01, 30deg);
-    }
-}
-
 @media (min-width: 993px) {
     @keyframes head-screen-scale {
         0% {
@@ -252,9 +238,5 @@
                 right: 0;
             }
         }
-    }
-
-    .container-translated {
-        transform: perspective(100rem) scale3d(.975, .975, 1) rotateX(8.5deg);
     }
 }
