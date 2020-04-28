@@ -552,7 +552,7 @@ main .possibilities .possibilities__slider .possibilities__texts .slider_text-hi
 
 main .possibilities .possibilities__slider .possibilities__img-with-bg {
   max-width: 75vw;
-  width: 13.5rem;
+  width: 14rem;
 }
 
 main .possibilities .possibilities__slider .possibilities__img-with-bg .possibilities__images {
@@ -564,8 +564,9 @@ main .possibilities .possibilities__slider .possibilities__img-with-bg .possibil
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  margin-left: -.5rem;
   padding-left: 0;
+  width: inherit;
+  margin-left: .1rem;
 }
 
 main .possibilities .possibilities__slider .possibilities__img-with-bg .possibilities__images li {
@@ -582,11 +583,16 @@ main .possibilities .possibilities__slider .possibilities__img-with-bg .possibil
   display: block;
   position: relative;
   height: 15rem;
+  -webkit-transform: perspective(20rem) rotateY(-25deg);
+          transform: perspective(20rem) rotateY(-25deg);
+  -webkit-box-shadow: 0 0 0.4rem var(--main-dark-color-first);
+          box-shadow: 0 0 0.4rem var(--main-dark-color-first);
+  border-radius: .65rem;
 }
 
 main .possibilities .possibilities__slider .possibilities__img-with-bg .possibilities__images li .right-image {
-  -webkit-transform: perspective(20rem) rotateY(45deg);
-          transform: perspective(20rem) rotateY(45deg);
+  -webkit-transform: perspective(20rem) rotateY(25deg);
+          transform: perspective(20rem) rotateY(25deg);
   -ms-grid-column-align: end;
       justify-self: end;
 }
