@@ -737,7 +737,7 @@ main .faq .faq__list li.closed {
 }
 
 main .faq .faq__list li[data-strings='2'] i {
-  font-size: 2em;
+  margin-top: .45rem;
   margin-right: .25em;
 }
 

@@ -687,7 +687,8 @@ main {
             }
             &[data-strings='2'] {
                i {
-                  font-size: 2em;
+                  // font-size: 2em;
+                  margin-top: .45rem;
                   margin-right: .25em;
                }
                .question__show-more {

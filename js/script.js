@@ -105,13 +105,12 @@ faqElems.forEach(function(item, index) {
 });
 
 // Коррекция ширины блоков
-
 questList.forEach(function(item) {
     let width = 0;
     for(let i = 0; i < item.children.length; i++) {
         width += parseFloat(getComputedStyle(item.children[i]).width) / rem;
     }
-    width += 1.5;
+    width += 1.75;
     item.closest('li').style.width = width + 'rem'; // ширина для родителя
 });
 
